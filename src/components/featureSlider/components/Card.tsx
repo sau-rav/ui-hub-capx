@@ -12,7 +12,7 @@ type FeatureCard = { title: string; description: string };
 const CONTAINER_CLASS_NAME =
   "flex flex-col gap-8 p-8 w-full h-full border-2 rounded-lg border-slate-400";
 
-const SRC_TO_IMAGE = {
+const SRC_TO_IMAGE: ImageMap = {
   feature1: feature1,
   feature2: feature2,
   feature3: feature3,

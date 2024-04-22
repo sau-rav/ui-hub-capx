@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import feature1 from "../../../../public/feature1.png";
 import feature2 from "../../../../public/feature2.png";
@@ -7,11 +7,21 @@ import feature3 from "../../../../public/feature3.png";
 import feature4 from "../../../../public/feature4.png";
 import feature5 from "../../../../public/feature5.png";
 
-type FeatureCard = { title: string; description: string };
+type FeatureCard = { title: string; description: string; image: keyof typeof SRC_TO_IMAGE };
+
+// Define a type for the mapping between image keys and their source URLs
+export type ImageMap = {
+  feature1: StaticImageData;
+  feature2: StaticImageData;
+  feature3: StaticImageData;
+  feature4: StaticImageData;
+  feature5: StaticImageData;
+};
 
 const CONTAINER_CLASS_NAME =
   "flex flex-col gap-8 p-8 w-full h-full border-2 rounded-lg border-slate-400";
 
+// Assign the correct types to SRC_TO_IMAGE
 const SRC_TO_IMAGE: ImageMap = {
   feature1: feature1,
   feature2: feature2,
@@ -20,15 +30,8 @@ const SRC_TO_IMAGE: ImageMap = {
   feature5: feature5,
 };
 
-// eslint-disable-next-line react/display-name
-export const Card = forwardRef<
-  HTMLDivElement,
-  { card: FeatureCard; visible: boolean }
->(
-  (
-    { card, visible }: { card: FeatureCard; visible: boolean },
-    ref
-  ): JSX.Element => {
+export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boolean }>(
+  ({ card, visible }, ref): JSX.Element => {
     return (
       <div
         className={
@@ -72,3 +75,4 @@ export const Card = forwardRef<
     );
   }
 );
+

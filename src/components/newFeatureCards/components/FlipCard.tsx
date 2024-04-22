@@ -39,6 +39,7 @@ export const FlipCard = ({
             {src ? (
               <div className={className}>
                 <img
+                  /*@ts-ignore*/
                   src={SRC_TO_IMAGE[src].src}
                   alt={`Flip Image - ${title}`}
                   //   style={{ width: "60%", height: "50%", objectFit: "cover" }}

@@ -1,0 +1,15 @@
+.circle {
+    -webkit-animation: circle 10s linear infinite;
+    animation: circle 10s linear infinite;
+}
+
+@-webkit-keyframes circle{
+    0% {
+        transform: rotate(0deg) translate(-160px) rotate(0deg);
+    }
+
+    0% {
+        transform: rotate(360deg) translate(-160px) rotate(-360deg);
+    }
+
+}

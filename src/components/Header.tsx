@@ -6,7 +6,7 @@ export const Header = (): JSX.Element => {
       <div className="text-3xl lg:text-4xl md:text-3xl font-montserrat">
         INTRODUCING
       </div>
-      <div className="text-5xl lg:text-9xl md:text-7xl font-mono">Cap</div>
+      <div className="text-5xl lg:text-9xl md:text-7xl font-mono">Cap X</div>
       <div className="text-2xl font-mono">
         Personalized gamified trading platform!
       </div>

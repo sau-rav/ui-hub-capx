@@ -2,20 +2,37 @@ import React, { useEffect, useState } from "react";
 import { Button, KIND, SIZE } from "baseui/button";
 import { useRouter } from "next/router";
 import { auth } from "../config/firebase"; // Assuming you have a custom hook to manage authentication
-import { signOut } from "firebase/auth"
+import { signOut } from "firebase/auth";
 
 export const NavBar = (): JSX.Element => {
   const router = useRouter();
   const [user, setUser] = useState<any>(null); // Custom hook to manage authentication
   const [loading, setLoading] = useState<boolean>(true);
+  const [buttonSize, setButtonSize] = useState<"compact" | "mini" | undefined>(
+    undefined
+  );
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
       setLoading(false);
     });
 
     return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1000) {
+        setButtonSize("mini");
+      } else {
+        setButtonSize("compact");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleJoinWaitlist = () => {
@@ -32,24 +49,24 @@ export const NavBar = (): JSX.Element => {
   };
 
   if (loading) {
-    return <div> Loading ... </div>
+    return <div> Loading ... </div>;
   }
 
   return (
-    <div className="flex items-center py-4 px-36 bg-black">
+    <div className="flex flex-wrap items-center py-2 px-6 lg:px-36 bg-black">
       <div
-        className="flex-1 flex items-center gap-2 text-white text-5xl font-bold"
+        className="flex-1 flex items-center gap-2 text-white text-3xl lg:text-5xl font-bold"
         style={{ color: "#EDAF36" }}
       >
         Cap X
       </div>
       {user ? (
         <>
-          <div className="text-white mr-4">{user.displayName}</div>
+          <div className="text-white mr-2 lg:mr-4">{user.displayName}</div>
           <Button
             onClick={handleLogout}
             kind={KIND.secondary}
-            size={SIZE.compact}
+            size={buttonSize}
             style={{ backgroundColor: "#EDAF36" }}
           >
             Logout
@@ -59,7 +76,7 @@ export const NavBar = (): JSX.Element => {
         <Button
           onClick={handleJoinWaitlist}
           kind={KIND.secondary}
-          size={SIZE.compact}
+          size={buttonSize}
           style={{ backgroundColor: "#EDAF36" }}
         >
           Join Waitlist

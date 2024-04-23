@@ -35,17 +35,17 @@ export const JoinWaitlist = (): JSX.Element => {
 
   return (
     <div>
-      <div className="flex items-center justify-center py-4 px-36 bg-black">
-        <div
-          className="flex-1 flex items-center gap-2 text-white text-5xl font-bold"
-          style={{ color: "#EDAF36" }}
-        >
-          Cap X
-        </div>
+      <div className="flex flex-wrap items-center py-2 px-6 lg:px-36 bg-black">
+      <div
+        className="flex-1 flex items-center gap-2 text-white text-3xl lg:text-5xl font-bold"
+        style={{ color: "#EDAF36" }}
+      >
+        Cap X
+      </div> 
       </div>
       <div className="text-white flex flex-col justify-center text-center bg-hero-image bg-cover py-36">
         <div className="text-3xl lg:text-4xl md:text-3xl font-montserrat"></div>
-        <div className="text-5xl lg:text-9xl md:text-7xl font-mono">Cap</div>
+        <div className="text-5xl lg:text-9xl md:text-7xl font-mono">Cap X</div>
         <div className="text-2xl font-mono">
           Personalized gamified trading platform!
         </div>
@@ -56,9 +56,10 @@ export const JoinWaitlist = (): JSX.Element => {
           onClick={signInWithGoogle}
           kind={KIND.secondary}
           size={SIZE.compact}
-          style={{ backgroundColor: "#EDAF36" }}
+          style={{ backgroundColor: "white", color: "black", marginTop: "-180px" }}
         >
-          SignIn With Google
+          <img src="https://p1.edge.duggup.com/tpt-icons/google.svg" alt="Google Logo" className="lg:w-6 h-6 lg:mr-2" />
+          Continue With Google
         </Button>
       </div>
     </div>

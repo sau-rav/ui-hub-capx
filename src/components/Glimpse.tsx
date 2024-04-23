@@ -2,8 +2,8 @@ import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 export const Glimpse = (): JSX.Element => {
   return (
-    <div className="pt-32 flex flex-col bg-black gap-8">
-      <div className="flex-1 text-white text-5xl lg:text-9xl md:text-7xl font-bold px-32">
+    <div className="pt-16 lg:pt-32 flex flex-col bg-black gap-8">
+      <div className="flex-1 text-white text-4xl lg:text-9xl md:text-7xl font-bold px-8 lg:px-32">
         Sneak peek into what we are building
       </div>
       <div className="p-px bg-gradient-to-r from-black via-golden via-50& to-black inline-block ">
@@ -14,3 +14,4 @@ export const Glimpse = (): JSX.Element => {
     </div>
   );
 };
+

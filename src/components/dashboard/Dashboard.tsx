@@ -54,8 +54,8 @@ export const Dashboard = (): JSX.Element => {
     }
 
     return (
-        <div className="p-16 bg-slate-300 flex flex-col gap-3">
-            <div className="flex-1 text-black text-8xl font-bold">
+        <div className="flex flex-col h-screen bg-black text-white p-16">
+            <div className="flex-1 text-xl font-bold">
                 {user ? (
                     `Hi ${user.displayName}. Welcome to your dashboard.`
                 ) : (
@@ -69,10 +69,11 @@ export const Dashboard = (): JSX.Element => {
                 )}
             </div>
             {user && (
-                <div className="flex flex-wrap gap-2 justify-between">
-                    <p className="welcome-message">{uid}</p>
+                <div className="flex-1 flex-wrap gap-2 justify-between">
+                    <p>Coming Soon</p>
+                    <p>Stay tuned!</p>
                 </div>
             )}
         </div>
-    );
+    ); 
 };

@@ -8,7 +8,7 @@ export const Header = (): JSX.Element => {
       </div>
       <div className="text-5xl lg:text-9xl md:text-7xl font-mono">Cap X</div>
       <div className="text-2xl font-mono">
-        Personalized gamified trading platform!
+        Trading made simple and smarter
       </div>
     </div>
   );

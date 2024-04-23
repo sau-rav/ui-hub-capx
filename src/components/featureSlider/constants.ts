@@ -12,28 +12,28 @@ export const FEATURES = [
     id: "2",
     title: "Knowledge Gap",
     description:
-      "Daily Indian traders suffer losses due to lack of guidance and self-control",
+      "~60% of traders can't explain terms like Demat, mutual funds or understand how Nifty works",
     image: "feature2" as keyof ImageMap,
   },
   {
     id: "3",
     title: "Money Issues",
     description:
-      "Daily Indian traders suffer losses due to lack of guidance and self-control",
+      "Traders beliveve they need lots of money to start rather than learning how to trade smartly",
     image: "feature3" as keyof ImageMap,
   },
   {
     id: "4",
     title: "Information overload",
     description:
-      "Daily Indian traders suffer losses due to lack of guidance and self-control",
+      "Too much information but not knowing which source to trust",
     image: "feature4" as keyof ImageMap,
   },
   {
     id: "5",
     title: "Time issue",
     description:
-      "Daily Indian traders suffer losses due to lack of guidance and self-control",
+      "Traders make rash decision or quit the market altogether due to lack of time",
     image: "feature5" as keyof ImageMap,
   },
 ];

@@ -1,9 +1,9 @@
 export const NEW_FEATURES = [
   {
     id: "1",
-    title: "Turn your 1,000 into 1,00,000",
+    title: "Learn how to trade more with less",
     description:
-      "There are various online tools and generators available that can provide you with the desired amount of placeholder text for your design projects.",
+      "You don't need lots of money to make money. We will help you make lots of money from money. Not the other way round",
     src: "flip1",
     size: 100,
     className: "absolute [bottom:0px] [right:10px] z-0",
@@ -13,7 +13,7 @@ export const NEW_FEATURES = [
     id: "2",
     title: "Turn profitable",
     description:
-      "There are various online tools and generators available that can provide you with the desired amount of placeholder text for your design projects.",
+      "Profitability is just some good habits away. We will curb all your bad habits and help you make better decisions",
 
     src: "flip2",
     size: 200,
@@ -22,9 +22,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "3",
-    title: "Trade while you brush",
+    title: "Trade daily in just 5 mins",
     description:
-      "There are various online tools and generators available that can provide you with the desired amount of placeholder text for your design projects.",
+      "Get summarised trustworthy data in just the format you want, to help you make fast and accurate decisions",
     src: "flip3",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
@@ -32,9 +32,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "4",
-    title: "Teach even your cat how to trade",
+    title: "Become an expert as you trade",
     description:
-      "There are various online tools and generators available that can provide you with the desired amount of placeholder text for your design projects.",
+      "No need to know everything as you start. We will teach you on need to know basis and make you and expert along the way",
     size: 200,
     src: "flip4",
     className: "absolute [bottom:20px] [right:10px] z-0",
@@ -42,9 +42,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "5",
-    title: "And much more",
+    title: "And much more...",
     description:
-      "There are various online tools and generators available that can provide you with the desired amount of placeholder text for your design projects.",
+      "Many more features that will change how you trade and help you become a better trader",
     src: "flip5",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",

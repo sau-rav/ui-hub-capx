@@ -2,31 +2,30 @@ export const RingBackdrop = (): JSX.Element => {
   return (
     <div
       className="overflow-hidden px-4 relative flex justify-center items-center text-white"
-      style={{ height: "738px" }}
+      style={{ height: "55vw" }}
     >
       <div
-        className="rounded-full border-2 p-4 flex items-center justify-center"
-        style={{ height: "100vw", width: "100vw" }}
+        className="rounded-full border-2 p-4 flex items-center justify-center overflow-hidden"
+        style={{ height: "90vw", width: "90vw" }}
       >
         <div
           className="rounded-full border-2 flex items-center justify-center relative"
-          style={{ height: "70vw", width: "70vw" }}
+          style={{ height: "65vw", width: "65vw" }}
         >
-          {/* <div
-            className="absolute w-32 h-32 bg-[#FFC34E] rounded-full"
-            style={{ left: "-64px" }}
-          ></div>
           <div
-            className="absolute w-44 h-44 bg-[#89641B] rounded-full"
-            style={{ right: "-88px" }}
-            class="circle"
-          ></div> */}
-          <div
-            className="rounded-full border-2 flex items-center justify-center text-center"
+            className="rounded-full border-2 flex items-center justify-center text-center flex-col"
             style={{ height: "40vw", width: "40vw" }}
           >
-            Be one of the first 2500 traders to test beta! Our public wait list
-            is launching soon!
+            <div className="rounded-full flex items-center justify-center text-center flex-col"
+            style={{ height: "20vw", width: "20vw" }}
+            >
+            <div className="mb-4" style={{ fontSize: "1.6vw"}}>
+              <p>Be one of the first 2500 traders to test beta! Our public wait list is launching soon!</p>
+            </div>
+            <div className="mt-4" style={{ fontSize: "1.4vw", color: "gray"}}>
+              <p>200+ traders have already signed up. Want to skip the public waitlist too? Then sign up now!</p>
+            </div>
+            </div>
           </div>
         </div>
       </div>

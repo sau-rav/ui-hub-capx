@@ -35,6 +35,11 @@ export const NavBar = (): JSX.Element => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const getFirstName = (displayName: string): string => {
+    const names = displayName.split(" ");
+    return names[0];
+  };
+
   const handleJoinWaitlist = () => {
     router.push("/join-waitlist");
   };
@@ -62,7 +67,7 @@ export const NavBar = (): JSX.Element => {
       </div>
       {user ? (
         <>
-          <div className="text-white mr-2 lg:mr-4">{user.displayName}</div>
+          <div className="text-white mr-2 lg:mr-4 lg:text-xl text-s md:text-xl">{getFirstName(user.displayName)}</div>
           <Button
             onClick={handleLogout}
             kind={KIND.secondary}
@@ -85,3 +90,4 @@ export const NavBar = (): JSX.Element => {
     </div>
   );
 };
+

@@ -8,7 +8,7 @@ import { NEW_FEATURES } from "./constants";
 export const NewFeatureCards = (): JSX.Element => {
   return (
     <div className="p-4 lg:p-32 flex flex-col bg-black gap-8">
-      <div className="flex-1 text-white text-5xl lg:text-9xl md:text-7xl font-bold flex justify-center">
+      <div className="flex-1 text-white text-5xl lg:text-9xl md:text-7xl font-bold flex text-center justify-center">
         CapX will help you
       </div>
       <div>

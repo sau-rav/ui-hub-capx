@@ -2,7 +2,7 @@ export const RingBackdrop = (): JSX.Element => {
   return (
     <div
       className="overflow-hidden px-4 relative flex justify-center items-center text-white"
-      style={{ height: "55vw" }}
+      style={{ height: "60vw" }}
     >
       <div
         className="rounded-full border-2 p-4 flex items-center justify-center overflow-hidden"
@@ -19,10 +19,10 @@ export const RingBackdrop = (): JSX.Element => {
             <div className="rounded-full flex items-center justify-center text-center flex-col"
             style={{ height: "20vw", width: "20vw" }}
             >
-            <div className="mb-4" style={{ fontSize: "1.6vw"}}>
+            <div style={{ fontSize: "1.9vw"}}>
               <p>Be one of the first 2500 traders to test beta! Our public wait list is launching soon!</p>
             </div>
-            <div className="mt-4" style={{ fontSize: "1.4vw", color: "gray"}}>
+            <div className="mt-2" style={{ fontSize: "1.7vw", color: "gray"}}>
               <p>200+ traders have already signed up. Want to skip the public waitlist too? Then sign up now!</p>
             </div>
             </div>

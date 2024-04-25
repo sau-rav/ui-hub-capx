@@ -54,7 +54,7 @@ export const Dashboard = (): JSX.Element => {
     }
 
     return (
-        <div className="flex flex-col h-screen bg-black text-white p-16">
+        <div className="flex flex-col h-screen bg-black text-white p-20 ml-20">
             <div className="flex-1 text-xl font-bold">
                 {user ? (
                     `Hi ${user.displayName}. Welcome to your dashboard.`

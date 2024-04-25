@@ -29,6 +29,7 @@ export const FlipCard = ({
   className?: string;
   background: string;
 }): JSX.Element => {
+  const backgroundColor = `from-${background}-700`
   return (
     <div className="group w-full h-full [perspective:1000px]">
       <div className="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] p-4">
@@ -48,7 +49,7 @@ export const FlipCard = ({
                 />
               </div>
             ) : null}
-            <h1 className="text-2xl lg:text-4xl md:text-3xl font-bold z-10">
+            <h1 className="text-2xl lg:text-3xl md:text-2xl font-bold z-10">
               {title}
             </h1>
           </div>

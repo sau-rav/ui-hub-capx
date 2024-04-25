@@ -7,7 +7,7 @@ export const NEW_FEATURES = [
     src: "flip1",
     size: 100,
     className: "absolute [bottom:0px] [right:10px] z-0",
-    background: "green-600",
+    background: "green",
   },
   {
     id: "2",
@@ -18,7 +18,7 @@ export const NEW_FEATURES = [
     src: "flip2",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
-    background: "pink-600",
+    background: "pink",
   },
   {
     id: "3",
@@ -28,7 +28,7 @@ export const NEW_FEATURES = [
     src: "flip3",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
-    background: "orange-600",
+    background: "indigo",
   },
   {
     id: "4",
@@ -38,7 +38,7 @@ export const NEW_FEATURES = [
     size: 200,
     src: "flip4",
     className: "absolute [bottom:20px] [right:10px] z-0",
-    background: "yellow-600",
+    background: "yellow",
   },
   {
     id: "5",
@@ -48,6 +48,6 @@ export const NEW_FEATURES = [
     src: "flip5",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
-    background: "purple-600",
+    background: "orange",
   },
 ];

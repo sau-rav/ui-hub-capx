@@ -7,6 +7,7 @@ export const FEATURES = [
     description:
       "Daily Indian traders suffer losses due to lack of guidance and self-control",
     image: "feature1" as keyof ImageMap,
+    width: 60,
   },
   {
     id: "2",

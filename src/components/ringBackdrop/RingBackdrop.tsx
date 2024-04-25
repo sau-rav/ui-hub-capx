@@ -19,7 +19,7 @@ export const RingBackdrop = (): JSX.Element => {
             <div className="rounded-full flex items-center justify-center text-center flex-col"
             style={{ height: "20vw", width: "20vw" }}
             >
-            <div style={{ fontSize: "1.9vw"}}>
+            <div style={{ fontSize: "2vw"}}>
               <p>Be one of the first 2500 traders to test beta! Our public wait list is launching soon!</p>
             </div>
             <div className="mt-2" style={{ fontSize: "1.7vw", color: "gray"}}>

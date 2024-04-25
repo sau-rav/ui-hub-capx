@@ -19,7 +19,7 @@ export type ImageMap = {
 };
 
 const CONTAINER_CLASS_NAME =
-  "flex flex-col gap-8 p-8 w-full h-full border-2 rounded-lg border-slate-400";
+  "flex flex-col gap-10 p-8 w-full h-full border-2 rounded-lg border-slate-400";
 
 // Assign the correct types to SRC_TO_IMAGE
 const SRC_TO_IMAGE: ImageMap = {
@@ -37,7 +37,7 @@ export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boo
         className={
           visible
             ? "flex text-white w-full border-2 border-transparent flex-none rounded h-100 lg:h-104 md:h-102"
-            : "flex text-white w-full border-2 border-transparent flex-none rounded h-98 lg:h-96 md:h-90"
+            : "flex text-white w-full border-2 border-transparent flex-none rounded h-100 lg:h-104 md:h-102"
         }
         ref={ref}
       >
@@ -45,8 +45,8 @@ export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boo
           <div
             className={
               visible
-                ? "text-2xl lg:text-4xl md:text-3xl"
-                : "text-xl lg:text-2xl md:text-base"
+                ? "text-2xl lg:text-4xl md:text-3xl font-bold" // Changed to font-bold
+                : "text-2xl lg:text-4xl md:text-3xl font-bold" // Changed to font-bold
             }
           >
             {card.title}
@@ -54,20 +54,18 @@ export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boo
           <div
             className={
               visible
-                ? "text-xl lg:text-3xl md:text-xl"
-                : "text-base lg:text-2xl md:text-xl"
+                ? "text-xl lg:text-3xl md:text-xl italic text-gray" // Changed to italic and text-gray
+                : "text-xl lg:text-3xl md:text-xl italic text-gray" // Changed to italic and text-gray
             }
           >
             {card.description}
           </div>
 
-          <div className="flex-1 flex w-full items-end justify-center h-56">
+          <div className="flex-1 flex w-full items-end justify-center">
             <Image
               src={SRC_TO_IMAGE[card.image]}
               alt={`Flip Image`}
-              className="bg-content"
-              width={200}
-              height={200}
+              className="bg-content w-40 lg:w-60 md:w-50"
             />
           </div>
         </div>
@@ -75,4 +73,3 @@ export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boo
     );
   }
 );
-

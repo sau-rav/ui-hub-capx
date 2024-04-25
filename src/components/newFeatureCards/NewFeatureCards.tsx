@@ -4,12 +4,19 @@ import { FlipCard } from "./components/FlipCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NEW_FEATURES } from "./constants";
+import Image from "next/image";
+import logo from "../../../public/logo.png";
 
 export const NewFeatureCards = (): JSX.Element => {
   return (
-    <div className="p-4 lg:p-32 flex flex-col bg-black gap-8">
-      <div className="flex-1 text-white text-5xl lg:text-9xl md:text-7xl font-bold flex text-center justify-center">
-        CapX will help you
+    <div className="p-4 py-18 lg:p-32 flex flex-col bg-black gap-8">
+      <div className="flex-1 flex justify-center items-center mt-20 md:mt-15 text-center text-white">
+        <div className="w-72 h-24"> {/* Adjust width using Tailwind CSS classes */}
+          <Image src={logo} alt="Cap X" />
+        </div>
+      </div>
+      <div className="flex-1 text-white mb-4 text-3xl lg:text-4xl md:text-4xl flex text-center justify-center">
+        will help you
       </div>
       <div>
         <Slider

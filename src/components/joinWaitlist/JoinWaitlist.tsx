@@ -4,6 +4,7 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../../config/firebase";
 import { useRouter, NextRouter } from "next/router";
 import { Button, KIND, SIZE } from "baseui/button";
+import logo from "../../../public/logo.png";
 
 export const JoinWaitlist = (): JSX.Element => {
   const router: NextRouter = useRouter();
@@ -35,16 +36,16 @@ export const JoinWaitlist = (): JSX.Element => {
 
   return (
     <div className="flex flex-col h-screen bg-black text-white">
-      <div className="flex items-center justify-between py-2 px-6 lg:px-36">
-        <div className="flex items-center gap-2 text-3xl lg:text-5xl font-bold" style={{ color: "#EDAF36" }}>
-          Cap X
-        </div>
+      <div className="flex items-center justify-between py-2 px-6 lg:px-36 mb-20">
+        <div className="flex items-center gap-2 text-white">
+          <img src={logo.src} alt="Cap X" className="h-10 lg:h-12 xl:h-14" />
+        </div> 
       </div>
-      <div className="flex-grow flex flex-col justify-center items-center text-left">
-        <div className="text-2xl font-mono max-w-xl px-8" style={{ marginTop: "-80px"}}>
+      <div className="flex-grow flex flex-col items-center text-left">
+        <div className="text-2xl font-mono max-w-xl px-8 mt-10">
           Don't worry, we won't handle your money in beta, we will only provide you tools to improve your experience and trading journey. You will trade via your current brokers like Zerodha, Groww.
         </div>
-        <div className="mt-8 mb-4 text-4xl font-bold" style={{ color: "#EDAF36", marginTop: "100px" }}>Join Now</div>
+        <div className="mt-8 mb-4 text-4xl font-bold" style={{ color: "#EDAF36", marginTop: "100px", marginBottom: "40px" }}>Join Now</div>
         <Button
           onClick={signInWithGoogle}
           kind={KIND.secondary}

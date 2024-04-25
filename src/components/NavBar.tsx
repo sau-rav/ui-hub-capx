@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Button, KIND, SIZE } from "baseui/button";
+import { Button, KIND } from "baseui/button";
 import { useRouter } from "next/router";
 import { auth } from "../config/firebase"; // Assuming you have a custom hook to manage authentication
 import { signOut } from "firebase/auth";
 
+// Import your logo image
+import logo from "../../public/logo.png";
+
 export const NavBar = (): JSX.Element => {
   const router = useRouter();
-  const [user, setUser] = useState<any>(null); // Custom hook to manage authentication
+  const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [buttonSize, setButtonSize] = useState<"compact" | "mini" | undefined>(
     undefined
@@ -46,7 +49,7 @@ export const NavBar = (): JSX.Element => {
 
   const handleLogout = async () => {
     try {
-      await signOut(auth); // Use signOut function from firebase/auth
+      await signOut(auth);
       router.push("/");
     } catch (error) {
       console.error("Error logging out:", error);
@@ -59,35 +62,32 @@ export const NavBar = (): JSX.Element => {
 
   return (
     <div className="flex flex-wrap items-center py-2 px-6 lg:px-36 bg-black">
-      <div
-        className="flex-1 flex items-center gap-2 text-white text-3xl lg:text-5xl font-bold"
-        style={{ color: "#EDAF36" }}
-      >
-        Cap X
+      <div className="flex items-center gap-2 text-white">
+        <img src={logo.src} alt="Cap X" className="h-10 lg:h-12 xl:h-14" />
       </div>
-      {user ? (
-        <>
-          <div className="text-white mr-2 lg:mr-4 lg:text-xl text-s md:text-xl">{getFirstName(user.displayName)}</div>
+      <div className="flex-1 text-right"> {/* Adjust alignment here */}
+        {user ? (
+          <>
+            <Button
+              onClick={handleLogout}
+              kind={KIND.secondary}
+              size={buttonSize}
+              style={{ backgroundColor: "#EDAF36" }}
+            >
+              Logout
+            </Button>
+          </>
+        ) : (
           <Button
-            onClick={handleLogout}
+            onClick={handleJoinWaitlist}
             kind={KIND.secondary}
             size={buttonSize}
             style={{ backgroundColor: "#EDAF36" }}
           >
-            Logout
+            Join Waitlist
           </Button>
-        </>
-      ) : (
-        <Button
-          onClick={handleJoinWaitlist}
-          kind={KIND.secondary}
-          size={buttonSize}
-          style={{ backgroundColor: "#EDAF36" }}
-        >
-          Join Waitlist
-        </Button>
-      )}
+        )}
+      </div>
     </div>
   );
 };
-

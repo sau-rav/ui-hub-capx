@@ -36,8 +36,8 @@ export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boo
       <div
         className={
           visible
-            ? "flex text-white w-full border-2 border-transparent flex-none rounded h-100 lg:h-104 md:h-102"
-            : "flex text-white w-full border-2 border-transparent flex-none rounded h-100 lg:h-104 md:h-102"
+          ? "flex text-white w-full border-2 border-transparent flex-none rounded h-100 lg:h-104 md:h-102"
+          : "flex text-white w-full border-2 border-transparent flex-none rounded h-98 lg:h-96 md:h-90"
         }
         ref={ref}
       >
@@ -45,8 +45,8 @@ export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boo
           <div
             className={
               visible
-                ? "text-2xl lg:text-4xl md:text-3xl font-bold" // Changed to font-bold
-                : "text-2xl lg:text-4xl md:text-3xl font-bold" // Changed to font-bold
+              ? "text-2xl lg:text-4xl md:text-3xl font-bold"
+              : "text-xl lg:text-2xl md:text-base font-bold"
             }
           >
             {card.title}
@@ -55,7 +55,7 @@ export const Card = forwardRef<HTMLDivElement, { card: FeatureCard; visible: boo
             className={
               visible
                 ? "text-xl lg:text-3xl md:text-xl italic text-gray" // Changed to italic and text-gray
-                : "text-xl lg:text-3xl md:text-xl italic text-gray" // Changed to italic and text-gray
+                : "text-base lg:text-2xl md:text-xl italic text-gray" // Changed to italic and text-gray
             }
           >
             {card.description}

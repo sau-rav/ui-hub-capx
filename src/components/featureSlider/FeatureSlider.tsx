@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Slider from "react-slick";
+import { createUseStyles } from "react-jss";
 
 import { Card } from "./components/Card";
 
@@ -8,15 +9,27 @@ import { FEATURES } from "./constants";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const useStyles = createUseStyles({
+  sliderContainer: {
+    "& .slick-track": {
+      marginTop: "100px",
+      display: "flex",
+      // flexDirection: "row",
+      alignItems: "center",
+    },
+  },
+});
+
 export const FeatureSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const className = useStyles();
 
   const settings = {
-    className: "center",
+    className,
     centerMode: true,
     infinite: true,
-    centerPadding: "200px",
-    slidesToShow: 1,
+    centerPadding: "60px",
+    slidesToShow: 3,
     speed: 500,
     swipeToSlide: true,
     dots: true,
@@ -25,13 +38,14 @@ export const FeatureSlider = () => {
       {
         breakpoint: 1200,
         settings: {
-          centerPadding: "100px",
+          centerPadding: "40px",
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 720,
         settings: {
           centerPadding: "0px",
+          slidesToShow: 1,
         },
       },
     ],

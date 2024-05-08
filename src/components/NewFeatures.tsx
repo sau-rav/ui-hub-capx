@@ -17,11 +17,12 @@ export const NewFeatures = (): JSX.Element => {
       }}
     >
       <div className="mb-4 lg:mb-6 md:mb-5 mt-4 w-72 h-24 flex justify-center items-center">
-        {/* Adjust width and height using Tailwind CSS classes */}
         <Image src={logo} alt="Cap X" />
       </div>
-      <div className="text-xl lg:text-3xl md:text-2xl font-montserrat w-full px-20 pt-20 text-center">
-        {/* Added text-center class */}
+      <div
+        className="text-2xl lg:text-6xl md:text-4xl font-montserrat w-full pt-20 px-10 flex justify-center lg:w-1/2 md:w-3/4"
+        style={{ lineHeight: 1.25 }}
+      >
         {DESCRIPTION}
       </div>
     </div>

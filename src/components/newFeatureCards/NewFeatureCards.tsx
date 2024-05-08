@@ -14,7 +14,7 @@ export const NewFeatureCards = (): JSX.Element => {
         CapX will help you
       </div>
 
-      <div>
+      <div className="px-20">
         <Slider
           infinite={true}
           centerPadding="48px"
@@ -42,7 +42,7 @@ export const NewFeatureCards = (): JSX.Element => {
           ]}
         >
           {NEW_FEATURES.map((item, index) => (
-            <div key={item.id} className="h-96 lg:w-36 md:w-56 w-full p-4">
+            <div key={item.id} className="h-104 lg:w-72 md:w-56 w-full p-4">
               <FlipCard {...item} />
             </div>
           ))}

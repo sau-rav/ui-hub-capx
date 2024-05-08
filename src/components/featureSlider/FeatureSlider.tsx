@@ -25,12 +25,6 @@ export const FeatureSlider = () => {
         breakpoint: 1200,
         settings: {
           centerPadding: "40px",
-        },
-      },
-      {
-        breakpoint: 720,
-        settings: {
-          centerPadding: "0px",
           slidesToShow: 1,
         },
       },

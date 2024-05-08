@@ -1,10 +1,11 @@
 export const NEW_FEATURES = [
   {
     id: "1",
-    title: "Learn how to trade more with less",
+    title: "Get started faster",
     description:
-      "You don't need lots of money to make money. We will help you make lots of money from money. Not the other way round",
-    src: "flip1",
+      "Get all the help you need to get started in one place and build wealth in a reliable manner",
+    src: "rocket",
+    flipImage: "rocket_back",
     size: 100,
     className: "absolute [bottom:0px] [right:10px] z-0",
     background: "green",
@@ -15,7 +16,8 @@ export const NEW_FEATURES = [
     description:
       "Profitability is just some good habits away. We will curb all your bad habits and help you make better decisions",
 
-    src: "flip2",
+    flipImage: "gold_back",
+    src: "gold",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "pink",
@@ -24,8 +26,9 @@ export const NEW_FEATURES = [
     id: "3",
     title: "Trade daily in just 5 mins",
     description:
-      "Get summarised trustworthy data in just the format you want, to help you make fast and accurate decisions",
-    src: "flip3",
+      "Make faster decisions with our summarized information/data in just the format you want",
+    flipImage: "brush_back",
+    src: "brush",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "indigo",
@@ -34,9 +37,10 @@ export const NEW_FEATURES = [
     id: "4",
     title: "Become an expert as you trade",
     description:
-      "No need to know everything as you start. We will teach you on need to know basis and make you and expert along the way",
+      "Let us help you become an expert while you trade on the live markets; no previous training required ",
     size: 200,
-    src: "flip4",
+    flipImage: "cat_back",
+    src: "cat",
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "yellow",
   },
@@ -44,8 +48,9 @@ export const NEW_FEATURES = [
     id: "5",
     title: "And much more...",
     description:
-      "Many more features that will change how you trade and help you become a better trader",
-    src: "flip5",
+      "Many more features that will improve your trading experience and help you become a better trader",
+    flipImage: "gift_back",
+    src: "gift",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "orange",

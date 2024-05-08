@@ -29,10 +29,10 @@ export const FlipCard = ({
   className?: string;
   background: string;
 }): JSX.Element => {
-  const backgroundColor = `from-${background}-700`
+  const backgroundColor = `from-${background}-700`;
   return (
     <div className="group w-full h-full [perspective:1000px]">
-      <div className="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] p-4">
+      <div className="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] [backface-visibility:hidden] p-4">
         <div className="absolute inset-0 text-4xl text-slate-200 backface-hidden rounded-xl border">
           <div
             className={`flex min-h-full flex-col items-start justify-start p-10 relative bg-gradient-to-t from-green-700 via-black to-black rounded-xl`}

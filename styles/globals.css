@@ -9,8 +9,7 @@
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
   }
 
-.slider :global .slick-track {
-  display: 'flex !important';
-  align-items: 'flex-end !important';
-
+.slick-track {
+  display: flex !important;
+  align-items: flex-end !important;
 }

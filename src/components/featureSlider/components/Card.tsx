@@ -18,8 +18,8 @@ export const Card = forwardRef<
     <div
       className={
         visible
-          ? "flex text-white w-full border-2 border-transparent flex-none rounded h-full lg:h-104 md:h-102 "
-          : "flex text-white w-full border-2 border-transparent flex-none rounded h-5/6 lg:h-100 md:h-90 "
+          ? "flex text-white w-full border-2 border-transparent flex-none rounded h-full lg:h-106 md:h-104 "
+          : "flex text-white w-full border-2 border-transparent flex-none rounded h-5/6 lg:h-104 md:h-102 "
       }
       ref={ref}
     >
@@ -27,8 +27,8 @@ export const Card = forwardRef<
         <div
           className={
             visible
-              ? "text-2xl lg:text-4xl md:text-3xl font-bold"
-              : "text-xl lg:text-2xl md:text-base font-bold"
+              ? "text-xl lg:text-3xl md:text-2xl font-bold"
+              : "text-lg lg:text-2xl md:text-xl font-bold"
           }
         >
           {card.title}
@@ -36,8 +36,8 @@ export const Card = forwardRef<
         <div
           className={
             visible
-              ? "text-xl lg:text-3xl md:text-xl italic text-gray" // Changed to italic and text-gray
-              : "text-base lg:text-2xl md:text-xl italic text-gray" // Changed to italic and text-gray
+              ? "text-lg lg:text-2xl md:text-xl italic text-slate-300" // Changed to italic and text-slate-300
+              : "text-base lg:text-xl md:text-lg italic text-slate-300" // Changed to italic and text-slate-300
           }
         >
           {card.description}

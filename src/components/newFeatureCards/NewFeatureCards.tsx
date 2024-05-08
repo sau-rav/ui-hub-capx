@@ -10,14 +10,10 @@ import logo from "../../../public/logo.png";
 export const NewFeatureCards = (): JSX.Element => {
   return (
     <div className="p-4 py-18 lg:p-32 flex flex-col bg-black gap-8">
-      <div className="flex-1 flex justify-center items-center mt-20 md:mt-15 text-center text-white">
-        <div className="w-72 h-24"> {/* Adjust width using Tailwind CSS classes */}
-          <Image src={logo} alt="Cap X" />
-        </div>
+      <div className="text-white justify-center italic flex gap-8 text-4xl lg:text-8xl md:text-6xl font-montserrat">
+        CapX will help you
       </div>
-      <div className="flex-1 text-white mb-4 text-3xl lg:text-4xl md:text-4xl flex text-center justify-center">
-        will help you
-      </div>
+
       <div>
         <Slider
           infinite={true}

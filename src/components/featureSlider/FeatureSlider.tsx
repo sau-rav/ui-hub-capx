@@ -38,7 +38,11 @@ export const FeatureSlider = () => {
   };
   return (
     <div className="flex flex-col justify-center text-white items-center gap-16 lg:py-48 py-12 md:py-24 font-montserrat">
-      <div className="text-3xl lg:text-4xl md:text-4xl"> SAY GOODBYE TO</div>
+      <div className="flex gap-8 text-3xl lg:text-4xl md:text-4xl font-montserrat">
+        <div>S A Y</div>
+        <div>G O O D B Y E</div>
+        <div>T O</div>
+      </div>
       <div className="w-3/4 slider-container ">
         <Slider {...settings}>
           {FEATURES.map((item, index) => (

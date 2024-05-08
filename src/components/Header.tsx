@@ -12,17 +12,18 @@ export const Header = (): JSX.Element => {
         backgroundPosition: "center",
       }}
     >
-      <div className="text-2xl lg:text-3xl md:text-3xl font-montserrat mb-4 lg:mb-6 md:mb-5">
-        INTRODUCING
+      <div className="text-2xl lg:text-5xl md:text-3xl font-montserrat mb-4 lg:mb-6 md:mb-5">
+        I N T R O D U C I N G
       </div>
+
       <div className="mb-4 lg:mb-6 md:mb-5">
         <Image
           src={capXLogo}
           alt="Cap X"
-          className="w-61" // Adjust width using Tailwind CSS classes
+          className="w-72" // Adjust width using Tailwind CSS classes
         />
       </div>
-      <div className="text-s lg:text-xl font-montserrat">
+      <div className="text-s lg:text-3xl font-montserrat">
         Trading made simple and smarter
       </div>
     </div>

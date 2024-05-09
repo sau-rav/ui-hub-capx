@@ -2,9 +2,7 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 
 const DESCRIPTION =
-  "We are bringing the tools of top traders to the masses while making then simple and personalized so that trading becomes more \
-  accessible for everyone. We offer real-time risk management tools, fast research capabilities, simple backtesting capabilities, \
-  personalized learning, simplified insights, and much more";
+  "We leverage AI to democratize top traders' tools for the masses in a personalized and easy-to-use way, making trading an accessible and reliable source of income for all Indians. Our platform offers smart real-time risk management, swift research, easy backtesting capabilities, personalized learning, and more.";
 
 export const NewFeatures = (): JSX.Element => {
   return (

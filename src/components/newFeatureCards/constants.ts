@@ -50,7 +50,7 @@ export const NEW_FEATURES = [
     description:
       "Many more features that will improve your trading experience and help you become a better trader",
     flipImage: "gift_back",
-    src: "gift",
+    src: "gift1",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "orange",

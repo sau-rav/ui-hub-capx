@@ -9,28 +9,28 @@ export const FEATURES = [
   },
   {
     id: "2",
-    title: "Knowledge Gap",
+    title: "Knowledge gap",
     description:
       "Over 60% of traders can’t explain terms like mutual funds, or understand how Nifty works",
     image: "feature_2",
   },
   {
     id: "3",
-    title: "Getting Started",
+    title: "Fear of starting",
     description:
-      "The absence of a clear, simple learning path has kept many Indians away from the trading",
+      "The absence of a clear, structured learning path has kept many Indians away from trading",
     image: "feature_3",
   },
   {
     id: "4",
-    title: "Information overload",
+    title: "Market Noise",
     description:
       "Too much noise in the market distracts traders from the correct information",
     image: "feature_4",
   },
   {
     id: "5",
-    title: "Time issue",
+    title: "Lack of time",
     description:
       "Traders make rash decisions or quit the market due to lack of time",
     image: "feature_5",

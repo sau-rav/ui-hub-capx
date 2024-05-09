@@ -61,7 +61,7 @@ export const Dashboard = (): JSX.Element => {
     <div className="flex flex-col h-screen bg-black text-white p-20 ml-20 justify-center">
       <div className="flex-none text-xl font-bold flex justify-center">
         {user ? (
-          `Hi ${user.displayName}. Welcome to your CapX.`
+          `Hi ${user.displayName}. Welcome to CapX.`
         ) : (
           <p className="login-message">
             No user is logged in. Please proceed to{" "}

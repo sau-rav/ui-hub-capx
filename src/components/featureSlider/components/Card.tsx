@@ -21,6 +21,11 @@ export const Card = forwardRef<
           ? "flex text-white w-full border-2 border-transparent flex-none rounded h-full lg:h-106 md:h-104 "
           : "flex text-white w-full border-2 border-transparent flex-none rounded h-5/6 lg:h-104 md:h-102 "
       }
+      style={{
+        backgroundImage: `url(${imageSrc})`,
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+      }}
       ref={ref}
     >
       <div className={CONTAINER_CLASS_NAME}>
@@ -42,15 +47,6 @@ export const Card = forwardRef<
         >
           {card.description}
         </div>
-
-        <div
-          className={`flex-1 flex w-full items-end justify-center`}
-          style={{
-            backgroundImage: `url(${imageSrc})`,
-            backgroundSize: "cover",
-            backgroundPosition: "top",
-          }}
-        ></div>
       </div>
     </div>
   );

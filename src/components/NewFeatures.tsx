@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../public/logo.png"; // Import your logo image
+import logo from "../../public/logo.png";
 
 const DESCRIPTION =
   "We are bringing the tools of top traders to the masses while making then simple and personalized so that trading becomes more \
@@ -16,9 +16,7 @@ export const NewFeatures = (): JSX.Element => {
         backgroundPosition: "center",
       }}
     >
-      <div className="mb-4 lg:mb-6 md:mb-5 mt-4 w-72 h-24 flex justify-center items-center">
-        <Image src={logo} alt="Cap X" />
-      </div>
+      <Image src={logo} alt="Cap X" width={300} />
       <div
         className="text-2xl lg:text-6xl md:text-4xl font-montserrat w-full pt-20 px-10 flex justify-center lg:w-1/2 md:w-3/4"
         style={{ lineHeight: 1.25 }}

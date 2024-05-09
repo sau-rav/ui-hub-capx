@@ -2,9 +2,6 @@ export const FlipCard = ({
   title,
   description,
   src,
-  size,
-  className,
-  background,
   flipImage,
 }: {
   title: string;

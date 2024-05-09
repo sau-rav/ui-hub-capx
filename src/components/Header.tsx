@@ -17,11 +17,7 @@ export const Header = (): JSX.Element => {
       </div>
 
       <div className="lg:mb-6 md:mb-5">
-        <Image
-          src={capXLogo}
-          alt="Cap X"
-          className="w-72" // Adjust width using Tailwind CSS classes
-        />
+        <Image src={capXLogo} alt="Cap X" width={300} />
       </div>
       <div className="text-s lg:text-3xl font-montserrat">
         Trading made simple and smarter

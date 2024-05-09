@@ -3,7 +3,7 @@ export const NEW_FEATURES = [
     id: "1",
     title: "Get started faster",
     description:
-      "Get all the help you need to get started in one place and build wealth in a reliable manner",
+      "Get personalized guidance as you trade on our platform making it easier for you to start and become a professional trader",
     src: "rocket",
     flipImage: "Rocket_back",
     size: 100,
@@ -12,9 +12,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "2",
-    title: "Turn profitable",
+    title: "Move towards profitability",
     description:
-      "Profitability is just some good habits away. We will curb all your bad habits and help you make better decisions",
+      "Use the best trading tools in the market to make better trades and take your first steps toward long-term profitability",
 
     flipImage: "Gold_back",
     src: "Gold",
@@ -24,9 +24,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "3",
-    title: "Trade daily in just 5 mins",
+    title: "Trade faster and smarter",
     description:
-      "Make faster decisions with our summarized information/data in just the format you want",
+      "Our smart research and backtesting tools provide fast summarized information to help you make faster trading decisions",
     flipImage: "Brush_back",
     src: "Brush",
     size: 200,
@@ -35,9 +35,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "4",
-    title: "Become an expert as you trade",
+    title: "Understand the market better",
     description:
-      "Let us help you become an expert while you trade on the live markets; no previous training required ",
+      "Learn what you need and when you need it in the format that suits you the best; no need to learn everything before you start",
     size: 200,
     flipImage: "Cat_back",
     src: "Cat",
@@ -46,9 +46,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "5",
-    title: "And much more...",
+    title: "Do so much more",
     description:
-      "Many more features that will improve your trading experience and help you become a better trader",
+      "Many more features that will not only improve your trading journey but also make you a better trader",
     flipImage: "Gift_back",
     src: "Gift1",
     size: 200,

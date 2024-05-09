@@ -18,8 +18,8 @@ export const Card = forwardRef<
     <div
       className={
         visible
-          ? "flex text-white w-full border-2 border-transparent flex-none rounded h-full lg:h-106 md:h-104 "
-          : "flex text-white w-full border-2 border-transparent flex-none rounded h-5/6 lg:h-104 md:h-102 "
+          ? "flex text-white w-full border-2 border-transparent flex-none rounded h-100 lg:h-106 md:h-104"
+          : "flex text-white w-full border-2 border-transparent flex-none rounded h-98 lg:h-104 md:h-102"
       }
       style={{
         backgroundImage: `url(${imageSrc})`,

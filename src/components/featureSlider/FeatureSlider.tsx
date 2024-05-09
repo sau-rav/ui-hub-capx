@@ -56,6 +56,20 @@ export const FeatureSlider = () => {
           slidesToShow: 1,
         },
       },
+      {
+        breakpoint: 640,
+        settings: {
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: "8px",
+          slidesToShow: 1,
+        },
+      },
     ],
   };
   return (

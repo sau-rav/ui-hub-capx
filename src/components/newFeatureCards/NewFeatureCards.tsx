@@ -9,16 +9,12 @@ import logo from "../../../public/logo.png";
 
 export const NewFeatureCards = (): JSX.Element => {
   return (
-    <div className="p-4 py-18 lg:p-32 flex flex-col bg-black gap-8">
-      <div className="flex-1 flex justify-center items-center mt-20 md:mt-15 text-center text-white">
-        <div className="w-72 h-24"> {/* Adjust width using Tailwind CSS classes */}
-          <Image src={logo} alt="Cap X" />
-        </div>
+    <div className="p-4 lg:py-48 py-12 md:py-24 lg:px-32 flex flex-col bg-black gap-8">
+      <div className="text-white justify-center italic flex gap-8 text-4xl lg:text-8xl md:text-6xl font-montserrat">
+        CapX will help you
       </div>
-      <div className="flex-1 text-white mb-4 text-3xl lg:text-4xl md:text-4xl flex text-center justify-center">
-        will help you
-      </div>
-      <div>
+
+      <div className="px-8">
         <Slider
           infinite={true}
           centerPadding="48px"
@@ -46,7 +42,7 @@ export const NewFeatureCards = (): JSX.Element => {
           ]}
         >
           {NEW_FEATURES.map((item, index) => (
-            <div key={item.id} className="h-96 lg:w-36 md:w-56 w-full p-4">
+            <div key={item.id} className="h-104 lg:w-72 md:w-56 w-full p-4">
               <FlipCard {...item} />
             </div>
           ))}

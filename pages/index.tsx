@@ -14,8 +14,8 @@ import { Footer } from "../src/components/Footer";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-black">
-      <NavBar/>
+    <div className="bg-black font-montserrat">
+      <NavBar />
       <Header />
       {/* <Divider /> */}
       <FeatureSlider />

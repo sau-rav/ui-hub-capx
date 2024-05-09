@@ -18,6 +18,7 @@ module.exports = {
         100: "30rem",
         102: "32rem",
         104: "34rem",
+        106: "36rem",
       },
     },
     fontFamily: {

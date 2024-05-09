@@ -5,7 +5,7 @@ export const NEW_FEATURES = [
     description:
       "Get all the help you need to get started in one place and build wealth in a reliable manner",
     src: "rocket",
-    flipImage: "rocket_back",
+    flipImage: "Rocket_back",
     size: 100,
     className: "absolute [bottom:0px] [right:10px] z-0",
     background: "green",
@@ -16,8 +16,8 @@ export const NEW_FEATURES = [
     description:
       "Profitability is just some good habits away. We will curb all your bad habits and help you make better decisions",
 
-    flipImage: "gold_back",
-    src: "gold",
+    flipImage: "Gold_back",
+    src: "Gold",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "pink",
@@ -27,8 +27,8 @@ export const NEW_FEATURES = [
     title: "Trade daily in just 5 mins",
     description:
       "Make faster decisions with our summarized information/data in just the format you want",
-    flipImage: "brush_back",
-    src: "brush",
+    flipImage: "Brush_back",
+    src: "Brush",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "indigo",
@@ -39,8 +39,8 @@ export const NEW_FEATURES = [
     description:
       "Let us help you become an expert while you trade on the live markets; no previous training required ",
     size: 200,
-    flipImage: "cat_back",
-    src: "cat",
+    flipImage: "Cat_back",
+    src: "Cat",
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "yellow",
   },
@@ -49,8 +49,8 @@ export const NEW_FEATURES = [
     title: "And much more...",
     description:
       "Many more features that will improve your trading experience and help you become a better trader",
-    flipImage: "gift_back",
-    src: "gift1",
+    flipImage: "Gift_back",
+    src: "Gift1",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "orange",

@@ -19,7 +19,7 @@ export const FlipCard = ({
     <div className="group w-full h-full [perspective:1000px]">
       <div className="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] [backface-visibility:hidden] p-4">
         <div
-          className="absolute inset-0 text-4xl text-slate-200 backface-hidden rounded-xl border p-10"
+          className="absolute inset-0 text-4xl text-slate-200 backface-hidden rounded-xl border lg:p-10 md:p-6 p-4"
           style={{
             backgroundImage: `url(${imageSrc})`,
             backgroundSize: "cover",

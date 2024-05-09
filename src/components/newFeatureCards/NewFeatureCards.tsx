@@ -14,7 +14,7 @@ export const NewFeatureCards = (): JSX.Element => {
         CapX will help you
       </div>
 
-      <div className="px-20">
+      <div className="px-8">
         <Slider
           infinite={true}
           centerPadding="48px"

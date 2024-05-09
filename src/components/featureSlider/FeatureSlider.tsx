@@ -74,12 +74,12 @@ export const FeatureSlider = () => {
   };
   return (
     <div className="flex flex-col justify-center text-white items-center gap-16 lg:py-48 py-12 md:py-24 font-montserrat">
-      <div className="flex gap-8 text-3xl lg:text-4xl md:text-4xl font-montserrat">
-        <div>S A Y</div>
-        <div>G O O D B Y E</div>
-        <div>T O</div>
+      <div className="flex gap-8 text-3xl lg:text-4xl md:text-4xl font-montserrat flex-col lg:flex-row md:flex-row">
+        <div className="flex justify-center">S A Y</div>
+        <div className="flex justify-center">G O O D B Y E</div>
+        <div className="flex justify-center">T O</div>
       </div>
-      <div className="w-3/4 slider-container ">
+      <div className="w-5/6 slider-container">
         <Slider {...settings}>
           {FEATURES.map((item, index) => (
             <Card key={item.id} card={item} visible={index === currentIndex} />

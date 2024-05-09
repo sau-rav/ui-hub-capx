@@ -9,7 +9,7 @@ import logo from "../../../public/logo.png";
 
 export const NewFeatureCards = (): JSX.Element => {
   return (
-    <div className="p-4 py-18 lg:p-32 flex flex-col bg-black gap-8">
+    <div className="p-4 lg:py-48 py-12 md:py-24 lg:px-32 flex flex-col bg-black gap-8">
       <div className="text-white justify-center italic flex gap-8 text-4xl lg:text-8xl md:text-6xl font-montserrat">
         CapX will help you
       </div>

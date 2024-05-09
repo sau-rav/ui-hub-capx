@@ -3,6 +3,7 @@ import { Button, KIND } from "baseui/button";
 import { useRouter } from "next/router";
 import { auth } from "../config/firebase"; // Assuming you have a custom hook to manage authentication
 import { signOut } from "firebase/auth";
+import Image from "next/image";
 
 // Import your logo image
 import logo from "../../public/logo.png";
@@ -84,15 +85,24 @@ export const NavBar = (): JSX.Element => {
   return (
     <>
       {logoutSuccess && (
-        <div className="text-black text-center py-2" style={{backgroundColor: "#EDAF36"}}>
+        <div
+          className="text-black text-center py-2"
+          style={{ backgroundColor: "#EDAF36" }}
+        >
           You have been successfully logged out.
         </div>
       )}
-      <div className={`flex flex-wrap items-center py-2 px-6 lg:px-36 bg-black ${isSticky ? 'sticky top-0 left-0 right-0 z-10' : ''}`}>
+      <div
+        className={`flex flex-wrap items-center py-2 px-6 lg:px-36 bg-black ${
+          isSticky ? "sticky top-0 left-0 right-0 z-10" : ""
+        }`}
+      >
         <div className="flex items-center gap-2 text-white">
-          <img src={logo.src} alt="Cap X" className="h-10 lg:h-12 xl:h-14" />
+          <Image src={logo.src} alt="Cap X" width={80} height={40} />
         </div>
-        <div className="flex-1 text-right"> {/* Adjust alignment here */}
+        <div className="flex-1 text-right">
+          {" "}
+          {/* Adjust alignment here */}
           {user ? (
             <>
               <Button

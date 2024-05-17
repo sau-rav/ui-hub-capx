@@ -1,3 +1,4 @@
+import React from 'react';
 import { Divider } from "../src/components/Divider";
 import { BoostYourRankComponents } from "../src/components/leaderBoard/Components/BoostYourRankComponents";
 import { ComponentPerksForBeta } from "../src/components/leaderBoard/Components/ComponentPerksForBeta";
@@ -6,7 +7,7 @@ import { ShareComponent } from "../src/components/leaderBoard/Components/ShareCo
 import { SurveyBanner } from "../src/components/leaderBoard/Components/SurveyBanner";
 import { TextComponent } from "../src/components/leaderBoard/Components/TextComponent";
 
-export const ScreenLeaderBoard = () => {
+const ScreenLeaderBoard = () => {
   return (
     <div className="text-center">
       <HeaderComponent />
@@ -37,3 +38,6 @@ export const ScreenLeaderBoard = () => {
     </div>
   );
 };
+
+export default ScreenLeaderBoard;
+

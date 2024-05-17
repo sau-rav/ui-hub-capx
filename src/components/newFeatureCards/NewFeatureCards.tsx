@@ -12,15 +12,23 @@ export const NewFeatureCards = (): JSX.Element => {
         CapX will help you
       </div>
 
-      <div className="">
+      <div className="px-8">
         <Slider
           infinite={true}
           centerPadding="48px"
-          slidesToShow={3}
+          slidesToShow={4}
           speed={500}
           swipeToSlide={true}
           dots={true}
           responsive={[
+            {
+              breakpoint: 1500,
+              settings: {
+                slidesToShow: 3,
+                centerPadding: "28px",
+                slidesToScroll: 1,
+              },
+            },
             {
               breakpoint: 1200,
               settings: {

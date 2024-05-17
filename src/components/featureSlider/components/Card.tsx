@@ -7,7 +7,7 @@ type FeatureCard = {
 };
 
 const CONTAINER_CLASS_NAME =
-  "flex flex-col gap-10 p-8 w-full h-full border-2 rounded-lg border-slate-400";
+  "flex flex-col gap-10 p-8 w-full h-full border-2 rounded-2xl border-slate-400";
 
 export const Card = forwardRef<
   HTMLDivElement,
@@ -21,14 +21,16 @@ export const Card = forwardRef<
           ? "flex text-white w-full border-2 border-transparent flex-none rounded h-100 lg:h-106 md:h-104"
           : "flex text-white w-full border-2 border-transparent flex-none rounded h-98 lg:h-104 md:h-102"
       }
-      style={{
-        backgroundImage: `url(${imageSrc})`,
-        backgroundSize: "cover",
-        backgroundPosition: "bottom",
-      }}
       ref={ref}
     >
-      <div className={CONTAINER_CLASS_NAME}>
+      <div
+        className={CONTAINER_CLASS_NAME}
+        style={{
+          backgroundImage: `url(${imageSrc})`,
+          backgroundSize: "cover",
+          backgroundPosition: "bottom",
+        }}
+      >
         <div
           className={
             visible

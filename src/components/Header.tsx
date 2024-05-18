@@ -17,7 +17,7 @@ export const Header = (): JSX.Element => {
       </div>
 
       <div className="lg:mb-6 md:mb-5 px-8 relative w-72 h-32 md:w-1/2 md:h-72">
-        <Image src={capXLogo} alt="Cap X" sizes="50vw" fill={true} />
+        <Image src={capXLogo} alt="Cap X" fill={true} />
       </div>
       <div className="flex items-center justify-center text-xl md:text-4xl font-montserrat text-center">
         The trading platform that works as your personal assistant

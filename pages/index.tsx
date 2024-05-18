@@ -18,9 +18,9 @@ const Home: NextPage = () => {
       <Header />
       <Divider />
       {/* <Divider /> */}
-      <FeatureSlider />
-      <Divider />
       <NewFeatures />
+      <Divider />
+      <FeatureSlider />
       <Divider />
       <NewFeatureCards />
       <Divider />

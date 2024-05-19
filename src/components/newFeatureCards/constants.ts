@@ -3,7 +3,7 @@ export const NEW_FEATURES = [
     id: "1",
     title: "Get started faster",
     description:
-      "Get personalized guidance as you trade on our platform making it easier for you to start and become a professional trader",
+      "Get personalized guidance as you trade on our platform making it easier for you to start",
     src: "rocket",
     flipImage: "Rocket_back",
     size: 100,
@@ -26,7 +26,7 @@ export const NEW_FEATURES = [
     id: "3",
     title: "Trade faster and smarter",
     description:
-      "Make faster decisions with our summarized information/data in just the format you want",
+      "Our smart research and backtesting tools provide actionable information to help you make faster trading decisions",
     flipImage: "Brush_back",
     src: "Brush",
     size: 200,
@@ -37,7 +37,7 @@ export const NEW_FEATURES = [
     id: "4",
     title: "Understand the market better",
     description:
-      "Learn what you need and when you need it in the format that suits you the best; no need to learn everything before you start",
+      "No need to learn everything before you start. Learn as you trade with our personalized learning.",
     size: 200,
     flipImage: "Cat_back",
     src: "Cat",
@@ -46,9 +46,9 @@ export const NEW_FEATURES = [
   },
   {
     id: "5",
-    title: "Do so much more",
+    title: "Do so much more.",
     description:
-      "Many more features that will improve your trading experience and help you become a better trader",
+      "Many more features that will not only improve your trading journey but also make you a better trader",
     flipImage: "Gift_back",
     src: "Gift",
     size: 200,

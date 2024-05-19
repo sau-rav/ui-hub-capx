@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Freeman&family=Montserrat:wght@500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 .slick-track {
   display: flex !important;
   align-items: flex-end !important;
+}
+
+.text-shadow-3d {
+  text-shadow: -7px 0px 0px rgba(237, 175, 54, 0.6),
+    -15px 0px 0px rgba(237, 175, 54, 0.2);
 }

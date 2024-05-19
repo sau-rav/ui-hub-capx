@@ -1,8 +1,8 @@
-import Image from "next/image";
-import logo from "../../public/logo.png";
+const DESCRIPTION_1 =
+  "A trading platform powered by AI that works as your personal assistant, guiding and helping you throughout your trading journey.";
 
-const DESCRIPTION =
-  "We leverage AI to democratize top traders' tools for the masses in a personalized and easy-to-use way, making trading an accessible and reliable source of income for all Indians. Our platform offers smart real-time risk management, swift research, easy backtesting capabilities, personalized learning, and more.";
+const DESCRIPTION_2 =
+  "Be it quick research, smart insights, testing hypotheses, or smart risk management in real-time, CapX will be there to help make trading a feasible and reliable source of income.";
 
 export const NewFeatures = (): JSX.Element => {
   return (
@@ -18,10 +18,11 @@ export const NewFeatures = (): JSX.Element => {
         Change the way you trade
       </div>
       <div
-        className="text-2xl lg:text-6xl md:text-4xl font-montserrat w-full pb-20 pt-10 px-10 flex justify-center lg:w-1/2 md:w-3/4 text-center"
+        className="text-2xl lg:text-6xl md:text-4xl font-montserrat w-full pb-20 pt-10 px-10 flex justify-center lg:w-1/2 md:w-3/4 text-center flex flex-col gap-6 md:gap-10"
         style={{ lineHeight: 1.25 }}
       >
-        {DESCRIPTION}
+        <div>{DESCRIPTION_1}</div>
+        <div>{DESCRIPTION_2}</div>
       </div>
     </div>
   );

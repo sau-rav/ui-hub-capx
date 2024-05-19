@@ -114,7 +114,7 @@ export const NavBar = (): JSX.Element => {
         <div className="flex items-center gap-2 text-white">
           <Image src={logo.src} alt="Cap X" width={120} height={80} />
         </div>
-        <div className="flex-1 flex gap-3 justify-center text-white">
+        {/* <div className="flex-1 flex gap-3 justify-center text-white">
           {PAGES.map((page) => (
             <div
               key={page.id}
@@ -127,8 +127,8 @@ export const NavBar = (): JSX.Element => {
               <Link href={page.route}>{page.label}</Link>
             </div>
           ))}
-        </div>
-        <div className="flex-none">
+        </div> */}
+        <div className="flex-1 flex justify-end">
           {/* Adjust alignment here */}
           {user ? (
             <>

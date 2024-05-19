@@ -26,7 +26,7 @@ export const NEW_FEATURES = [
     id: "3",
     title: "Trade faster and smarter",
     description:
-      "Our smart research and backtesting tools provide fast summarized information to help you make faster trading decisions",
+      "Make faster decisions with our summarized information/data in just the format you want",
     flipImage: "Brush_back",
     src: "Brush",
     size: 200,
@@ -48,9 +48,9 @@ export const NEW_FEATURES = [
     id: "5",
     title: "Do so much more",
     description:
-      "Many more features that will not only improve your trading journey but also make you a better trader",
+      "Many more features that will improve your trading experience and help you become a better trader",
     flipImage: "Gift_back",
-    src: "Gift1",
+    src: "Gift",
     size: 200,
     className: "absolute [bottom:20px] [right:10px] z-0",
     background: "orange",

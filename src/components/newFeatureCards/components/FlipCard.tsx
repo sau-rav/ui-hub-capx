@@ -31,7 +31,7 @@ export const FlipCard = ({
           </div>
 
           <div
-            className="text-base lg:text-xl md:text-lg z-10 font-extrabold border border-solid px-4 py-2 w-fit rounded-full absolute"
+            className="text-base lg:text-xl md:text-lg z-10 font-extrabold border border-solid px-4 py-2 w-fit rounded-full absolute [backface-visibility:hidden]"
             style={{ top: "30%" }}
           >
             Know More

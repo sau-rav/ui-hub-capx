@@ -53,20 +53,24 @@ const ScreenX: NextPage = () => {
       <Divider />
 
       <div
-        className="relative text-center py-6 my-4 text-white bg-cover bg-center px-5 gap-4 justify-center flex flex-col items-center"
+        className="relative py-6 my-4 text-white bg-cover bg-center px-5 gap-4 justify-center flex flex-col items-center"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('priortyAccess.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="relative font-semibold text-2xl sm:text-2xl lg:text-4xl md:text-3xl flex justify-center w-full">
+        <div className="relative z-10 font-semibold text-2xl sm:text-2xl lg:text-4xl md:text-3xl  pr-10 flex justify-center lg:w-1/2 md:w-3/4">
           T O P
         </div>
-        <div className="relative z-10 font-semibold text-5xl sm:text-6xl lg:text-8xl md:text-8xl flex justify-center w-full">
-          <span className="text-white font-bold text-shadow-3d">1000</span>
+        <div className="relative z-10 font-semibold text-5xl sm:text-6xl lg:text-8xl md:text-8xl  flex justify-center lg:w-1/2 md:w-3/4">
+          <span className="text-yellow-500">1000&nbsp;</span>
+          <span> </span>
+          <span>1000&nbsp;</span>
+          <span> </span>
+          <span className="text-yellow-500">&nbsp;1000</span>
         </div>
-        <div className="relative z-10 tracking-wider text-center font-semibold text-1xl sm:text-3xl lg:text-3xl md:text-3xl flex justify-center w-full">
+        <div className="relative z-10 tracking-wider text-center font-semibold text-1xl sm:text-3xl lg:text-3xl md:text-3xl  pr-10 flex justify-center lg:w-1/2 md:w-3/4">
           users will get the beta access
         </div>
       </div>
@@ -183,7 +187,7 @@ const Card = ({ item }: CardProps) => {
             style={{
               height: "20%",
             }}
-            className="flex uppercase items-center justify-center text-center mt-5  font-semibold text-xl md:text-xl tracking-wider text-black"
+            className="flex items-center justify-center text-center mt-5  font-semibold text-xl md:text-xl tracking-wider text-black"
           >
             {item.title}
           </div>

@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,ts,tsx}", "./pages/**/*.{js,ts,tsx}"],
@@ -6,6 +7,7 @@ module.exports = {
       colors: {
         golden: "#EDAF36",
         "golden-light": "#EBD300",
+        grey: '#1a1713'
       },
 
       backgroundImage: {

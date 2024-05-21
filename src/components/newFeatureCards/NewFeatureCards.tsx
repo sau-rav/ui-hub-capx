@@ -7,8 +7,8 @@ import { NEW_FEATURES } from "./constants";
 
 export const NewFeatureCards = (): JSX.Element => {
   return (
-    <div className="lg:py-48 py-12 md:py-24 lg:px-32 flex flex-col bg-black gap-8">
-      <div className="text-white justify-center italic flex gap-8 text-4xl lg:text-8xl md:text-6xl font-montserrat">
+    <div className="lg:py-48 py-12 md:py-24 flex flex-col bg-black gap-8">
+      <div className="text-white justify-center lg:px-32 flex gap-8 text-4xl lg:text-8xl md:text-6xl font-montserrat">
         CapX will help you
       </div>
 
@@ -16,11 +16,19 @@ export const NewFeatureCards = (): JSX.Element => {
         <Slider
           infinite={true}
           centerPadding="48px"
-          slidesToShow={3}
+          slidesToShow={4}
           speed={500}
           swipeToSlide={true}
           dots={true}
           responsive={[
+            {
+              breakpoint: 1500,
+              settings: {
+                slidesToShow: 3,
+                centerPadding: "28px",
+                slidesToScroll: 1,
+              },
+            },
             {
               breakpoint: 1200,
               settings: {

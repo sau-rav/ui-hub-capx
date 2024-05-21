@@ -23,14 +23,14 @@ export const FEATURES = [
   },
   {
     id: "4",
-    title: "Market Noise",
+    title: "Information Overload",
     description:
       "Too much noise in the market distracts traders from the correct information",
     image: "feature_4",
   },
   {
     id: "5",
-    title: "Lack of time",
+    title: "Time Issue",
     description:
       "Traders make rash decisions or quit the market due to lack of time",
     image: "feature_5",

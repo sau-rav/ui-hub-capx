@@ -1,20 +1,18 @@
 import { useState } from "react";
 
-export const ComponentPerksForBeta = () => {
+interface ComponentPerksForBetaProps {
+  img: string;
+  title: string;
+  description: string;
+}
+
+export const ComponentPerksForBeta = ({
+  data,
+}: {
+  data: ComponentPerksForBetaProps[];
+}) => {
   return (
     <>
-      <div
-        style={{
-          padding: 20,
-          backgroundColor: "black",
-          textAlign: "start",
-        }}
-      >
-        <div className="text-white font-bold text-2xl md:text-7xl lg:text-8xl ">
-          Perks of joining <span className="text-yellow-500">waitlist</span>
-        </div>
-      </div>
-
       <div
         style={{
           msOverflowStyle: "none",
@@ -22,17 +20,23 @@ export const ComponentPerksForBeta = () => {
         }}
         className="mx-6 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
       >
-        {Array(5)
-          .fill(0)
-          .map((index) => (
-            <Card key={index} />
-          ))}
+        {data.map((item, index) => (
+          <Card item={item} key={index} />
+        ))}
       </div>
     </>
   );
 };
 
-const Card = () => {
+interface CardProps {
+  item: {
+    img: string;
+    title: string;
+    description: string;
+  };
+}
+
+const Card = ({ item }: CardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -41,69 +45,51 @@ const Card = () => {
 
   return (
     <div className="snap-start flex-shrink-0 sm:w-4/5 w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/4">
-      <div className="px-1 rounded-xl  pt-1 bg-gradient-to-r from-yellow-500 to-yellow-300">
+      <div
+        className={`p-0.5 rounded-xl bg-gradient-to-r from-yellow-500 to-yellow-300`}
+      >
         <div
-          className="p-5 bg-yellow-500 snap-start"
+          className={`rounded-t-xl ${
+            !isOpen ? "rounded-b-xl" : ""
+          } px-1 bg-accordionFooter snap-start`}
           style={{
-            borderStartStartRadius: "8px",
-            borderStartEndRadius: "8px",
-            borderEndStartRadius: !isOpen ? "8px" : "0px",
-            borderEndEndRadius: !isOpen ? "8px" : "0px",
-            height: "300px",
+            height: "250px",
           }}
         >
           <div
-            style={{
-              height: "40%",
-            }}
-            className="flex justify-center"
+            style={{ height: "40%" }}
+            className="items-center flex justify-center"
           >
-            <img src={"/BotImg.png"} alt="Cap X" />
+            <img className="mx-auto h-16" src={item.img} alt="Cap X" />
           </div>
-          <p
-            style={{
-              height: "20%",
-            }}
-            className="flex items-center justify-center text-center mt-5  font-semibold text-xl md:text-xl tracking-wider text-black"
-          >
-            {"Test strategies like a pro"}
-          </p>
           <div
-            style={{
-              height: "40%",
-            }}
+            style={{ height: "20%" }}
+            className="flex text-accordionText uppercase items-center justify-center text-center font-semibold sm:text-xl md:text-xl lg:text-2xl tracking-wider"
+          >
+            {item.title}
+          </div>
+          <div
+            style={{ height: "40%" }}
             className="flex items-center justify-center"
           >
             <button
               onClick={() => toggleOpen()}
-              className="mt-6  font-semibold text-xl md:text-2xl tracking-wider text-white px-8 py-4 rounded-2xl border-2 border-white"
+              className="mt-6 mb-4 font-semibold text-sm md:text-xl lg:text-2xl tracking-wider text-white px-6 md:px-8 py-3 md:py-4 rounded-xl border-2 border-white"
             >
               {isOpen ? "SHOW LESS" : "KNOW MORE"}
             </button>
           </div>
         </div>
-      </div>
-      {isOpen && (
         <div
-          style={{
-            borderEndStartRadius: "8px",
-            borderEndEndRadius: "6px",
-          }}
-          className="bg-gradient-to-r from-yellow-500 to-yellow-300 overflow-hidden"
+          className={`rounded-b-xl overflow-hidden ${
+            isOpen ? "active" : "inactive"
+          }`}
         >
-          <div
-            className={`p-1 overflow-hidden transition-max-h duration-500 ease-in-out ${
-              isOpen ? "max-h-full" : "max-h-0"
-            }`}
-          >
-            <div className="p-4 px-10 text-center bg-black text-white p-4">
-              {
-                "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis ris Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora consectetur adipiscing elit. Etiam eu turpis risMaecenas eget condimentum velit, sit a"
-              }
-            </div>
+          <div className="p-4 px-10 flex justify-center h-50 text-center bg-black text-white">
+            {item.description}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

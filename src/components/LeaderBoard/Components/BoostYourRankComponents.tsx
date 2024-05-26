@@ -23,11 +23,13 @@ export const BoostYourRankComponents = () => {
             className="snap-start"
             key={_item.img}
             style={{
-              minWidth: 284,
               position: "relative",
               borderRadius: "10px",
               overflow: "hidden",
-              height: 364,
+              height: 300,
+              minWidth: "244px",
+              maxWidth: "100%",
+              width: "100%",
             }}
           >
             <div
@@ -35,7 +37,6 @@ export const BoostYourRankComponents = () => {
                 height: "100%",
                 backgroundImage: `url("${_item.img}")`,
                 backgroundSize: "cover",
-                filter: "blur(4px)",
               }}
             />
             <div

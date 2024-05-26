@@ -2,7 +2,10 @@ import type { NextPage } from "next";
 
 import { Divider } from "../src/components/Divider";
 import { ComponentPerksForBeta } from "../src/components/LeaderBoard/Components/ComponentPerksForBeta";
-import { waitListPerks } from "../src/components/LeaderBoard/Components/Constants";
+import {
+  headerCommonStyle,
+  joiningWaitList,
+} from "../src/components/LeaderBoard/Components/Constants";
 import { NavBar } from "../src/components/NavBar";
 
 const DESCRIPTION = "The next generation trading platform";
@@ -80,12 +83,12 @@ const ScreenX: NextPage = () => {
           textAlign: "start",
         }}
       >
-        <div className="text-white font-bold text-xl md:text-7xl lg:text-8xl ">
+        <div className={`${headerCommonStyle}`}>
           Perks of joining <span className="text-yellow-500">waitlist</span>
         </div>
       </div>
 
-      <ComponentPerksForBeta data={waitListPerks} />
+      <ComponentPerksForBeta data={joiningWaitList} />
       <Divider />
     </div>
   );

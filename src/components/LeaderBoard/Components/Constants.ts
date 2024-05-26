@@ -3,6 +3,9 @@ import fb from "../../../../public/fb.png";
 import Insta from "../../../../public/intagram.png";
 import X from "../../../../public/twitter.png";
 
+export const headerCommonStyle =
+  "text-3xl md:text-5xl lg:text-6xl font-extrabold leading-10 md:leading-12 text-white";
+
 export const rankArray = [
   {
     name: "Share the joy with your friends",

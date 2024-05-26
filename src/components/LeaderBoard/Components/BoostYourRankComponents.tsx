@@ -1,12 +1,12 @@
 import Image from "next/image";
 import LockImg from "../../../../public/LockImg.svg";
-import { boostYourRank } from "./Constants";
+import { boostYourRank, headerCommonStyle } from "./Constants";
 
 export const BoostYourRankComponents = () => {
   return (
-    <>
+    <div className="p-2">
       <div className="text-start p-4">
-        <div className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-10 md:leading-12  text-white">
+        <div className={`${headerCommonStyle}`}>
           More ways to boost your rank coming soon...
         </div>
       </div>
@@ -29,14 +29,15 @@ export const BoostYourRankComponents = () => {
               height: 300,
               minWidth: "244px",
               maxWidth: "100%",
-              width: "100%",
             }}
           >
             <div
               style={{
                 height: "100%",
                 backgroundImage: `url("${_item.img}")`,
-                backgroundSize: "cover",
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
             />
             <div
@@ -53,6 +54,6 @@ export const BoostYourRankComponents = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };

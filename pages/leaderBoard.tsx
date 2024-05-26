@@ -6,7 +6,7 @@ import { ShareComponent } from "../src/components/LeaderBoard/Components/ShareCo
 import { SurveyBanner } from "../src/components/LeaderBoard/Components/SurveyBanner";
 import { TextComponent } from "../src/components/LeaderBoard/Components/TextComponent";
 
-export const ScreenLeaderBoard = () => {
+const ScreenLeaderBoard = () => {
   return (
     <div className="text-center font-montserrat">
       <HeaderComponent />
@@ -37,3 +37,5 @@ export const ScreenLeaderBoard = () => {
     </div>
   );
 };
+
+export default ScreenLeaderBoard;

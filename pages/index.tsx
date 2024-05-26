@@ -10,23 +10,26 @@ import { Divider } from "../src/components/Divider";
 import { NewFeatures } from "../src/components/NewFeatures";
 import { NewFeatureCards } from "../src/components/newFeatureCards";
 import { Footer } from "../src/components/Footer";
+import { TradersCount } from "../src/components/TradersCount";
 
 const Home: NextPage = () => {
   return (
     <div className="bg-black font-montserrat">
       <NavBar />
       <Header />
-      <Divider />
+      {/* <Divider /> */}
       {/* <Divider /> */}
       <NewFeatures />
       <Divider />
       <FeatureSlider />
       <Divider />
       <NewFeatureCards />
-      <Divider />
+      {/* <Divider /> */}
       {/* <Glimpse /> */}
       {/* <RingBackdrop /> */}
-      {/* <Divider /> */}
+      <Divider />
+      <TradersCount />
+
       <Footer />
     </div>
   );

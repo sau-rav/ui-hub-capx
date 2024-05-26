@@ -13,11 +13,6 @@
   text-shadow: -7px 0px 0px rgba(237, 175, 54, 0.6),
     -15px 0px 0px rgba(237, 175, 54, 0.2);
 }
-
-.accordion-animation {
-  transition: max-height 0.5s ease-in-out;
-}
-
 .active {
   max-height: 400px;
   transition: max-height 0.5s ease-in;
@@ -25,8 +20,4 @@
 .inactive {
   max-height: 0px;
   transition: max-height 0.5s ease-out;
-}
-
-.delay-1s {
-  animation: delayEffect 1s forwards;
 }

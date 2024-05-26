@@ -18,7 +18,7 @@ export const NewFeatures = (): JSX.Element => {
         Change the way you trade
       </div>
       <div
-        className="text-2xl lg:text-6xl md:text-4xl font-montserrat px-10 flex justify-center md:w-3/4 flex flex-col gap-6 md:gap-10"
+        className="text-xl lg:text-5xl md:text-3xl font-montserrat px-10 flex justify-center md:w-3/4 flex flex-col gap-6 md:gap-10"
         style={{ lineHeight: 1.25 }}
       >
         <div>{DESCRIPTION_1}</div>

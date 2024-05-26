@@ -1,13 +1,5 @@
 export const FEATURES = [
   {
-    id: "1",
-    title: "Losses",
-    description:
-      "Over 90% of traders suffer losses in the long term due to the lack of proper support and guidance",
-    image: "feature_1",
-    width: 60,
-  },
-  {
     id: "2",
     title: "Knowledge gap",
     description:

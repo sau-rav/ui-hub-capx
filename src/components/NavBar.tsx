@@ -92,10 +92,6 @@ export const NavBar = (): JSX.Element => {
     }
   };
 
-  if (loading) {
-    return <div> Loading ... </div>;
-  }
-
   return (
     <>
       {logoutSuccess && (
@@ -130,7 +126,7 @@ export const NavBar = (): JSX.Element => {
         </div> */}
         <div className="flex-1 flex justify-end">
           {/* Adjust alignment here */}
-          {user ? (
+          {user || loading ? (
             <>
               <Button
                 onClick={handleLogout}

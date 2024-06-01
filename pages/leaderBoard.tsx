@@ -1,14 +1,19 @@
 import { Divider } from "../src/components/Divider";
 import { BoostYourRankComponents } from "../src/components/LeaderBoard/Components/BoostYourRankComponents";
 import { ComponentPerksForBeta } from "../src/components/LeaderBoard/Components/ComponentPerksForBeta";
+import {
+  headerCommonStyle,
+  waitListPerks,
+} from "../src/components/LeaderBoard/Components/Constants";
 import { HeaderComponent } from "../src/components/LeaderBoard/Components/HeaderComponent";
-import { ShareComponent } from "../src/components/LeaderBoard/Components/ShareComponent";
 import { SurveyBanner } from "../src/components/LeaderBoard/Components/SurveyBanner";
 import { TextComponent } from "../src/components/LeaderBoard/Components/TextComponent";
+import { NavBar } from "../src/components/NavBar";
 
 const ScreenLeaderBoard = () => {
   return (
-    <div className="text-center font-montserrat">
+    <div className="bg-black text-center font-montserrat">
+      <NavBar />
       <HeaderComponent />
       <TextComponent />
       <SurveyBanner />
@@ -23,16 +28,22 @@ const ScreenLeaderBoard = () => {
         <Divider />
       </div>
 
-      <ComponentPerksForBeta />
-
-      <div className="mt-10 mb-10">
-        <Divider />
+      <div
+        style={{
+          padding: 20,
+          textAlign: "start",
+        }}
+      >
+        <div className={`${headerCommonStyle}`}>
+          Perks of joining{" "}
+          <span className="text-yellow-500">priority access</span>
+        </div>
       </div>
 
-      <ShareComponent />
+      <ComponentPerksForBeta data={waitListPerks} />
 
-      <div className="bg-black font-normal text-base leading-5 text-yellow-400 py-10">
-        Copyright CapX 2024. Made in India
+      <div className="mt-10">
+        <Divider />
       </div>
     </div>
   );

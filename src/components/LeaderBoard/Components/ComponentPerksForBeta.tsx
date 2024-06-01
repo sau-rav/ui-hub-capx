@@ -57,7 +57,7 @@ const Card = ({ item, isOpen, toggleOpen }: CardProps) => {
       >
         <div
           className={`rounded-t-xl ${
-            !isOpen ? "rounded-b-xl delay-1s" : ""
+            isOpen ? "" : "inactiveBorder"
           } px-1 bg-accordionFooter snap-start`}
           style={{
             height: "250px",

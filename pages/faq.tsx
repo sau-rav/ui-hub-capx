@@ -1,5 +1,6 @@
 import { NavBar } from "../src/components/NavBar";
 import { Questions } from "../src/components/questions";
+import Footer from "../src/components/footer";
 
 const FAQ = (): JSX.Element => {
   return (
@@ -9,6 +10,7 @@ const FAQ = (): JSX.Element => {
         Frequently Asked Questions
       </div>
       <Questions />
+      <Footer />
     </div>
   );
 };

@@ -7,6 +7,7 @@ import {
   joiningWaitList,
 } from "../src/components/LeaderBoard/Components/Constants";
 import { NavBar } from "../src/components/NavBar";
+import Footer from "../src/components/footer";
 
 const DESCRIPTION = "The next generation trading platform";
 
@@ -90,6 +91,7 @@ const Waitlist: NextPage = () => {
 
       <ComponentPerksForBeta data={joiningWaitList} />
       <Divider />
+      <Footer />
     </div>
   );
 };

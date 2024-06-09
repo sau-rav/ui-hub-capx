@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -20,7 +20,9 @@ const PAGES = [
 const NAVIGATOR_LINK_CLASSNAME =
   "border border-solid p-1 px-2 rounded-md hover:border-golden border-transparent";
 
-export const NavBar = (): JSX.Element => {
+const WAITLIST_ROUTE = "/waitlist";
+
+const NavBar = (): JSX.Element => {
   const router = useRouter();
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -76,7 +78,7 @@ export const NavBar = (): JSX.Element => {
   };
 
   const handleJoinWaitlist = () => {
-    router.push("/join-waitlist");
+    router.push("/waitlist");
   };
 
   const handleLogout = async () => {
@@ -133,16 +135,19 @@ export const NavBar = (): JSX.Element => {
                 kind={KIND.secondary}
                 size={buttonSize}
                 style={{ backgroundColor: "#EDAF36" }}
+                shape="pill"
               >
                 Logout
               </Button>
             </>
-          ) : (
+          ) : route === WAITLIST_ROUTE ? null : (
             <Button
               onClick={handleJoinWaitlist}
               kind={KIND.secondary}
               size={buttonSize}
               style={{ backgroundColor: "#EDAF36" }}
+              shape="pill"
+              className="px-4"
             >
               Join Waitlist
             </Button>
@@ -152,3 +157,7 @@ export const NavBar = (): JSX.Element => {
     </>
   );
 };
+
+const MemoizedNavBar = memo(NavBar);
+
+export { MemoizedNavBar as NavBar };

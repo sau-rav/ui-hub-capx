@@ -10,7 +10,7 @@ import { NavBar } from "../src/components/NavBar";
 
 const DESCRIPTION = "The next generation trading platform";
 
-const ScreenX: NextPage = () => {
+const Waitlist: NextPage = () => {
   return (
     <div className="bg-black font-montserrat">
       <NavBar />
@@ -94,4 +94,4 @@ const ScreenX: NextPage = () => {
   );
 };
 
-export default ScreenX;
+export default Waitlist;

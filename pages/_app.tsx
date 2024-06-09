@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "odometer/themes/odometer-theme-default.css";
 
 import type { AppProps } from "next/app";
 
@@ -11,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <StyletronProvider value={styletron}>
       <BaseProvider theme={LightTheme}>
-        <Component {...pageProps} />
+        <div className="font-medium">
+          <Component {...pageProps} />
+        </div>
       </BaseProvider>
     </StyletronProvider>
   );

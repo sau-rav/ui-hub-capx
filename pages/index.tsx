@@ -2,13 +2,12 @@ import type { NextPage } from "next";
 
 import { Divider } from "../src/components/Divider";
 import { FeatureSlider } from "../src/components/featureSlider";
-import { Glimpse } from "../src/components/Glimpse";
 import Footer from "../src/components/footer";
 import { Header } from "../src/components/Header";
 import { NavBar } from "../src/components/NavBar";
 import { NewFeatureCards } from "../src/components/newFeatureCards";
-import { TradersCount } from "../src/components/TradersCount";
 import { NewFeatures } from "../src/components/NewFeatures";
+import { Counter } from "../src/components/counter";
 
 const Home: NextPage = () => {
   return (
@@ -26,7 +25,7 @@ const Home: NextPage = () => {
       {/* <Glimpse /> */}
       {/* <RingBackdrop /> */}
       <Divider />
-      <TradersCount />
+      <Counter />
 
       <Footer />
     </div>

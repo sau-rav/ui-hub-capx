@@ -18,11 +18,27 @@ export const NewFeatures = (): JSX.Element => {
         Change the way you trade
       </div>
       <div
-        className="text-xl lg:text-5xl md:text-3xl font-montserrat px-10 flex justify-center md:w-3/4 flex flex-col gap-6 md:gap-10"
+        className="text-xl lg:text-6xl md:text-3xl font-montserrat px-10 flex justify-center md:w-3/4 flex flex-col gap-6 md:gap-10"
         style={{ lineHeight: 1.25 }}
       >
-        <div>{DESCRIPTION_1}</div>
-        <div>{DESCRIPTION_2}</div>
+        <div>
+          {/** Add className="typing-para-1" */}
+          <p>Introducing an AI-powered</p>
+          <p>trading platform designed to be</p>
+          <p>your personal assistant, streamlining</p>
+          <p>your journey from research to</p>
+          <p>investing while speeding and</p>
+          <p>simplifying the whole journey.</p>
+        </div>
+        <div>
+          {/** Add className="typing-para-1" */}
+          <p>All your needs in one place,</p>
+          <p>from learning, research, information,</p>
+          <p>data and brokerage.</p>
+          <p>Imagine all this together and</p>
+          <p>comprehensive way so that you</p>
+          <p>won't need any other platform.</p>
+        </div>
       </div>
     </div>
   );

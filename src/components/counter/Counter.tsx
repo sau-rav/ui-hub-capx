@@ -7,11 +7,11 @@ const Odometer = dynamic(import("react-odometerjs"), {
 });
 
 export const Counter = (): JSX.Element => {
-  const [odometerValue, setOdometerValue] = useState(52137);
+  const [odometerValue, setOdometerValue] = useState(504);
 
   useEffect(() => {
     setTimeout(() => {
-      setOdometerValue(52147);
+      setOdometerValue(514);
     }, 10);
   }, []);
 

@@ -12,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <StyletronProvider value={styletron}>
       <BaseProvider theme={LightTheme}>
-        <Component {...pageProps} />
+        <div className="font-medium">
+          <Component {...pageProps} />
+        </div>
       </BaseProvider>
     </StyletronProvider>
   );

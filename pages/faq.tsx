@@ -3,9 +3,9 @@ import { Questions } from "../src/components/questions";
 
 const FAQ = (): JSX.Element => {
   return (
-    <div className="bg-black font-montserrat flex flex-col h-full">
+    <div className="bg-black font-montserrat flex flex-col h-full pb-12">
       <NavBar />
-      <div className="text-golden flex justify-center text-2xl lg:text-5xl md:text-3xl lg:py-36 md:py-30 py-24 md:px-8 lg:px-16">
+      <div className="text-golden flex justify-center text-2xl lg:text-5xl md:text-3xl lg:py-36 md:py-30 py-24 px-8 md:px-16 font-bold text-center">
         Frequently Asked Questions
       </div>
       <Questions />

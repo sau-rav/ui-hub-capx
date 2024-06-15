@@ -28,7 +28,7 @@ export const Reveal = ({
   return (
     <div ref={ref} className="relative w-fit overflow-hidden py-1">
       <motion.div
-        variants={{ start: { opacity: 0, x: 0 }, end: { opacity: 1, x: 0 } }}
+        variants={{ start: { opacity: 0, x: 75 }, end: { opacity: 1, x: 0 } }}
         initial="start"
         animate={scrollControl}
         transition={{ duration: 0.5, delay: 0 }}

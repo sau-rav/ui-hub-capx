@@ -28,7 +28,7 @@ export const Questions = (): JSX.Element => {
           question={question}
           onSelect={selectQuestion}
           isSelected={selectedPosition === question.position}
-        ></Question>
+        />
       ))}
     </div>
   );

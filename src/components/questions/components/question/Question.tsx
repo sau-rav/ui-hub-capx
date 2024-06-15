@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Description } from "./components/Description";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -20,7 +22,8 @@ export const Question = ({
   }, [question.position, onSelect]);
 
   return (
-    <div
+    <motion.div
+      layout
       className={`text-white flex gap-4 md:gap-10 p-4 md:p-8 rounded-xl hover:bg-[#18212B] group ${
         isSelected ? "bg-[#18212B]" : ""
       }`}
@@ -29,19 +32,21 @@ export const Question = ({
       <div className="flex-none border rounded-xl w-8 h-8 flex items-center justify-center">
         {question.position}
       </div>
-      <Description
-        title={question.title}
-        description={isSelected ? question.description : undefined}
-        descriptionList={isSelected ? question.descriptionList : undefined}
-        className="flex-1"
-      />
-      <div
+      <motion.div layout className="flex-1">
+        <Description
+          title={question.title}
+          description={isSelected ? question.description : undefined}
+          descriptionList={isSelected ? question.descriptionList : undefined}
+        />
+      </motion.div>
+      <motion.div
+        layout
         className={`flex-none rounded-full w-8 h-8 flex items-center justify-center group-hover:bg-golden group-hover:text-black ${
           isSelected ? "bg-golden text-black" : ""
         }`}
       >
         {isSelected ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };

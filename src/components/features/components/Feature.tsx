@@ -14,8 +14,21 @@ export const Feature = ({
   position,
   imageSrc,
 }: FeatureType): JSX.Element => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
   return (
-    <div className="flex flex-col w-full">
+    <motion.div
+      ref={ref}
+      style={{ scale, opacity }}
+      className="flex flex-col w-full"
+    >
       <div className="text-white w-full bg-light-black rounded-t-xl p-10 flex gap-6">
         <div className="bg-white rounded-full h-10 w-10 text-light-black flex items-center justify-center text-xl flex-none">
           {position}
@@ -34,7 +47,7 @@ export const Feature = ({
           <Image src={imageSrc} alt="feature" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

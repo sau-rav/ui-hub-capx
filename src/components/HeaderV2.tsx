@@ -7,13 +7,13 @@ export const Header = (): JSX.Element => {
         <p className="text-4xl md:text-7xl">An AI-powered</p>
       </Reveal>
       <Reveal>
-        <p className="text-4xl md:text-7xl">trading Platform</p>
+        <p className="text-4xl md:text-7xl">trading platform that</p>
       </Reveal>
       <Reveal>
-        <p className="text-4xl md:text-7xl">that works as your</p>
+        <p className="text-4xl md:text-7xl">works as your</p>
       </Reveal>
       <Reveal>
-        <p className="text-4xl md:text-7xl font-bold">personal Assistant</p>
+        <p className="text-4xl md:text-7xl font-bold">personal assistant</p>
       </Reveal>
       <Reveal sliderColor="#808080">
         <p className="text-2xl text-golden-light-light text-center">

@@ -1,4 +1,7 @@
-import featureImage from "../../../public/feature1.png";
+import feature1 from "../../../public/feature1.png";
+import feature2 from "../../../public/feature2.png";
+import feature3 from "../../../public/feature3.png";
+import feature4 from "../../../public/feature4.png";
 
 import { Feature } from "./types";
 
@@ -10,7 +13,7 @@ export const FEATURES: Feature[] = [
       "Daily Indian traders suffer losses due to lack of guidance and self-control",
     answerTitle: "How CapX solves this",
     answerDescription: "Providing an interactive prompt-based research tool",
-    imageSrc: featureImage,
+    imageSrc: feature1,
     imageUrl: "feature1.png",
   },
   {
@@ -20,7 +23,7 @@ export const FEATURES: Feature[] = [
       "Too much noise in the market distracts investors from the correct information",
     answerTitle: "How CapX solves this",
     answerDescription: "Simple data visualization with actionable insights",
-    imageSrc: featureImage,
+    imageSrc: feature2,
     imageUrl: "feature2.png",
   },
   {
@@ -31,7 +34,7 @@ export const FEATURES: Feature[] = [
     answerTitle: "How CapX solves this",
     answerDescription:
       "Get personalized guide to becoming a professional trader",
-    imageSrc: featureImage,
+    imageSrc: feature3,
     imageUrl: "feature3.png",
   },
   {
@@ -42,7 +45,7 @@ export const FEATURES: Feature[] = [
     answerTitle: "How CapX solves this",
     answerDescription:
       "Get personalized interactive learning at every stage of your investing journey",
-    imageSrc: featureImage,
+    imageSrc: feature4,
     imageUrl: "feature4.png",
   },
 ];

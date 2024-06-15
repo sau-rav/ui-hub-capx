@@ -20,7 +20,7 @@ export const Feature = ({
     offset: ["end end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (

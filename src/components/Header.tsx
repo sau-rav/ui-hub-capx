@@ -1,30 +1,25 @@
-import React from "react";
-import Image from "next/image";
-import capXLogo from "../../public/logo.png";
+import { Reveal } from "./Reveal";
 
 export const Header = (): JSX.Element => {
   return (
-    <div
-      className="text-white flex flex-col justify-center items-center bg-cover lg:py-36 md:py-30 py-24 gap-8"
-      style={{
-        backgroundImage: `url('hero.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="text-2xl lg:text-5xl md:text-3xl font-montserrat lg:mb-6 md:mb-5">
-        I N T R O D U C I N G
-      </div>
-
-      <div className="lg:mb-6 md:mb-5 px-8">
-        <Image src={capXLogo} alt="Cap X" width={760} />
-      </div>
-      <div className="flex items-center justify-center text-xl md:text-4xl font-montserrat text-center">
-        The trading platform that works <br /> as your personal assistant
-      </div>
-      <div className="flex items-center justify-center text-xl md:text-4xl font-montserrat text-center text-golden font-bold tracking-widest">
-        Trading made simpler and smarter
-      </div>
+    <div className="flex flex-col justify-center items-center text-white gap-2 h-screen px-4">
+      <Reveal>
+        <p className="text-3xl md:text-7xl">An AI-powered</p>
+      </Reveal>
+      <Reveal>
+        <p className="text-3xl md:text-7xl">trading platform that</p>
+      </Reveal>
+      <Reveal>
+        <p className="text-3xl md:text-7xl">works as your</p>
+      </Reveal>
+      <Reveal>
+        <p className="text-3xl md:text-7xl font-bold">personal assistant</p>
+      </Reveal>
+      <Reveal sliderColor="#808080">
+        <p className="text-2xl text-golden-light-light text-center">
+          Research to investing, all-in-one place
+        </p>
+      </Reveal>
     </div>
   );
 };

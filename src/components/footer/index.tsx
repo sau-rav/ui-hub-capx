@@ -22,9 +22,9 @@ const Footer = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center pt-[60px] pb-[40px] bg-grey 2xl:bg-[#000000] mt-[40px] 2xl:mt-[0] rounded-t-[50px]">
+    <div className="relative flex items-center justify-center pt-[60px] pb-[40px] bg-normal-black 2xl:bg-normal-black mt-[40px] 2xl:mt-[0] rounded-t-[50px]">
       <div className="2xl:w-11/12">
-        <div className="2xl:flex 2xl:bg-[#000000] 2xl:w-full 2xl:rounded-tl-[50px]">
+        <div className="2xl:flex 2xl:bg-normal-black 2xl:w-full 2xl:rounded-tl-[50px]">
           <div className=" 2xl:w-4/5">
             <div className="bg-grey 2xl:rounded-[50px] 2xl:rounded-br-[0px] pl-[20px] pt-[13px] pb-[21px] 2xl:pl-[37px]">
               <Image
@@ -39,18 +39,18 @@ const Footer = (): JSX.Element => {
               </div>
             </div>
             <div className="bg-grey relative hidden 2xl:block">
-              <div className="relative max-w-fit font-normal text-[#fdc861] text-[18px] leading-[21px] rounded-tr-[50px] pt-[41px] pr-[25px] pb-[29px] pl-[14px] 2xl:bg-[#000000]">
+              <div className="relative max-w-fit font-normal text-[#fdc861] text-[18px] leading-[21px] rounded-tr-[50px] pt-[41px] pr-[25px] pb-[29px] pl-[14px] 2xl:bg-normal-black">
                 Copyright &copy; CapX 2024. Made in India
-                <div className="hidden 2xl:block absolute bg-[#000000] right-[-50px] bottom-0">
+                <div className="hidden 2xl:block absolute bg-normal-black right-[-50px] bottom-0">
                   <div className="hidden 2xl:block w-[50px] h-[50px] rounded-bl-[50px] bg-grey"></div>
                 </div>
               </div>
             </div>
           </div>
           <div className="bg-grey 2xl:w-2/5 mt-[11spx] rounded-br-[50px] flex flex-col">
-            <div className="relative text-[#fffded] font-semibold text-[32px] leading-[39px] rounded-bl-[50px] pl-[30px] py-[26px] 2xl:bg-[#000000] 2xl:text-center 2xl:pl-[47px] 2xl:pr-[56px]">
+            <div className="relative text-[#fffded] font-semibold text-[32px] leading-[39px] rounded-bl-[50px] pl-[30px] py-[26px] 2xl:bg-normal-black 2xl:text-center 2xl:pl-[47px] 2xl:pr-[56px]">
               <span>Join CapX on</span>
-              <div className="absolute bg-[#000] right-0 bottom-[-50px] hidden 2xl:block">
+              <div className="absolute bg-normal-black right-0 bottom-[-50px] hidden 2xl:block">
                 <div className="w-[50px] h-[50px] rounded-tr-[50px] hidden 2xl:block bg-grey"></div>
               </div>
             </div>

@@ -6,12 +6,18 @@ module.exports = {
       colors: {
         golden: "#EDAF36",
         "golden-light": "#EBD300",
+        "golden-light-light": "#FFE3AC",
         grey: "#1a1713",
         accordionText: "#CA952E",
+        "light-black": "#1E1E1E",
+        "light-grey": "#828282",
+        "lite-yellow": "#E8C19C",
       },
       backgroundColor: {
         footer: "#EDAF36",
         accordionFooter: "#151410",
+        "light-black": "#1E1E1E",
+        "normal-black": "#101115",
       },
 
       backgroundImage: {

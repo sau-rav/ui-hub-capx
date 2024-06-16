@@ -15,6 +15,7 @@ module.exports = {
         footer: "#EDAF36",
         accordionFooter: "#151410",
         "light-black": "#1E1E1E",
+        "normal-black": "#101115",
       },
 
       backgroundImage: {

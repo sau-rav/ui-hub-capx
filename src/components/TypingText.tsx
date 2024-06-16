@@ -37,11 +37,11 @@ export const TypingText = (): JSX.Element => {
 
   return (
     <motion.div
-      className="flex items-center justify-center mb-48"
+      className="flex items-center justify-center mb-28 md:mb-48"
       id="type-container"
       ref={ref}
     >
-      <div className="text-light-black text-3xl font-bold md:text-6xl flex gap-3 flex-wrap w-6/12">
+      <div className="text-light-black text-3xl font-bold md:text-6xl flex gap-3 flex-wrap w-9/12 md:w-6/12">
         {DESCRIPTION_WITH_TAGS}
       </div>
     </motion.div>

@@ -1,6 +1,6 @@
 import { useEffect, useState, memo } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Button, KIND } from "baseui/button";
 import { auth } from "../config/firebase"; // Assuming you have a custom hook to manage authentication
@@ -155,6 +155,35 @@ const NavBar = (): JSX.Element => {
         </div>
       </div>
     </>
+  );
+};
+
+export const NavBarV2 = (): JSX.Element => {
+  useState;
+  return (
+    <div
+      className="text-white w-full fixed flex items-center justify-center z-50 h-20 px-5 md:px-20"
+      style={{ top: "20px" }}
+    >
+      <div
+        className="w-full rounded-2xl flex items-center h-full px-5 md:px-10"
+        style={{
+          background:
+            "linear-gradient(109deg, rgba(51, 50, 50, 0.26) 10.11%, rgba(51, 50, 50, 0.07) 101.56%)",
+          backdropFilter: "blur(17px)",
+        }}
+      >
+        <div className="flex-1">
+          <Image src={logo} alt="logo" height={40} />
+        </div>
+
+        <div className="bg-gradient-to-r from-golden to-golden-light-light rounded-2xl p-1 justify-end">
+          <button className="h-full w-full px-6 py-3 rounded-xl md:rounded-2xl font-bold relative bg-black text-white hover:bg-transparent hover:text-black">
+            <span>Join Waitlist</span>
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

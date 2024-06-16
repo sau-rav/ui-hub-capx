@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Feature as FeatureType } from "../types";
 import { FadeInOut } from "../../FadeInOut";
 
+import { useIsMobile } from "../../../hooks/useIsMobile";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -20,6 +22,8 @@ export const Feature = ({
     offset: ["end end", "end start"],
   });
 
+  const isMobile = useIsMobile();
+
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
@@ -29,19 +33,29 @@ export const Feature = ({
       style={{ scale, opacity }}
       className="flex flex-col w-full"
     >
-      <div className="text-white w-full bg-light-black rounded-t-xl p-10 flex gap-6">
-        <div className="bg-white rounded-full h-10 w-10 text-light-black flex items-center justify-center text-xl flex-none">
-          {position}
-        </div>
-        <div className="flex flex-col flex-1 text-2xl">
+      <div className="text-white w-full bg-light-black rounded-t-xl p-6 md:p-10 flex gap-6">
+        {isMobile ? null : (
+          <div className="bg-white rounded-full md:h-10 md:w-10 text-light-black flex items-center justify-center text-lg md:text-xl flex-none">
+            {position}
+          </div>
+        )}
+        <div className="flex flex-col flex-1 text-xl md:text-2xl gap-3">
           <div className="font-bold">{questionTitle}</div>
           <div>{questionDescription}</div>
         </div>
       </div>
-      <div className="text-light-black w-full bg-white rounded-b-xl p-10 flex gap-6 gap-10">
-        <div className="flex flex-col justify-center text-3xl flex-1">
-          <p className="flex-none font-bold">{answerTitle}</p>
-          <p className="flex-none">{answerDescription}</p>
+      <div
+        className={`text-light-black w-full bg-white rounded-b-xl p-4 md:p-10 flex gap-6 gap-10 ${
+          isMobile ? "flex-col-reverse" : ""
+        }`}
+      >
+        <div className="flex flex-col justify-center flex-1">
+          <p className="flex-none font-bold text-md md:text-lg">
+            {answerTitle}
+          </p>
+          <p className="flex-1 flex items-center text-2xl md:text-3xl">
+            {answerDescription}
+          </p>
         </div>
         <div className="flex-1">
           <Image src={imageSrc} alt="feature" />

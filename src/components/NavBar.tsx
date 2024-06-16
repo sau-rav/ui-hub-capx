@@ -31,6 +31,7 @@ const NavBar = (): JSX.Element => {
           background:
             "linear-gradient(109deg, rgba(51, 50, 50, 0.26) 10.11%, rgba(51, 50, 50, 0.07) 101.56%)",
           backdropFilter: "blur(17px)",
+          WebkitBackdropFilter: "blur(17px)",
         }}
       >
         <div className="flex-1 cursor-pointer" onClick={handleHome}>

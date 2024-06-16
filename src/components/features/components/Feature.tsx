@@ -39,9 +39,11 @@ export const Feature = ({
             {position}
           </div>
         )}
-        <div className="flex flex-col flex-1 text-xl md:text-2xl gap-3">
-          <div className="font-bold">{questionTitle}</div>
-          <div>{questionDescription}</div>
+        <div className="flex flex-col flex-1 gap-3">
+          <div className="font-bold text-3xl md:text-4xl">{questionTitle}</div>
+          <div className="text-2xl md:text-3xl text-white/80 font-semibold">
+            {questionDescription}
+          </div>
         </div>
       </div>
       <div
@@ -50,10 +52,10 @@ export const Feature = ({
         }`}
       >
         <div className="flex flex-col justify-center flex-1">
-          <p className="flex-none font-bold text-md md:text-lg">
+          <p className="flex-none font-bold text-xl md:text-2xl text-light-grey">
             {answerTitle}
           </p>
-          <p className="flex-1 flex items-center text-2xl md:text-3xl">
+          <p className="flex-1 flex items-center text-2xl md:text-4xl font-semibold text-[#222222]">
             {answerDescription}
           </p>
         </div>

@@ -1,25 +1,39 @@
 import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
-import { useInView } from "framer-motion";
+import { useInView, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Odometer = dynamic(import("react-odometerjs"), {
   ssr: false,
   loading: () => null,
 });
 
+let countTimer: ReturnType<typeof setTimeout> | null = null;
+
 export const Counter = (): JSX.Element => {
   const [odometerValue, setOdometerValue] = useState(504);
   const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "end start"],
+  });
 
   const inView = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (inView) {
-      setTimeout(() => {
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest > 0.2 && !countTimer) {
+      countTimer = setTimeout(() => {
         setOdometerValue(514);
       }, 10);
     }
-  }, [inView]);
+  });
+
+  useEffect(() => {
+    return () => {
+      if (countTimer) {
+        clearTimeout(countTimer);
+      }
+    };
+  }, [countTimer]);
 
   return (
     <div ref={ref} className="flex flex-col text-white items-center">

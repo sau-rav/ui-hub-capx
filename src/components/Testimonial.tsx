@@ -3,11 +3,11 @@ import { FadeInOut } from "./FadeInOut";
 export const Testimonial = (): JSX.Element => {
   return (
     <div className="flex items-center justify-center">
-      <div className="flex justify-center pt-16 gap-0 overflow-visible px-6 md:px-16 text-light-grey md:w-9/12">
+      <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-light-grey md:w-9/12">
         <div className="flex flex-col items-center justify-center w-full px-4 gap-4">
           <FadeInOut>
             <p className="text-4xl font-bold md:text-7xl text-center mb-6 text-white">
-              Why trust CapX ?
+              Why trust CapX?
             </p>
           </FadeInOut>
           <div className="flex flex-col md:flex-row gap-4">

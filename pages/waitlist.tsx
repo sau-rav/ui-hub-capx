@@ -13,7 +13,7 @@ const DESCRIPTION = "The next generation trading platform";
 
 const Waitlist: NextPage = () => {
   return (
-    <div className="bg-black font-montserrat">
+    <div className="bg-black font-montserrat pt-40">
       <NavBar />
       <div
         className="text-white bg-cover p-5 gap-4"

@@ -34,10 +34,19 @@ export const Counter = (): JSX.Element => {
       <div className="text-xl md:text-2xl mb-8">
         people have already signed up
       </div>
-      <div className="bg-gradient-to-r from-golden to-golden-light-light rounded-2xl p-1 justify-end">
-        <button className="h-full w-full px-6 py-3 rounded-xl md:rounded-2xl font-bold relative bg-transparent text-black">
-          <span>Join Waitlist</span>
-        </button>
+      <div className="relative">
+        <div
+          style={{
+            border: "4px solid #FE9839",
+            filter: "blur(6.524994373321533px)",
+          }}
+          className="rounded-full absolute flex items-center justify-center p-4 h-full w-full"
+        ></div>
+        <div>
+          <button className="h-full w-full px-6 py-3 rounded-full relative bg-golden text-black absolute">
+            <span>Join Waitlist</span>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ export const Feature = ({
       style={{ scale, opacity }}
       className="flex flex-col w-full"
     >
-      <div className="text-white w-full bg-light-black rounded-t-xl p-6 md:p-10 flex gap-6">
+      <div className="text-white w-full bg-light-black rounded-t-xl p-6 md:px-10 md:py-20 flex gap-6">
         {isMobile ? null : (
           <div className="bg-white rounded-full md:h-10 md:w-10 text-light-black flex items-center justify-center text-lg md:text-xl flex-none">
             {position}

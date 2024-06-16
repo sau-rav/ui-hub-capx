@@ -2,7 +2,7 @@ import { Reveal } from "./Reveal";
 
 export const Header = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-center items-center text-white gap-2 h-screen">
+    <div className="flex flex-col justify-center items-center text-white gap-2 h-screen px-4">
       <Reveal>
         <p className="text-3xl md:text-7xl">An AI-powered</p>
       </Reveal>

@@ -1,11 +1,10 @@
 import { useEffect, useState, memo } from "react";
 import { useRouter } from "next/router";
-import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 import { Button, KIND } from "baseui/button";
 import { auth } from "../config/firebase"; // Assuming you have a custom hook to manage authentication
 import { signOut } from "firebase/auth";
-import Image from "next/image";
 
 // Import your logo image
 import logo from "../../public/logo.png";

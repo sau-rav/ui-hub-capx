@@ -1,39 +1,43 @@
 import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
-import { useInView, useScroll, useMotionValueEvent } from "framer-motion";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { useCallback } from "react";
+import { useRouter } from "next/router";
 
 const Odometer = dynamic(import("react-odometerjs"), {
   ssr: false,
   loading: () => null,
 });
 
-let countTimer: ReturnType<typeof setTimeout> | null = null;
-
 export const Counter = (): JSX.Element => {
   const [odometerValue, setOdometerValue] = useState(504);
+  const [triggerCounter, setTriggerCounter] = useState(false);
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "end start"],
   });
 
-  const inView = useInView(ref, { once: true });
-
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0.2 && !countTimer) {
-      countTimer = setTimeout(() => {
-        setOdometerValue(514);
-      }, 10);
+    if (latest > 0.2 && !triggerCounter) {
+      setTriggerCounter(true);
     }
   });
 
   useEffect(() => {
-    return () => {
-      if (countTimer) {
-        clearTimeout(countTimer);
-      }
-    };
-  }, [countTimer]);
+    if (triggerCounter) {
+      setTimeout(() => {
+        setOdometerValue(514);
+      }, 10);
+    }
+  }, [triggerCounter]);
+
+  const router = useRouter();
+
+  const handleJoinWaitlist = useCallback(() => {
+    router.push("/waitlist");
+  }, []);
 
   return (
     <div ref={ref} className="flex flex-col text-white items-center">
@@ -57,7 +61,10 @@ export const Counter = (): JSX.Element => {
           className="rounded-full absolute flex items-center justify-center p-4 h-full w-full"
         ></div>
         <div>
-          <button className="h-full w-full px-6 py-3 rounded-full relative bg-golden text-black absolute">
+          <button
+            className="h-full w-full px-6 py-3 rounded-full relative bg-golden text-black absolute"
+            onClick={handleJoinWaitlist}
+          >
             <span>Join Waitlist</span>
           </button>
         </div>

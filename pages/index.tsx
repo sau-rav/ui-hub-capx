@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 
 import Footer from "../src/components/footer";
-import { Header } from "../src/components/HeaderV2";
+import { Header } from "../src/components/Header";
 import { Features } from "../src/components/features";
 import { TypingText } from "../src/components/TypingText";
 import { NavBar } from "../src/components/NavBar";

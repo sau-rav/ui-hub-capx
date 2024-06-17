@@ -54,11 +54,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta property="og:type" content="article" />
           <meta
             property="og:title"
-            content="When Great Minds Don’t Think Alike"
+            content="The next-generation trading platform"
           />
           <meta
             property="og:description"
-            content="How much does culture influence creative thinking?"
+            content="An AI-powered trading personal assistant"
           />
         </Head>
         <div className="font-medium">

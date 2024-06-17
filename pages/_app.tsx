@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Head>
         <div className="font-medium">
           <LoadingBar
-            color="linear-gradient(90deg, rgba(255,227,172,1) 0%, rgba(235,211,0,1) 45%, rgba(237,175,54,1) 100%)"
+            color="linear-gradient(90deg, rgba(1,88,4,1) 1%, rgba(254,152,57,1) 63%)"
             progress={progress}
             onLoaderFinished={() => setProgress(0)}
             waitingTime={400}

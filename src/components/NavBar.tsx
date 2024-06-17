@@ -5,13 +5,13 @@ import Image from "next/image";
 // Import your logo image
 import logo from "../../public/logo.png";
 
-const WAITLIST_ROUTE = "/waitlist";
+const WAITLIST_ROUTE = "/join-waitlist";
 
 const NavBar = (): JSX.Element => {
   const router = useRouter();
 
   const handleJoinWaitlist = useCallback(() => {
-    router.push("/waitlist");
+    router.push(WAITLIST_ROUTE);
   }, []);
 
   const handleHome = useCallback(() => {

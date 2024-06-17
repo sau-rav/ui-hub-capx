@@ -1,13 +1,14 @@
 import { JoinWaitlist } from "../src/components/joinWaitlist";
-import { Header } from "../src/components/Header";
+import { NavBar } from "../src/components/NavBar";
 import { NextPage } from "next";
 
 const Waitlist: NextPage = () => {
-    return (
-      <div className="bg-black">
-        <JoinWaitlist/>
-      </div>
-    );
-  };
-  
-  export default Waitlist;
+  return (
+    <div className="bg-normal-black font-montserrat">
+      <NavBar />
+      <JoinWaitlist />
+    </div>
+  );
+};
+
+export default Waitlist;

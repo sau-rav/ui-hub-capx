@@ -9,7 +9,7 @@ type Props = {
 
 export const Reveal = ({
   children,
-  sliderColor = "#EDAF36",
+  sliderColor = "#ED8E36",
 }: Props): JSX.Element => {
   const ref = useRef(null);
 
@@ -26,7 +26,7 @@ export const Reveal = ({
   }, [inView]);
 
   return (
-    <div ref={ref} className="relative w-fit overflow-hidden py-1">
+    <div ref={ref} className="relative w-fit overflow-hidden py-2.5">
       <motion.div
         variants={{ start: { opacity: 0, x: 75 }, end: { opacity: 1, x: 0 } }}
         initial="start"

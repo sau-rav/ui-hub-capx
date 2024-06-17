@@ -1,6 +1,7 @@
 import { useRef } from "react";
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const DESCRIPTION =
   "Everything you will ever need for investing is all in one place, from learning, research, information, and data to investing tools. Our platform makes investing faster and easier for everyone, whether you are just getting started or need a helping hand to invest better.";
@@ -20,6 +21,8 @@ export const TypingText = (): JSX.Element => {
     offset: ["start end", "50% start"],
   });
 
+  const isMobile = useIsMobile();
+
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const typeElements = document.querySelectorAll("#type-container #type");
     const typeOffset = latest - 0.2;
@@ -37,11 +40,17 @@ export const TypingText = (): JSX.Element => {
 
   return (
     <motion.div
-      className="flex items-center justify-center mb-28 md:mb-48"
+      className={`flex items-center justify-center ${
+        isMobile ? "mb-28" : "mb-48"
+      }`}
       id="type-container"
       ref={ref}
     >
-      <div className="text-light-black text-3xl font-bold md:text-6xl flex gap-3 flex-wrap w-9/12 md:w-6/12">
+      <div
+        className={`text-light-black  font-bold flex gap-3 flex-wrap ${
+          isMobile ? "w-9/12 text-4xl" : "w-6/12 text-6xl"
+        }`}
+      >
         {DESCRIPTION_WITH_TAGS}
       </div>
     </motion.div>

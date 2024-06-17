@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        golden: "#EDAF36",
-        "golden-light": "#EBD300",
-        "golden-light-light": "#FFE3AC",
+        golden: "#ED8E36",
+        "golden-light": "#FFC48E",
         grey: "#1a1713",
         accordionText: "#CA952E",
         "light-black": "#1E1E1E",
@@ -14,7 +13,7 @@ module.exports = {
         "lite-yellow": "#E8C19C",
       },
       backgroundColor: {
-        footer: "#EDAF36",
+        footer: "#ED8E36",
         accordionFooter: "#151410",
         "light-black": "#1E1E1E",
         "normal-black": "#101115",
@@ -42,6 +41,7 @@ module.exports = {
     },
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
     },
   },
   plugins: [],

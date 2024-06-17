@@ -1,16 +1,18 @@
+import { useIsMobile } from "../hooks/useIsMobile";
 import { FadeInOut } from "./FadeInOut";
 
 export const Testimonial = (): JSX.Element => {
+  const isMobile = useIsMobile();
   return (
     <div className="flex items-center justify-center">
-      <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-light-grey md:w-9/12">
+      <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-light-grey">
         <div className="flex flex-col items-center justify-center w-full px-4 gap-4">
           <FadeInOut>
             <p className="text-4xl font-bold md:text-7xl text-center mb-6 text-white">
               Why trust CapX?
             </p>
           </FadeInOut>
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className={`flex gap-4 ${isMobile ? "flex-col" : "flex-row"}`}>
             <div
               className="p-11 bg-light-black flex-1 rounded-3xl text-3xl"
               style={{ flexGrow: 1 }}
@@ -31,7 +33,11 @@ export const Testimonial = (): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="p-11 bg-light-black w-full rounded-3xl flex gap-4 flex-col md:flex-row text-center md:text-left">
+          <div
+            className={`p-11 bg-light-black w-full rounded-3xl flex gap-4 ${
+              isMobile ? "flex-col text-center" : "flex-row text-left"
+            }`}
+          >
             <div
               className="flex justify-center text-lite-yellow text-7xl md:text-9xl font-bold md:p-6"
               style={{ flexGrow: 1 }}
@@ -46,7 +52,11 @@ export const Testimonial = (): JSX.Element => {
               self-control
             </div>
           </div>
-          <div className="p-11 bg-light-black w-full rounded-3xl flex gap-4 flex-col md:flex-row text-center md:text-left">
+          <div
+            className={`p-11 bg-light-black w-full rounded-3xl flex gap-4 ${
+              isMobile ? "flex-col text-center" : "flex-row text-left"
+            }`}
+          >
             <div
               style={{ flexGrow: 3 }}
               className="text-3xl flex items-center md:p-6"

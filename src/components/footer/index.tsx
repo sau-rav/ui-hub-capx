@@ -34,12 +34,12 @@ const Footer = (): JSX.Element => {
                 height={279}
                 className={`w-3/5`}
               />
-              <div className="font-bold text-[15px] sm:text-[22px] lg:text-[28px] 2xl:text-[36px] leading-[44px] text-[#EDAF36] mt-[6px] pl-[10px]">
+              <div className="font-bold text-[15px] sm:text-[22px] lg:text-[28px] 2xl:text-[36px] leading-[44px] text-[#ED8E36] mt-[6px] pl-[10px]">
                 Trading made simpler and smarter
               </div>
             </div>
             <div className="bg-grey relative hidden 2xl:block">
-              <div className="relative max-w-fit font-normal text-[#fdc861] text-[18px] leading-[21px] rounded-tr-[50px] pt-[41px] pr-[25px] pb-[29px] pl-[14px] 2xl:bg-normal-black">
+              <div className="relative max-w-fit font-normal text-golden-light text-[18px] leading-[21px] rounded-tr-[50px] pt-[41px] pr-[25px] pb-[29px] pl-[14px] 2xl:bg-normal-black">
                 Copyright &copy; CapX 2024. Made in India
                 <div className="hidden 2xl:block absolute bg-normal-black right-[-50px] bottom-0">
                   <div className="hidden 2xl:block w-[50px] h-[50px] rounded-bl-[50px] bg-grey"></div>
@@ -61,14 +61,14 @@ const Footer = (): JSX.Element => {
                   target={"_blank"}
                   rel={"noreferrer"}
                 >
-                  <YouTubeIcon sx={{ fontSize: iconSize, color: "#EDAF36" }} />
+                  <YouTubeIcon sx={{ fontSize: iconSize, color: "#ED8E36" }} />
                 </a>
                 <a
                   href="https://x.com/CapX_live"
                   target={"_blank"}
                   rel={"noreferrer"}
                 >
-                  <XIcon sx={{ fontSize: iconSize, color: "#EDAF36" }} />
+                  <XIcon sx={{ fontSize: iconSize, color: "#ED8E36" }} />
                 </a>
                 <a
                   href="https://www.instagram.com/capx_live/"
@@ -76,7 +76,7 @@ const Footer = (): JSX.Element => {
                   rel={"noreferrer"}
                 >
                   <InstagramIcon
-                    sx={{ fontSize: iconSize, color: "#EDAF36" }}
+                    sx={{ fontSize: iconSize, color: "#ED8E36" }}
                   />
                 </a>
                 <a
@@ -84,7 +84,7 @@ const Footer = (): JSX.Element => {
                   target="_blank"
                   rel={"noreferrer"}
                 >
-                  <LinkedInIcon sx={{ fontSize: iconSize, color: "#EDAF36" }} />
+                  <LinkedInIcon sx={{ fontSize: iconSize, color: "#ED8E36" }} />
                 </a>
               </div>
             </div>

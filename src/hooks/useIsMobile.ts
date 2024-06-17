@@ -15,5 +15,5 @@ export const useIsMobile = (): boolean => {
     };
   }, []);
 
-  return width <= 768;
+  return width <= 1200;
 };

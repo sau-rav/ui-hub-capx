@@ -60,6 +60,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             property="og:description"
             content="An AI-powered trading personal assistant"
           />
+          <meta
+            property="og:image"
+            content="https://lh3.googleusercontent.com/drive-viewer/AKGpihbUSg4AIyeGPYQ111xdOdcX79IcK9Wf1E-C4xsSGJeuo4fo-A9mE7uj9XAgSrJ7d2tBqR9n1Bc0CdmKtTXIfH1VLSBN20Pd_Ro=w3456-h614"
+          />
         </Head>
         <div className="font-medium">
           <LoadingBar

@@ -29,12 +29,6 @@
   transition: border-bottom-right-radius 1.5s, border-bottom-left-radius 1.5s;
 }
 
-.radial-gradient {
-  background: radial-gradient (
-    circle at 0% 0%
-    rgb(195, 134, 11) 0%
-    transparent 100%
-  )
-}
+
 
 

@@ -29,6 +29,11 @@
   transition: border-bottom-right-radius 1.5s, border-bottom-left-radius 1.5s;
 }
 
+::selection {
+  color: black;
+  background: #ED8E36;
+}
+
 
 
 

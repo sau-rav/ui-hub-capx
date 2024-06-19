@@ -5,7 +5,7 @@ export const Thankyou = (): JSX.Element => {
 
   return (
     <div>
-      <div className="flex flex-col justify-center items-center text-white gap-1 px-4 font-poppins gap-8 h-full py-40 md:py-60">
+      <div className="flex flex-col justify-center items-center text-white gap-1 px-4 font-poppins gap-8 h-full pt-56 pb-24 md:py-60">
         <div className="flex gap-4 flex-wrap justify-center items-center">
           <p className="text-3xl md:text-7xl font-semibold">Welcome to CapX,</p>
           <p className="text-3xl md:text-7xl font-semibold text-golden">

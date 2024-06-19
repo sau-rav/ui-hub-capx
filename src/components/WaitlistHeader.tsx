@@ -32,7 +32,7 @@ export const WaitlistHeader = (): JSX.Element => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center text-white gap-1 px-4 font-poppins gap-12 py-32 md:py-48">
+    <div className="flex flex-col justify-center items-center text-white gap-1 px-4 font-poppins gap-12 py-40 md:py-48">
       <div className="flex flex-col text-center gap-2">
         <p className="text-3xl md:text-7xl font-extrabold">
           The next generation
@@ -46,7 +46,7 @@ export const WaitlistHeader = (): JSX.Element => {
       <div className="flex flex-col gap-2">
         <div className="flex justify-center">
           <button
-            className="h-full px-6 py-3 rounded-xl relative bg-white text-black absolute flex items-center hover:bg-golden-light"
+            className="h-full px-6 py-3 rounded-xl relative bg-white text-black absolute flex items-center hover:bg-golden"
             onClick={signInWithGoogle}
           >
             <img

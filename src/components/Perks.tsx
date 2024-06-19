@@ -57,7 +57,7 @@ export const Perks = (): JSX.Element => {
         <Divider />
         <Perk
           title="BE THE FIRST TO"
-          subTitle="TRY THW PRODUCT"
+          subTitle="TRY THE PRODUCT"
           description="Chance to engage with top traders around the India and learn the best strategies from each other"
           className="flex-1"
         />

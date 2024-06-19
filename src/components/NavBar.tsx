@@ -34,8 +34,8 @@ const NavBar = (): JSX.Element => {
           WebkitBackdropFilter: "blur(17px)",
         }}
       >
-        <div className="flex-1 cursor-pointer" onClick={handleHome}>
-          <Image src={logo} alt="logo" height={40} />
+        <div className="flex-1 cursor-pointer">
+          <Image src={logo} alt="logo" height={40} onClick={handleHome} />
         </div>
         {route === WAITLIST_ROUTE ? null : (
           <div>

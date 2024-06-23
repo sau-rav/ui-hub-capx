@@ -18,7 +18,7 @@ export const Header = (): JSX.Element => {
         </p>
       </Reveal>
       <Reveal sliderColor="#808080">
-        <p className="text-2xl md:text-3xl font-bold text-golden-light text-center mt-4 md:mt-8">
+        <p className="text-2xl md:text-3xl font-bold text-golden-light text-center mt-8 md:mt-12">
           Research to investing, all-in-one place
         </p>
       </Reveal>

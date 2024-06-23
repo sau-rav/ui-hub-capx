@@ -36,7 +36,7 @@ export const WaitlistHeader = (): JSX.Element => {
       <div className="flex flex-col text-center gap-2">
         <p className="text-3xl md:text-7xl font-bold">The next generation</p>
         <p className="text-3xl md:text-7xl font-bold">trading platform</p>
-        <p className="text-xl md:text-3xl font-semibold text-golden-light text-center mt-4 md:mt-8">
+        <p className="text-xl md:text-3xl font-semibold text-golden-light text-center mt-8 md:mt-12">
           Join now for Early Access
         </p>
       </div>

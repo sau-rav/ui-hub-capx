@@ -41,7 +41,7 @@ export const Feature = ({
         )}
         <div className="flex flex-col flex-1 gap-3">
           <div className="font-bold text-3xl md:text-4xl">{questionTitle}</div>
-          <div className="text-2xl md:text-3xl text-white/80 font-semibold">
+          <div className="text-2xl md:text-3xl text-white/80 font-normal">
             {questionDescription}
           </div>
         </div>
@@ -55,7 +55,7 @@ export const Feature = ({
           <p className="flex-none font-bold text-xl md:text-2xl text-light-grey">
             {answerTitle}
           </p>
-          <p className="flex-1 flex items-center text-2xl md:text-4xl font-semibold text-[#222222]">
+          <p className="flex-1 flex items-center text-2xl md:text-4xl font-normal text-[#222222]">
             {answerDescription}
           </p>
         </div>

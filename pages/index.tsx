@@ -10,7 +10,7 @@ import { Testimonial } from "../src/components/Testimonial";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-normal-black font-montserrat">
+    <div className="bg-normal-black font-poppins">
       <NavBar />
       <Header />
       <TypingText />

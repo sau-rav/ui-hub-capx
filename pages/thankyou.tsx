@@ -27,7 +27,7 @@ const ThankyouPage: NextPage = () => {
   const { width, height } = useWindowDimension();
 
   return (
-    <div className="bg-normal-black font-montserrat">
+    <div className="bg-normal-black font-poppins">
       <div className="fixed">
         <Confetti
           width={width}

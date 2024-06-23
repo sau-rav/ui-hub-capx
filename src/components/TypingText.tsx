@@ -18,7 +18,7 @@ export const TypingText = (): JSX.Element => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "50% start"],
+    offset: ["start end", "25% start"],
   });
 
   const isMobile = useIsMobile();
@@ -47,8 +47,8 @@ export const TypingText = (): JSX.Element => {
       ref={ref}
     >
       <div
-        className={`text-light-black  font-bold flex gap-3 flex-wrap ${
-          isMobile ? "w-9/12 text-4xl" : "w-6/12 text-6xl"
+        className={`text-light-black  font-medium flex gap-3 flex-wrap ${
+          isMobile ? "w-full text-3xl px-8" : "w-9/12 text-6xl"
         }`}
       >
         {DESCRIPTION_WITH_TAGS}

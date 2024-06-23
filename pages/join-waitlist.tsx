@@ -8,7 +8,7 @@ import Footer from "../src/components/footer";
 
 const Waitlist: NextPage = () => {
   return (
-    <div className="bg-normal-black font-montserrat">
+    <div className="bg-normal-black font-poppins">
       <NavBar />
       <WaitlistHeader />
       <Counter hideJoinWaitlistButton className="pb-32 md:pb-48" />

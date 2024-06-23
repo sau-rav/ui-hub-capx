@@ -12,7 +12,7 @@ import logo from "../../public/logo.png";
 
 const WAITLIST_ROUTE = "/join-waitlist";
 const PRIMARY_BUTTON_CLASSNAME =
-  "h-full w-full px-4 md:px-6 py-2 md:py-3 rounded-full relative bg-golden text-black";
+  "h-full w-full px-4 md:px-6 py-2 md:py-3 rounded-full relative bg-golden text-black hover:font-bold";
 
 const NavBar = (): JSX.Element => {
   const router = useRouter();

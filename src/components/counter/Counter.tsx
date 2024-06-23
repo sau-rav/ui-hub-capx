@@ -66,7 +66,7 @@ export const Counter = ({
         ></div>
         <div>
           <button
-            className="h-full w-full px-6 py-3 rounded-full relative bg-golden text-black absolute"
+            className="h-full w-full px-6 py-3 rounded-full relative bg-golden text-black absolute hover:font-bold"
             onClick={handleJoinWaitlist}
           >
             <span>Join Waitlist</span>

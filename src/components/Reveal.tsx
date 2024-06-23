@@ -26,7 +26,7 @@ export const Reveal = ({
   }, [inView]);
 
   return (
-    <div ref={ref} className="relative w-fit overflow-hidden py-2.5">
+    <div ref={ref} className="relative w-fit overflow-hidden pb-2">
       <motion.div
         variants={{ start: { opacity: 0, x: 75 }, end: { opacity: 1, x: 0 } }}
         initial="start"

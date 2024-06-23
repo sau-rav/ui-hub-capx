@@ -9,6 +9,7 @@ import Head from "next/head";
 import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider } from "baseui";
 import LoadingBar from "react-top-loading-bar";
+import { UserProvider } from "../src/context/user";
 
 import { styletron } from "../src/styletron";
 
@@ -60,7 +61,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             waitingTime={400}
             height={3}
           />
-          <Component {...pageProps} />
+          <UserProvider>
+            <Component {...pageProps} />
+          </UserProvider>
         </div>
       </BaseProvider>
     </StyletronProvider>

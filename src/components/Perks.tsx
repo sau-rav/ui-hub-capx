@@ -15,7 +15,7 @@ const Perk = ({
     <div
       className={`flex flex-col text-2xl md:text-3xl text-center gap-8 ${className}`}
     >
-      <div className="flex flex-col text-transparent bg-clip-text bg-gradient-to-b to-golden via-golden-light from-white">
+      <div className="flex flex-col text-transparent bg-clip-text bg-gradient-to-b to-golden via-golden-light from-white font-semibold">
         <p>{title}</p>
         <p>{subTitle}</p>
       </div>
@@ -41,8 +41,8 @@ const Divider = (): JSX.Element => {
 export const Perks = (): JSX.Element => {
   const isMobile = useIsMobile();
   return (
-    <div className="md:pb-24 flex flex-col font-poppins gap-16 md:gap-24">
-      <div className="flex gap-2 flex-wrap justify-center text-3xl font-bold md:text-6xl px-8">
+    <div className="md:pb-24 flex flex-col gap-16 md:gap-24">
+      <div className="flex gap-2 flex-wrap justify-center text-4xl font-semibold md:text-7xl px-8">
         <p className="text-white">Perks of joining</p>
         <p className="text-golden">waitlist</p>
       </div>

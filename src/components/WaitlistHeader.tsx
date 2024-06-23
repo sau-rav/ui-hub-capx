@@ -1,44 +1,42 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { signInWithPopup } from "firebase/auth";
+import { useCallback } from "react";
 import { useRouter, NextRouter } from "next/router";
+import { signInWithPopup } from "firebase/auth";
+
+import { useUser } from "../context/user";
 
 import { auth, googleProvider } from "../config/firebase";
 
 export const WaitlistHeader = (): JSX.Element => {
   const router: NextRouter = useRouter();
-  const [refParam, setRefParam] = useState<string | null>(null);
+  // const [refParam, setRefParam] = useState<string | null>(null);
 
-  useEffect(() => {
-    const { ref } = router.query;
-    if (typeof ref === "string") {
-      setRefParam(ref);
-    }
-  }, [router.query]);
+  const userContextValue = useUser();
+  const { setUser } = userContextValue ?? {};
 
-  const signInWithGoogle = async () => {
+  // useEffect(() => {
+  //   const { ref } = router.query;
+  //   if (typeof ref === "string") {
+  //     setRefParam(ref);
+  //   }
+  // }, [router.query]);
+
+  const signInWithGoogle = useCallback(async () => {
     try {
       await signInWithPopup(auth, googleProvider).then((userCredential) => {
-        console.log(userCredential);
-        if (refParam) {
-          router.push(`/dashboard?ref=${refParam}`);
-        } else {
-          router.push("/dashboard");
-        }
+        setUser?.(userCredential.user);
+        router.push("/thankyou");
       });
     } catch (err) {
       console.error(err);
     }
-  };
+  }, [setUser]);
 
   return (
     <div className="flex flex-col justify-center items-center text-white gap-1 px-4 font-poppins gap-12 py-40 md:py-48">
       <div className="flex flex-col text-center gap-2">
-        <p className="text-3xl md:text-7xl font-extrabold">
-          The next generation
-        </p>
-        <p className="text-3xl md:text-7xl font-extrabold">trading platform</p>
-        <p className="text-xl md:text-3xl font-bold text-golden-light text-center">
+        <p className="text-3xl md:text-7xl font-bold">The next generation</p>
+        <p className="text-3xl md:text-7xl font-bold">trading platform</p>
+        <p className="text-xl md:text-3xl font-semibold text-golden-light text-center mt-8 md:mt-12">
           Join now for Early Access
         </p>
       </div>

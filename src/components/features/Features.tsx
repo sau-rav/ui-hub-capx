@@ -6,7 +6,7 @@ import { FEATURES } from "./constants";
 export const Features = (): JSX.Element => {
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col items-center justify-center text-white w-9/12 gap-16 md:gap-32">
+      <div className="flex flex-col items-center justify-center text-white w-full md:w-9/12 gap-16 md:gap-32 px-4 md:px-0">
         <FadeInOut>
           <p className="text-4xl font-bold md:text-7xl text-center">
             How CapX does things differently

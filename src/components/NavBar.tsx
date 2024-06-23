@@ -1,14 +1,25 @@
 import { memo, useCallback } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { signOut } from "firebase/auth";
+
+import { useUser } from "../context/user";
+
+import { auth } from "../config/firebase";
 
 // Import your logo image
 import logo from "../../public/logo.png";
 
 const WAITLIST_ROUTE = "/join-waitlist";
+const PRIMARY_BUTTON_CLASSNAME =
+  "h-full w-full px-4 md:px-6 py-2 md:py-3 rounded-full relative bg-golden text-black";
 
 const NavBar = (): JSX.Element => {
   const router = useRouter();
+
+  const userContext = useUser();
+
+  const { user, setUser } = userContext ?? {};
 
   const handleJoinWaitlist = useCallback(() => {
     router.push(WAITLIST_ROUTE);
@@ -18,7 +29,40 @@ const NavBar = (): JSX.Element => {
     router.push("/");
   }, []);
 
+  const handleLogout = useCallback(async () => {
+    try {
+      await signOut(auth).then(() => {
+        setUser?.(undefined);
+        router.push("/");
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }, [setUser]);
+
   const { route } = router;
+
+  let primaryButtonEl;
+  if (user) {
+    primaryButtonEl = (
+      <div>
+        <button className={PRIMARY_BUTTON_CLASSNAME} onClick={handleLogout}>
+          <span>Logout</span>
+        </button>
+      </div>
+    );
+  } else if (route !== WAITLIST_ROUTE) {
+    primaryButtonEl = (
+      <div>
+        <button
+          className={PRIMARY_BUTTON_CLASSNAME}
+          onClick={handleJoinWaitlist}
+        >
+          <span>Join Waitlist</span>
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -37,16 +81,7 @@ const NavBar = (): JSX.Element => {
         <div className="flex-1 cursor-pointer">
           <Image src={logo} alt="logo" height={40} onClick={handleHome} />
         </div>
-        {route === WAITLIST_ROUTE ? null : (
-          <div>
-            <button
-              className="h-full w-full px-4 md:px-6 py-2 md:py-3 rounded-full relative bg-golden text-black"
-              onClick={handleJoinWaitlist}
-            >
-              <span>Join Waitlist</span>
-            </button>
-          </div>
-        )}
+        {primaryButtonEl}
       </div>
     </div>
   );

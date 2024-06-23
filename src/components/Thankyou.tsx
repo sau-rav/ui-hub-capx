@@ -1,7 +1,13 @@
 import { useIsMobile } from "../hooks/useIsMobile";
 
+import { useUser } from "../context/user";
+
 export const Thankyou = (): JSX.Element => {
   const isMobile = useIsMobile();
+
+  const userContext = useUser();
+
+  const { user } = userContext ?? {};
 
   return (
     <div>
@@ -9,7 +15,7 @@ export const Thankyou = (): JSX.Element => {
         <div className="flex gap-4 flex-wrap justify-center items-center">
           <p className="text-3xl md:text-7xl font-semibold">Welcome to CapX,</p>
           <p className="text-3xl md:text-7xl font-semibold text-golden">
-            Abhigyan
+            {user?.displayName}
           </p>
         </div>
         <p

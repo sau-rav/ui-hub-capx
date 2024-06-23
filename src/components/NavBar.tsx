@@ -1,13 +1,16 @@
-import { memo, useCallback } from "react";
-import { useRouter } from "next/router";
-import Image from "next/image";
 import { signOut } from "firebase/auth";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { memo, useCallback, useState } from "react";
+
+import NavbarModal from './NavbarModal'
 
 import { useUser } from "../context/user";
 
 import { auth } from "../config/firebase";
 
 // Import your logo image
+import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../../public/logo.png";
 
 const WAITLIST_ROUTE = "/join-waitlist";
@@ -15,6 +18,7 @@ const PRIMARY_BUTTON_CLASSNAME =
   "h-full w-full px-4 md:px-6 py-2 md:py-3 rounded-full relative bg-golden text-black hover:font-bold";
 
 const NavBar = (): JSX.Element => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
 
   const userContext = useUser();
@@ -40,12 +44,17 @@ const NavBar = (): JSX.Element => {
     }
   }, [setUser]);
 
+
+  const handleModalClose = () => {
+    setIsModalOpen(false)
+  }
+
   const { route } = router;
 
   let primaryButtonEl;
   if (user) {
     primaryButtonEl = (
-      <div>
+      <div className="hidden md:block">
         <button className={PRIMARY_BUTTON_CLASSNAME} onClick={handleLogout}>
           <span>Logout</span>
         </button>
@@ -53,7 +62,7 @@ const NavBar = (): JSX.Element => {
     );
   } else if (route !== WAITLIST_ROUTE) {
     primaryButtonEl = (
-      <div>
+      <div className="hidden md:block">
         <button
           className={PRIMARY_BUTTON_CLASSNAME}
           onClick={handleJoinWaitlist}
@@ -82,6 +91,10 @@ const NavBar = (): JSX.Element => {
           <Image src={logo} alt="logo" height={40} onClick={handleHome} />
         </div>
         {primaryButtonEl}
+        <div className="md:hidden" onClick={() => setIsModalOpen(true)}>
+          <MenuIcon sx={{ fontSize: 30, color: "#FFFFFF" }} />
+        </div>
+        <NavbarModal isModalOpen={isModalOpen} handleModalClose={handleModalClose} handleJoinWaitlist={handleJoinWaitlist} handleHome={handleHome} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useMemo, useState, ReactNode, useEffect } from "react";
+import { useMemo, useState, ReactNode } from "react";
 import { UserContext, User } from "./context";
 import { auth } from "../..//config/firebase";
 

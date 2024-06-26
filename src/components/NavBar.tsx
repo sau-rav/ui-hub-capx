@@ -32,7 +32,7 @@ const NavBar = (): JSX.Element => {
   const handleLogout = useCallback(async () => {
     try {
       await signOut(auth).then(() => {
-        setUser?.(undefined);
+        setUser?.(null);
         router.push("/");
       });
     } catch (err) {

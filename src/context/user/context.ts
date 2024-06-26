@@ -7,7 +7,10 @@ export type User = {
 };
 
 type Value =
-  | { user?: User | undefined; setUser: (user: User | undefined) => void }
+  | {
+      user?: User | null;
+      setUser: (user: User | null) => void;
+    }
   | undefined;
 
 export const UserContext = createContext<Value>(undefined);

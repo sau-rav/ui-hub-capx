@@ -31,6 +31,7 @@ const NavBar = (): JSX.Element => {
 
   const handleHome = useCallback(() => {
     router.push("/");
+    handleModalClose();
   }, []);
 
   const handleLogout = useCallback(async () => {
@@ -45,9 +46,9 @@ const NavBar = (): JSX.Element => {
   }, [setUser]);
 
 
-  const handleModalClose = () => {
+  const handleModalClose = useCallback(() => {
     setIsModalOpen(false)
-  }
+  }, [])
 
   const { route } = router;
 

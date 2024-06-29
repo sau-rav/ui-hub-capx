@@ -7,6 +7,7 @@ import { TypingText } from "../src/components/TypingText";
 import { NavBar } from "../src/components/NavBar";
 import { Counter } from "../src/components/counter";
 import { Testimonial } from "../src/components/Testimonial";
+import { FAQ } from "../src/components/FAQ";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Features />
       <Counter />
       <Testimonial />
+      <FAQ />
       <Footer />
     </div>
   );

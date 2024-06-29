@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 
 import { Question } from "./components/question";
+import { motion } from "framer-motion";
 
 import { QUESTIONS } from "./contants";
 
@@ -21,7 +22,7 @@ export const Questions = (): JSX.Element => {
   );
 
   return (
-    <div className="flex flex-col px-4 md:px-8 md:px-16 lg:px-24 gap-2">
+    <motion.div className="flex flex-col px-4 md:px-8 md:px-16 lg:px-24 gap-2">
       {QUESTIONS.map((question) => (
         <Question
           key={question.id}
@@ -30,6 +31,6 @@ export const Questions = (): JSX.Element => {
           isSelected={selectedPosition === question.position}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };

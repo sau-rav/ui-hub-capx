@@ -17,7 +17,9 @@ export const FAQ = (): JSX.Element => {
     <motion.div layout>
       <motion.div
         layout
-        className="text-golden flex items-center gap-4 justify-center text-2xl lg:text-5xl md:text-3xl lg:pt-36 md:pt-30 pt-24 lg:pb-28 md:pt-24 pt-16 px-8 md:px-16 font-semibold text-center cursor-pointer"
+        className={`text-golden flex items-center gap-4 justify-center text-2xl lg:text-5xl md:text-3xl mt-12 md:mt-20 py-12 md:py-20 px-8 md:px-16 font-semibold text-center cursor-pointer ${
+          expanded ? "" : "bg-light-black"
+        }`}
         onClick={toggleExpansion}
       >
         Frequently Asked Questions

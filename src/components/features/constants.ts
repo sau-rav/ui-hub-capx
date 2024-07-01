@@ -10,41 +10,42 @@ export const FEATURES: Feature[] = [
     position: "01",
     questionTitle: "Lack of Time",
     questionDescription:
-      "Daily Indian traders suffer losses due to lack of guidance and self-control",
+      "Not enough time to research and make informed trading decisions",
     answerTitle: "How CapX solves this",
-    answerDescription: "Providing an interactive prompt-based research tool",
+    answerDescription:
+      "Make all your trading decisions in the fastest way possible",
     imageSrc: feature1,
     imageUrl: "feature1.png",
   },
   {
     position: "02",
-    questionTitle: "Market Noise",
+    questionTitle: "Lack of knowledge",
     questionDescription:
-      "Too much noise in the market distracts investors from the correct information",
+      "Lack of basic knowledge or understanding to make trading decisions",
     answerTitle: "How CapX solves this",
-    answerDescription: "Simple data visualization with actionable insights",
+    answerDescription:
+      "Personalized guidance at every stage to help you get better",
     imageSrc: feature2,
     imageUrl: "feature2.png",
   },
   {
     position: "03",
-    questionTitle: "Fear of Starting",
+    questionTitle: "Fear of starting",
     questionDescription:
       "The absence of a clear, structured learning path has kept many individuals from trading",
     answerTitle: "How CapX solves this",
     answerDescription:
-      "Get personalized guide to becoming a professional trader",
+      "Get a personalized starting path to get you started faster",
     imageSrc: feature3,
     imageUrl: "feature3.png",
   },
   {
     position: "04",
-    questionTitle: "Knowledge Gap",
+    questionTitle: "Market Noise",
     questionDescription:
-      "Investors lack a basic understanding of the fundamentals to make informed decisions",
+      "Too much information in the market, leading to confusion and distraction",
     answerTitle: "How CapX solves this",
-    answerDescription:
-      "Get personalized interactive learning at every stage of your investing journey",
+    answerDescription: " See only the data you need for the right decisions",
     imageSrc: feature4,
     imageUrl: "feature4.png",
   },

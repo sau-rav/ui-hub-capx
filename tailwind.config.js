@@ -11,6 +11,7 @@ module.exports = {
         "light-black": "#1E1E1E",
         "light-grey": "#828282",
         "lite-yellow": "#E8C19C",
+        "normal-black": "#101115",
       },
       backgroundColor: {
         footer: "#ED8E36",

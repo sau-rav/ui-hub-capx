@@ -9,7 +9,7 @@ export const Features = (): JSX.Element => {
       <div className="flex flex-col items-center justify-center text-white w-full md:w-9/12 gap-16 md:gap-32 px-4 md:px-0">
         <FadeInOut>
           <p className="text-4xl font-bold md:text-7xl text-center">
-            How CapX does things differently
+            How CapX solves your problems
           </p>
         </FadeInOut>
         {FEATURES.map((feature) => (

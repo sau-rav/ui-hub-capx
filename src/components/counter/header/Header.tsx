@@ -41,21 +41,23 @@ export const Header = (): JSX.Element => {
       <Card3 />
 
       <Reveal>
-        <p className="text-xl md:text-7xl font-semibold">An AI-powered</p>
+        <p className="text-3xl md:text-7xl font-semibold">An AI-powered</p>
       </Reveal>
       <Reveal>
-        <p className="text-xl md:text-7xl font-semibold">
+        <p className="text-3xl md:text-7xl font-semibold text-left">
           trading platform that
         </p>
       </Reveal>
       <Reveal>
-        <p className="text-xl md:text-7xl font-semibold">works as your</p>
+        <p className="text-3xl md:text-7xl font-semibold">works as your</p>
       </Reveal>
       <Reveal>
-        <p className="text-xl md:text-7xl font-semibold ">personal assistant</p>
+        <p className="text-3xl md:text-7xl font-semibold ">
+          personal assistant
+        </p>
       </Reveal>
       <Reveal sliderColor="#808080">
-        <p className="text-lg md:text-2xl font-normal text-golden-light text-left md:text-center mt-2 md:mt-12">
+        <p className="text-xl md:text-2xl font-normal text-golden-light text-left md:text-center mt-2 md:mt-12">
           Research to investing, all-in-one place
         </p>
       </Reveal>

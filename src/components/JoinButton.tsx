@@ -36,12 +36,12 @@ export const JoinButton = (): JSX.Element | null => {
             <span>Join Waitlist</span>
           </button>
         </div>
-        <div className="absolute" style={{ right: "0px", bottom: "20px" }}>
+        {/* <div className="absolute" style={{ right: "0px", bottom: "20px" }}>
           <Image src={lineLeft} alt="lineLeft" height={isMobile ? 80 : 150} />
         </div>
         <div className="absolute" style={{ right: "0px", top: "20px" }}>
           <Image src={lineRight} alt="lineRight" height={isMobile ? 80 : 150} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

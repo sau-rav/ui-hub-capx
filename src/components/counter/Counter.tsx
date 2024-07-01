@@ -81,7 +81,7 @@ export const Counter = ({
       ref={ref}
       className={`flex flex-col text-white items-center ${className}`}
     >
-      <div className="text-6xl md:text-9xl font-bold md:text-white text-golden">
+      <div className="text-6xl md:text-9xl font-bold text-golden">
         <Odometer
           value={odometerValue}
           format="(,ddd)"

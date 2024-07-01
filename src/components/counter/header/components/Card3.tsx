@@ -30,7 +30,7 @@ export const Card3 = (): JSX.Element => {
         bottom: isMobile ? "240px" : "320px",
       }}
       variants={{
-        start: { opacity: 0, x: 200, y: 200 },
+        start: { opacity: 0, x: 0, y: -200 },
         end: { opacity: 1, x: 0, y: 0 },
       }}
       initial="start"

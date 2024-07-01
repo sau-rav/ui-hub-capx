@@ -31,10 +31,10 @@ const Footer = (): JSX.Element => {
                 src={logo.src}
                 alt="Cap X"
                 width={666}
-                height={279}
-                className={`w-3/5`}
+                height={200}
+                className={`w-1/2`}
               />
-              <div className="font-bold text-[16px] leading-[19px] text-[#FFFBF6] mt-[6px] xl:pl-[37px]">
+              <div className="font-light text-2xl leading-[19px] text-[#FFFBF6] mt-[6px]">
                 Research to investing, all-in-one place
               </div>
             </div>
@@ -48,7 +48,7 @@ const Footer = (): JSX.Element => {
             </div>
           </div>
           <div className="bg-light-black xl:w-2/5 mt-[11spx] xl:rounded-br-[50px] flex flex-col items-center xl:items-stretch">
-            <div className="relative text-[#fffded] font-semibold text-[32px] leading-[39px] rounded-bl-[50px] 2xl:pl-[30px] py-[26px] xl:bg-normal-black xl:text-center xl:pl-[47px] xl:pr-[56px]">
+            <div className="relative text-[#fffded] font-light text-2xl leading-[39px] rounded-bl-[50px] 2xl:pl-[30px] py-[26px] xl:bg-normal-black xl:text-center xl:pl-[47px] xl:pr-[56px]">
               <span>Join CapX on</span>
               <div className="absolute bg-normal-black right-0 bottom-[-50px] hidden xl:block">
                 <div className="w-[50px] h-[50px] rounded-tr-[50px] hidden xl:block bg-light-black"></div>

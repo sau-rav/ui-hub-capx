@@ -41,14 +41,14 @@ export const TypingText = (): JSX.Element => {
   return (
     <motion.div
       className={`flex items-center justify-center ${
-        isMobile ? "mb-28" : "mb-48"
+        isMobile ? "mb-28 mt-16" : "mb-48 mt-20"
       }`}
       id="type-container"
       ref={ref}
     >
       <div
         className={`text-light-black  font-medium flex gap-3 flex-wrap ${
-          isMobile ? "w-full text-3xl px-8" : "w-9/12 text-6xl"
+          isMobile ? "w-full text-2xl px-8" : "w-9/12 text-6xl"
         }`}
       >
         {DESCRIPTION_WITH_TAGS}

@@ -1,11 +1,18 @@
+import Image from "next/image";
+
 import { useIsMobile } from "../hooks/useIsMobile";
 import { FadeInOut } from "./FadeInOut";
+
+import test1 from "../../public/test1.png";
+import test2 from "../../public/test2.png";
+import test3 from "../../public/test3.png";
+import test4 from "../../public/test4.png";
 
 export const Testimonial = (): JSX.Element => {
   const isMobile = useIsMobile();
   return (
     <div className="flex items-center justify-center">
-      <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-light-grey">
+      <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-white">
         <div className="flex flex-col items-center justify-center w-full px-4 gap-4">
           <FadeInOut>
             <p className="text-4xl font-bold md:text-7xl text-center mb-6 text-white">
@@ -14,61 +21,65 @@ export const Testimonial = (): JSX.Element => {
           </FadeInOut>
           <div className={`flex gap-4 ${isMobile ? "flex-col" : "flex-row"}`}>
             <div
-              className="p-11 bg-light-black flex-1 rounded-3xl text-3xl"
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl bg-gradient-to-l from-light-black to-normal-black"
               style={{ flexGrow: 1 }}
             >
-              Daily Indian traders suffer losses due to lack of guidance and
-              self-control
+              <div>
+                <span className="font-bold text-2xl md:text-4xl mr-2">10+</span>
+                <span>years of combined experience from top IITs</span>
+              </div>
+              <div className="flex justify-end">
+                <Image src={test1} alt="test1" height={isMobile ? 120 : 180} />
+              </div>
             </div>
             <div
-              className="p-11 bg-light-black rounded-3xl text-3xl flex-1 flex flex-col gap-4"
+              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4 bg-gradient-to-l from-light-black to-normal-black"
               style={{ flexGrow: 3 }}
             >
               <div className="flex-1 w-full md:w-2/3">
-                Daily Indian traders suffer losses due to lack of guidance and
-                self-control
+                Advisors have managed assets exceeding{" "}
+                <p className="font-bold text-2xl md:text-4xl mr-2">
+                  $4 billion
+                </p>
               </div>
-              <div className="flex justify-end text-lite-yellow text-7xl md:text-9xl font-bold">
-                123cr
+              <div className="flex justify-end">
+                <Image src={test2} alt="test1" height={isMobile ? 120 : 180} />
               </div>
             </div>
           </div>
-          <div
-            className={`p-11 bg-light-black w-full rounded-3xl flex gap-4 ${
-              isMobile ? "flex-col text-center" : "flex-row text-left"
-            }`}
-          >
+          <div className={`flex gap-4 ${isMobile ? "flex-col" : "flex-row"}`}>
             <div
-              className="flex justify-center text-lite-yellow text-7xl md:text-9xl font-bold md:p-6"
+              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4 bg-gradient-to-l from-light-black to-normal-black"
+              style={{ flexGrow: 3 }}
+            >
+              <div className="flex-1 w-full md:w-2/3">
+                Built services generating millions in daily revenue and
+                distributing{" "}
+                <p className="font-bold text-2xl md:text-4xl mr-2">
+                  {" "}
+                  3 billion+{" "}
+                </p>
+                rewards monthly.
+              </div>
+              <div className="flex justify-end">
+                <Image src={test3} alt="test1" height={isMobile ? 120 : 180} />
+              </div>
+            </div>
+            <div
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl bg-gradient-to-l from-light-black to-normal-black"
               style={{ flexGrow: 1 }}
             >
-              1234
-            </div>
-            <div
-              style={{ flexGrow: 3 }}
-              className="text-3xl flex items-center md:p-6"
-            >
-              Daily Indian traders suffer losses due to lack of guidance and
-              self-control
-            </div>
-          </div>
-          <div
-            className={`p-11 bg-light-black w-full rounded-3xl flex gap-4 ${
-              isMobile ? "flex-col text-center" : "flex-row text-left"
-            }`}
-          >
-            <div
-              style={{ flexGrow: 3 }}
-              className="text-3xl flex items-center md:p-6"
-            >
-              Daily Indian traders suffer losses due to lack of guidance and
-              self-control
-            </div>
-            <div
-              className="flex justify-center text-lite-yellow text-7xl md:text-9xl font-bold md:p-6"
-              style={{ flexGrow: 1 }}
-            >
-              1234
+              <div className="flex flex-col">
+                Have raised over{" "}
+                <p className="font-bold text-2xl md:text-4xl mr-2">
+                  {" "}
+                  $250,000{" "}
+                </p>
+                for scalable B2C products
+              </div>
+              <div className="flex justify-end">
+                <Image src={test4} alt="test1" height={isMobile ? 120 : 180} />
+              </div>
             </div>
           </div>
         </div>

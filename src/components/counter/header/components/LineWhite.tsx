@@ -21,18 +21,7 @@ export const LineWhite = (): JSX.Element => {
     }
   }, [inView]);
 
-  return isMobile ? (
-    <div
-      ref={ref}
-      className="absolute"
-      style={{
-        right: "0px",
-        bottom: "0px",
-      }}
-    >
-      <Image src={whiteLine} alt="card1" height={640} />
-    </div>
-  ) : (
+  return (
     <motion.div
       ref={ref}
       className="absolute"

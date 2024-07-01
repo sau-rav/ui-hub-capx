@@ -21,18 +21,18 @@ export const Testimonial = (): JSX.Element => {
           </FadeInOut>
           <div className={`flex gap-4 ${isMobile ? "flex-col" : "flex-row"}`}>
             <div
-              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl"
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl flex flex-col"
               style={{
                 flexGrow: 1,
                 background:
                   "linear-gradient(132.29deg, #0F0F0F 26.18%, #2B2B2B 139.91%)",
               }}
             >
-              <div>
+              <div className="flex-1">
                 <span className="font-bold text-2xl md:text-4xl mr-2">10+</span>
                 <span>years of combined experience from top IITs</span>
               </div>
-              <div className="flex justify-end">
+              <div className="flex justify-end items-end">
                 <Image src={test1} alt="test1" height={isMobile ? 120 : 180} />
               </div>
             </div>
@@ -50,14 +50,14 @@ export const Testimonial = (): JSX.Element => {
                   $4 billion
                 </p>
               </div>
-              <div className="flex justify-end">
+              <div className="flex justify-end items-end">
                 <Image src={test2} alt="test1" height={isMobile ? 120 : 180} />
               </div>
             </div>
           </div>
           <div className={`flex gap-4 ${isMobile ? "flex-col" : "flex-row"}`}>
             <div
-              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4"
+              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4 flex"
               style={{
                 flexGrow: 1.6,
                 background:
@@ -73,19 +73,19 @@ export const Testimonial = (): JSX.Element => {
                 </p>
                 rewards monthly.
               </div>
-              <div className="flex justify-end">
+              <div className="flex justify-end items-end">
                 <Image src={test3} alt="test1" height={isMobile ? 120 : 180} />
               </div>
             </div>
             <div
-              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl"
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl flex flex-col"
               style={{
                 flexGrow: 1,
                 background:
                   "linear-gradient(132.29deg, #0F0F0F 26.18%, #2B2B2B 139.91%)",
               }}
             >
-              <div className="flex flex-col">
+              <div className="flex-1 flex flex-col">
                 Have raised over{" "}
                 <p className="font-bold text-2xl md:text-4xl mr-2">
                   {" "}
@@ -93,7 +93,7 @@ export const Testimonial = (): JSX.Element => {
                 </p>
                 for scalable B2C products
               </div>
-              <div className="flex justify-end">
+              <div className="flex justify-end items-end">
                 <Image src={test4} alt="test1" height={isMobile ? 120 : 180} />
               </div>
             </div>

@@ -15,7 +15,7 @@ export const Header = (): JSX.Element => {
   const isMobile = useIsMobile();
   return (
     <div
-      className={`flex flex-col text-white gap-1  px-4 font-poppins text-center relative ${
+      className={`flex flex-col text-white gap-1 font-poppins text-center relative ${
         isMobile ? "px-8 pt-36" : "px-20 justify-center h-screen"
       }`}
       style={{ height: isMobile ? "100vh" : "100vh" }}

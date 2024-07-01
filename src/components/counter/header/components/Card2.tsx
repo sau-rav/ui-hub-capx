@@ -24,14 +24,14 @@ export const Card2 = (): JSX.Element => {
   return (
     <motion.div
       ref={ref}
-      className="absolute"
+      className="absolute overflow-hidden"
       style={{
         right: isMobile ? undefined : "360px",
         bottom: isMobile ? "60px" : "20px",
         left: isMobile ? "20px" : undefined,
       }}
       variants={{
-        start: { opacity: 0, x: 200, y: 200, scale: 2 },
+        start: { opacity: 0, x: -200, y: 200, scale: 2 },
         end: { opacity: 1, x: 0, y: 0, scale: 1 },
       }}
       initial="start"

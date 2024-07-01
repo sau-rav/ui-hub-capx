@@ -30,8 +30,8 @@ export const LineWhite = (): JSX.Element => {
         bottom: "0px",
       }}
       variants={{
-        start: { opacity: 0, x: 200 },
-        end: { opacity: 1, x: 0 },
+        start: { opacity: 0, y: 200 },
+        end: { opacity: 1, y: 0 },
       }}
       initial="start"
       animate={control}

@@ -21,17 +21,28 @@ export const LineWhite = (): JSX.Element => {
     }
   }, [inView]);
 
-  return (
+  return isMobile ? (
+    <div
+      ref={ref}
+      className="absolute"
+      style={{
+        right: "0px",
+        bottom: "0px",
+      }}
+    >
+      <Image src={whiteLine} alt="card1" height={640} />
+    </div>
+  ) : (
     <motion.div
       ref={ref}
       className="absolute"
       style={{
-        right: isMobile ? "20px" : "140px",
-        bottom: isMobile ? "240px" : "320px",
+        right: "0px",
+        bottom: "0px",
       }}
       variants={{
-        start: { opacity: 0, x: 200, y: 340 },
-        end: { opacity: 1, x: 140, y: 320 },
+        start: { opacity: 0, x: 200 },
+        end: { opacity: 1, x: 0 },
       }}
       initial="start"
       animate={control}

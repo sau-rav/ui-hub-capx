@@ -34,7 +34,7 @@ export const Header = (): JSX.Element => {
 
       <LineGolden />
 
-      <Card1 />
+      {isMobile ? null : <Card1 />}
 
       <Card2 />
 

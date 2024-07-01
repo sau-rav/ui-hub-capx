@@ -8,6 +8,7 @@ import { Counter } from "../src/components/counter";
 import { Perks } from "../src/components/Perks";
 import Footer from "../src/components/footer";
 import { Steps } from "../src/components/Steps";
+import { FAQ } from "../src/components/FAQ";
 
 const Waitlist: NextPage = () => {
   const isMobile = useIsMobile();
@@ -22,6 +23,7 @@ const Waitlist: NextPage = () => {
         className={`${isMobile ? "py-20" : "py-32"}`}
       />
       <Perks />
+      <FAQ />
       <Footer />
     </div>
   );

@@ -20,7 +20,8 @@ export const Counter = ({
   hideJoinWaitlistButton?: boolean;
   className?: string;
 }): JSX.Element => {
-  const [odometerValue, setOdometerValue] = useState(504);
+  const [odometerValue, setOdometerValue] = useState<number>(990);
+  const [complete, setComplete] = useState(false);
   const [triggerCounter, setTriggerCounter] = useState(false);
 
   const userContext = useUser();
@@ -42,8 +43,13 @@ export const Counter = ({
   useEffect(() => {
     if (triggerCounter) {
       setTimeout(() => {
-        setOdometerValue(514);
+        setOdometerValue(1000);
       }, 10);
+    }
+    if (triggerCounter) {
+      setTimeout(() => {
+        setComplete(true);
+      }, 2000);
     }
   }, [triggerCounter]);
 
@@ -81,13 +87,16 @@ export const Counter = ({
       ref={ref}
       className={`flex flex-col text-white items-center ${className}`}
     >
-      <div className="text-6xl md:text-9xl font-bold text-golden">
+      <div
+        className={`text-6xl md:text-9xl font-bold text-golden flex items-center`}
+      >
         <Odometer
           value={odometerValue}
           format="(,ddd)"
           theme="default"
           duration={1000}
         />
+        {complete ? "+" : ""}
       </div>
       <div className="text-xl md:text-2xl mb-8">
         people have already signed up

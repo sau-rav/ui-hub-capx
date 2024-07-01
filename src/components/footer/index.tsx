@@ -34,7 +34,7 @@ const Footer = (): JSX.Element => {
                 height={200}
                 className={`w-1/2`}
               />
-              <div className="font-light text-2xl leading-[19px] text-[#FFFBF6] mt-[6px]">
+              <div className="font-normal text-2xl leading-[19px] text-[#FFFBF6] mt-[6px]">
                 Research to investing, all-in-one place
               </div>
             </div>

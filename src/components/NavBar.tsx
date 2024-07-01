@@ -3,14 +3,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { memo, useCallback, useState } from "react";
 
-import NavbarModal from './NavbarModal'
+import NavbarModal from "./NavbarModal";
 
 import { useUser } from "../context/user";
 
 import { auth } from "../config/firebase";
 
 // Import your logo image
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../../public/logo.png";
 
 const WAITLIST_ROUTE = "/join-waitlist";
@@ -45,25 +45,18 @@ const NavBar = (): JSX.Element => {
     }
   }, [setUser]);
 
-
   const handleModalClose = useCallback(() => {
-    setIsModalOpen(false)
-  }, [])
+    setIsModalOpen(false);
+  }, []);
 
   const { route } = router;
 
   let primaryButtonEl;
   if (user) {
-    primaryButtonEl = (
-      <div className="hidden md:block">
-        <button className={PRIMARY_BUTTON_CLASSNAME} onClick={handleLogout}>
-          <span>Logout</span>
-        </button>
-      </div>
-    );
+    primaryButtonEl = null;
   } else if (route !== WAITLIST_ROUTE) {
     primaryButtonEl = (
-      <div className="hidden md:block">
+      <div>
         <button
           className={PRIMARY_BUTTON_CLASSNAME}
           onClick={handleJoinWaitlist}
@@ -92,10 +85,17 @@ const NavBar = (): JSX.Element => {
           <Image src={logo} alt="logo" height={40} onClick={handleHome} />
         </div>
         {primaryButtonEl}
-        <div className="md:hidden" onClick={() => setIsModalOpen(true)}>
-          <MenuIcon sx={{ fontSize: 30, color: "#FFFFFF" }} />
-        </div>
-        <NavbarModal isModalOpen={isModalOpen} handleModalClose={handleModalClose} handleJoinWaitlist={handleJoinWaitlist} handleHome={handleHome} />
+        {user ? (
+          <div onClick={() => setIsModalOpen(true)}>
+            <MenuIcon sx={{ fontSize: 30, color: "#FFFFFF" }} />
+          </div>
+        ) : null}
+        <NavbarModal
+          isModalOpen={isModalOpen}
+          handleModalClose={handleModalClose}
+          handleLogout={handleLogout}
+          handleHome={handleHome}
+        />
       </div>
     </div>
   );

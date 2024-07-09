@@ -34,20 +34,21 @@ const NavBar = (): JSX.Element => {
     handleModalClose();
   }, []);
 
+  const handleModalClose = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
   const handleLogout = useCallback(async () => {
     try {
       await signOut(auth).then(() => {
         setUser?.(null);
         router.push("/");
+        handleModalClose();
       });
     } catch (err) {
       console.error(err);
     }
-  }, [setUser]);
-
-  const handleModalClose = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
+  }, [setUser, handleModalClose]);
 
   const { route } = router;
 

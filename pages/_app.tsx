@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "odometer/themes/odometer-theme-default.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -12,6 +13,8 @@ import LoadingBar from "react-top-loading-bar";
 import { UserProvider } from "../src/context/user";
 
 import { styletron } from "../src/styletron";
+
+const queryClient = new QueryClient();
 
 const Header = (): JSX.Element => (
   <Head>
@@ -50,23 +53,25 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
 
   return (
-    <StyletronProvider value={styletron}>
-      <BaseProvider theme={LightTheme}>
-        <Header />
-        <div className="font-medium">
-          <LoadingBar
-            color="linear-gradient(90deg, rgba(1,88,4,1) 1%, rgba(254,152,57,1) 63%)"
-            progress={progress}
-            onLoaderFinished={() => setProgress(0)}
-            waitingTime={400}
-            height={3}
-          />
-          <UserProvider>
-            <Component {...pageProps} />
-          </UserProvider>
-        </div>
-      </BaseProvider>
-    </StyletronProvider>
+    <QueryClientProvider client={queryClient}>
+      <StyletronProvider value={styletron}>
+        <BaseProvider theme={LightTheme}>
+          <Header />
+          <div className="font-medium">
+            <LoadingBar
+              color="linear-gradient(90deg, rgba(1,88,4,1) 1%, rgba(254,152,57,1) 63%)"
+              progress={progress}
+              onLoaderFinished={() => setProgress(0)}
+              waitingTime={400}
+              height={3}
+            />
+            <UserProvider>
+              <Component {...pageProps} />
+            </UserProvider>
+          </div>
+        </BaseProvider>
+      </StyletronProvider>
+    </QueryClientProvider>
   );
 }
 

@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { useUser } from "../context/user";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { useSignUpMutation } from "../hooks/useSignUpMutation";
 
 import { auth, googleProvider } from "../config/firebase";
 import joinWaitlist from "../../public/joinWaitlist.png";
@@ -16,12 +17,19 @@ export const WaitlistHeader = (): JSX.Element => {
   const { setUser } = userContextValue ?? {};
   const isMobile = useIsMobile();
 
+  const { mutateAsync: signUp } = useSignUpMutation({
+    onSuccess: () => router.push("/thankyou"),
+  });
+
   const signInWithGoogle = useCallback(async () => {
     try {
-      await signInWithPopup(auth, googleProvider).then((userCredential) => {
-        setUser?.(userCredential.user);
-        router.push("/thankyou");
+      const userCred = await signInWithPopup(auth, googleProvider);
+      setUser?.({
+        displayName: userCred.user.displayName,
+        email: userCred.user.email,
+        uid: userCred.user.uid,
       });
+      await signUp(userCred.user);
     } catch (err) {
       console.error(err);
     }

@@ -13,6 +13,9 @@ const signup = (user: User) => {
         invitationCode: "",
         phoneNumber: "",
         invitationLink: "",
+        headers: {
+          "Content-Type": "application/json",
+        },
       }),
     }
   );

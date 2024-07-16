@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev-secure": "node ./server/dev.js"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -15,6 +16,7 @@
     "@mui/material": "^5.15.15",
     "axios": "^1.6.8",
     "baseui": "^0.0.0-next-6fabc7134",
+    "express": "^4.19.2",
     "firebase": "^10.10.0",
     "framer-motion": "^11.2.10",
     "next": "^14.2.2",

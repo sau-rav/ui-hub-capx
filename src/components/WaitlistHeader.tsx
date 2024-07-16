@@ -9,6 +9,7 @@ import { useSignUpMutation } from "../hooks/useSignUpMutation";
 
 import { auth, googleProvider } from "../config/firebase";
 import joinWaitlist from "../../public/joinWaitlist.png";
+import { User } from "../context/user/context";
 
 export const WaitlistHeader = (): JSX.Element => {
   const router: NextRouter = useRouter();
@@ -20,6 +21,29 @@ export const WaitlistHeader = (): JSX.Element => {
   const { mutateAsync: signUp } = useSignUpMutation({
     onSuccess: () => router.push("/thankyou"),
   });
+
+  const signUpUser = useCallback(async (user: User) => {
+    const body = JSON.stringify({
+      emailId: user.email,
+      fullName: user.displayName,
+    });
+
+    try {
+      console.log("Inside custom mutation", body);
+      await fetch(
+        "http://ec2-16-171-226-117.eu-north-1.compute.amazonaws.com:7080/v1/user/signUp",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body,
+        }
+      );
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
 
   const signInWithGoogle = useCallback(async () => {
     try {

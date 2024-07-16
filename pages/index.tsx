@@ -8,6 +8,7 @@ import { NavBar } from "../src/components/NavBar";
 import { Testimonial } from "../src/components/Testimonial";
 import { FAQ } from "../src/components/FAQ";
 import { JoinButton } from "../src/components/JoinButton";
+import { FeatureSlider } from "../src/components/featureSlider";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Features />
       {/* <JoinButton /> */}
       <Testimonial />
+      <FeatureSlider />
       <FAQ />
       <Footer />
     </div>

@@ -10,8 +10,6 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useSignUpMutation } from "../hooks/useSignUpMutation";
 
 import { auth, googleProvider } from "../config/firebase";
-import joinWaitlist from "../../public/joinWaitlist.png";
-import { User } from "../context/user/context";
 
 export const WaitlistHeader = (): JSX.Element => {
   const router: NextRouter = useRouter();

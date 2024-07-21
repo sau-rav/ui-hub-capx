@@ -13,7 +13,31 @@ import circle from "../../../../public/circle.png";
 
 export const Header = (): JSX.Element => {
   const isMobile = useIsMobile();
-  return (
+  return isMobile ? (
+    <div className="flex flex-col text-white gap-1 font-poppins text-center relative h-screen items-center justify-center px-2 text-center">
+      <Reveal>
+        <p className="text-3xl md:text-7xl font-semibold">An AI-powered</p>
+      </Reveal>
+      <Reveal>
+        <p className="text-3xl md:text-7xl font-semibold text-center">
+          trading platform that
+        </p>
+      </Reveal>
+      <Reveal>
+        <p className="text-3xl md:text-7xl font-semibold">works as your</p>
+      </Reveal>
+      <Reveal>
+        <p className="text-3xl md:text-7xl font-semibold ">
+          personal assistant
+        </p>
+      </Reveal>
+      <Reveal sliderColor="#808080">
+        <p className="text-xl md:text-2xl font-normal text-golden-light md:text-center mt-2 md:mt-12">
+          Research to investing, all-in-one place
+        </p>
+      </Reveal>
+    </div>
+  ) : (
     <div
       className={`flex flex-col text-white gap-1 font-poppins text-center relative ${
         isMobile ? "px-8 pt-36" : "px-20 justify-center h-screen"
@@ -40,27 +64,17 @@ export const Header = (): JSX.Element => {
 
       <Card3 />
 
-      <Reveal>
-        <p className="text-3xl md:text-7xl font-semibold">An AI-powered</p>
-      </Reveal>
-      <Reveal>
-        <p className="text-3xl md:text-7xl font-semibold text-left">
-          trading platform that
-        </p>
-      </Reveal>
-      <Reveal>
-        <p className="text-3xl md:text-7xl font-semibold">works as your</p>
-      </Reveal>
-      <Reveal>
-        <p className="text-3xl md:text-7xl font-semibold ">
-          personal assistant
-        </p>
-      </Reveal>
-      <Reveal sliderColor="#808080">
-        <p className="text-xl md:text-2xl font-normal text-golden-light text-left md:text-center mt-2 md:mt-12">
-          Research to investing, all-in-one place
-        </p>
-      </Reveal>
+      <p className="w-fit text-3xl md:text-7xl font-semibold">An AI-powered</p>
+      <p className="w-fit text-3xl md:text-7xl font-semibold text-left">
+        trading platform that
+      </p>
+      <p className="w-fit text-3xl md:text-7xl font-semibold">works as your</p>
+      <p className="w-fit text-3xl md:text-7xl font-semibold ">
+        personal assistant
+      </p>
+      <p className="w-fit text-xl md:text-2xl font-normal text-golden-light text-left md:text-center mt-2 md:mt-12">
+        Research to investing, all-in-one place
+      </p>
     </div>
   );
 };

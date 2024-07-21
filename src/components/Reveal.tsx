@@ -27,8 +27,7 @@ export const Reveal = ({
 
   return (
     <div ref={ref} className="relative w-fit overflow-hidden pb-2">
-      {children}
-      {/* <motion.div
+      <motion.div
         variants={{ start: { opacity: 0, x: 75 }, end: { opacity: 1, x: 0 } }}
         initial="start"
         animate={scrollControl}
@@ -54,7 +53,7 @@ export const Reveal = ({
           zIndex: 10,
           background: sliderColor,
         }}
-      ></motion.div> */}
+      ></motion.div>
     </div>
   );
 };

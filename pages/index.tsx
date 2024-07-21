@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { useState, useEffect } from "react";
 
 import Footer from "../src/components/footer";
 import { Header } from "../src/components/counter/header";
@@ -11,7 +12,13 @@ import { FAQ } from "../src/components/FAQ";
 import { TESTIMONY } from "../src/constants/testimony";
 
 const Home: NextPage = () => {
-  return (
+  const [rendered, setRendered] = useState(false);
+
+  useEffect(() => {
+    setRendered(true);
+  }, []);
+
+  return rendered ? (
     <div className="bg-normal-black font-poppins">
       <NavBar />
       <Header />
@@ -21,6 +28,8 @@ const Home: NextPage = () => {
       <FAQ />
       <Footer />
     </div>
+  ) : (
+    <></>
   );
 };
 

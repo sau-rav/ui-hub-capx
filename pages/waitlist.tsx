@@ -6,6 +6,7 @@ import {
   headerCommonStyle,
   joiningWaitList,
 } from "../src/components/LeaderBoard/Components/Constants";
+
 import { NavBar } from "../src/components/NavBar";
 import Footer from "../src/components/footer";
 

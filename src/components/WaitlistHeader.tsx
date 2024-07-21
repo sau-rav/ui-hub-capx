@@ -22,29 +22,6 @@ export const WaitlistHeader = (): JSX.Element => {
     onSuccess: () => router.push("/thankyou"),
   });
 
-  const signUpUser = useCallback(async (user: User) => {
-    const body = JSON.stringify({
-      emailId: user.email,
-      fullName: user.displayName,
-    });
-
-    try {
-      console.log("Inside custom mutation", body);
-      await fetch(
-        "http://ec2-16-171-226-117.eu-north-1.compute.amazonaws.com:7080/v1/user/signUp",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body,
-        }
-      );
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
-
   const signInWithGoogle = useCallback(async () => {
     try {
       const userCred = await signInWithPopup(auth, googleProvider);
@@ -53,7 +30,8 @@ export const WaitlistHeader = (): JSX.Element => {
         email: userCred.user.email,
         uid: userCred.user.uid,
       });
-      await signUp(userCred.user);
+      router.push("/thankyou");
+      // await signUp(userCred.user);
     } catch (err) {
       console.error(err);
     }

@@ -1,50 +1,35 @@
-import { Divider } from "../src/components/Divider";
-import { BoostYourRankComponents } from "../src/components/LeaderBoard/Components/BoostYourRankComponents";
-import { ComponentPerksForBeta } from "../src/components/LeaderBoard/Components/ComponentPerksForBeta";
-import {
-  headerCommonStyle,
-  waitListPerks,
-} from "../src/components/LeaderBoard/Components/Constants";
+import { useIsMobile } from "../src/hooks/useIsMobile";
+
+import Footer from "../src/components/footer";
 import { HeaderComponent } from "../src/components/LeaderBoard/Components/HeaderComponent";
-import { SurveyBanner } from "../src/components/LeaderBoard/Components/SurveyBanner";
-import { TextComponent } from "../src/components/LeaderBoard/Components/TextComponent";
 import { NavBar } from "../src/components/NavBar";
+import { Perks } from "../src/components/Perks";
+import { FAQ } from "../src/components/FAQ";
+import { Testimonial } from "../src/components/Testimonial";
+
+import { PERKS } from "../src/constants/betaPerks";
+import { TESTIMONY } from "../src/constants/profileTestimony";
 
 const ScreenLeaderBoard = () => {
+  const isMobile = useIsMobile();
+
   return (
-    <div className="bg-black text-center font-montserrat">
+    <div className="bg-normal-black font-poppins">
       <NavBar />
       <HeaderComponent />
-      <TextComponent />
-      <SurveyBanner />
 
-      <div className="mt-10 mb-10">
-        <Divider />
-      </div>
-
-      <BoostYourRankComponents />
-
-      <div className="mt-10 mb-10">
-        <Divider />
-      </div>
-
-      <div
-        style={{
-          padding: 20,
-          textAlign: "start",
-        }}
-      >
-        <div className={`${headerCommonStyle}`}>
-          Perks of joining{" "}
-          <span className="text-yellow-500">priority access</span>
-        </div>
-      </div>
-
-      <ComponentPerksForBeta data={waitListPerks} />
-
-      <div className="mt-10">
-        <Divider />
-      </div>
+      <Testimonial
+        title="Secure your early access now!"
+        testimony={TESTIMONY}
+      />
+      <Perks
+        heading="Perks of joining"
+        highlightedHeading="Beta"
+        perks={PERKS}
+        className={`${isMobile ? "mt-20" : "mt-32"}`}
+      />
+      <FAQ />
+      <Footer />
     </div>
   );
 };

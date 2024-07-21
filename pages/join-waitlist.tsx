@@ -10,6 +10,8 @@ import Footer from "../src/components/footer";
 import { Steps } from "../src/components/Steps";
 import { FAQ } from "../src/components/FAQ";
 
+import { PERKS } from "../src/constants/JoinWaitlistPerks";
+
 const Waitlist: NextPage = () => {
   const isMobile = useIsMobile();
 
@@ -22,7 +24,11 @@ const Waitlist: NextPage = () => {
         hideJoinWaitlistButton
         className={`${isMobile ? "py-20" : "py-32"}`}
       />
-      <Perks />
+      <Perks
+        heading="Perks of joining"
+        highlightedHeading="waitlist"
+        perks={PERKS}
+      />
       <FAQ />
       <Footer />
     </div>

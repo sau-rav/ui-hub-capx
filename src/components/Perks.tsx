@@ -38,17 +38,44 @@ const Divider = (): JSX.Element => {
   );
 };
 
-export const Perks = (): JSX.Element => {
+type PerkType = {
+  title: string;
+  subTitle: string;
+  description: string;
+};
+
+export const Perks = ({
+  heading,
+  highlightedHeading,
+  perks,
+  className,
+}: {
+  heading: string;
+  highlightedHeading: string;
+  perks: Array<PerkType>;
+  className?: string;
+}): JSX.Element => {
   const isMobile = useIsMobile();
   return (
-    <div className="md:pb-24 flex flex-col gap-16 md:gap-24">
+    <div className={`md:pb-24 flex flex-col gap-16 md:gap-24 ${className}`}>
       <div className="flex gap-2 flex-wrap justify-center text-4xl font-semibold md:text-7xl px-8">
-        <p className="text-white">Perks of joining</p>
-        <p className="text-golden">waitlist</p>
+        <p className="text-white">{heading}</p>
+        <p className="text-golden">{highlightedHeading}</p>
       </div>
 
       <div className={`flex gap-12 h-full ${isMobile ? "flex-col" : ""} px-8`}>
-        <Perk
+        {perks.map((perk, index) => (
+          <>
+            <Perk
+              title={perk.title}
+              subTitle={perk.subTitle}
+              description={perk.description}
+              className="flex-1"
+            />
+            {index !== perks.length - 1 ? <Divider /> : null}
+          </>
+        ))}
+        {/* <Perk
           title="COMMUNITY OF"
           subTitle="TOP TRADERS"
           description="Chance to engage with top traders around the India and learn the best strategies from each other"
@@ -67,7 +94,7 @@ export const Perks = (): JSX.Element => {
           subTitle="EXCLUSIVE OFFERS"
           description="Chance to engage with top traders around the India and learn the best strategies from each other"
           className="flex-1"
-        />
+        /> */}
       </div>
     </div>
   );

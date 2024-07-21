@@ -7,8 +7,8 @@ import { TypingText } from "../src/components/TypingText";
 import { NavBar } from "../src/components/NavBar";
 import { Testimonial } from "../src/components/Testimonial";
 import { FAQ } from "../src/components/FAQ";
-import { JoinButton } from "../src/components/JoinButton";
-import { FeatureSlider } from "../src/components/featureSlider";
+
+import { TESTIMONY } from "../src/constants/homeTestimony";
 
 const Home: NextPage = () => {
   return (
@@ -17,9 +17,7 @@ const Home: NextPage = () => {
       <Header />
       <TypingText />
       <Features />
-      {/* <JoinButton /> */}
-      <Testimonial />
-      {/* <FeatureSlider /> */}
+      <Testimonial title="Why trust CapX?" testimony={TESTIMONY} />
       <FAQ />
       <Footer />
     </div>

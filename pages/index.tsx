@@ -8,7 +8,7 @@ import { NavBar } from "../src/components/NavBar";
 import { Testimonial } from "../src/components/Testimonial";
 import { FAQ } from "../src/components/FAQ";
 
-import { TESTIMONY } from "../src/constants/homeTestimony";
+import { TESTIMONY } from "../src/constants/testimony";
 
 const Home: NextPage = () => {
   return (

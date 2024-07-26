@@ -28,7 +28,7 @@ export const Steps = (): JSX.Element => {
         </div>
         <div
           className={`flex justify-center items-center ${
-            isMobile ? "pt-6" : "px-6"
+            isMobile ? "pt-6 mr-4" : "flex-1"
           }`}
         >
           {isMobile ? (
@@ -55,7 +55,7 @@ export const Steps = (): JSX.Element => {
         </div>
         <div
           className={`flex justify-center items-center ${
-            isMobile ? "pt-6" : "px-6"
+            isMobile ? "pt-6 mr-4" : "flex-1"
           }`}
         >
           {isMobile ? (

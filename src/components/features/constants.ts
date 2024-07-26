@@ -13,7 +13,7 @@ export const FEATURES: Feature[] = [
       "Not enough time to research and make informed trading decisions",
     answerTitle: "How CapX solves this",
     answerDescription:
-      "Make all your trading decisions in the fastest way possible",
+      "Do all your research and investing in one place, quickly and efficiently",
     imageSrc: feature1,
     imageUrl: "feature1.png",
   },
@@ -21,10 +21,10 @@ export const FEATURES: Feature[] = [
     position: "02",
     questionTitle: "Lack of knowledge",
     questionDescription:
-      "Lack of basic knowledge or understanding to make trading decisions",
+      "Lack of right knowledge or guidance to help make trading decisions",
     answerTitle: "How CapX solves this",
     answerDescription:
-      "Personalized guidance at every stage to help you get better",
+      "Improve your trading journey with personal guidance and continuous inputs",
     imageSrc: feature2,
     imageUrl: "feature2.png",
   },
@@ -35,7 +35,7 @@ export const FEATURES: Feature[] = [
       "The absence of a clear, structured learning path has kept many individuals from trading",
     answerTitle: "How CapX solves this",
     answerDescription:
-      "Get a personalized starting path to get you started faster",
+      "Shorten your learning journey, start quickly, and learn in a way that suits you",
     imageSrc: feature3,
     imageUrl: "feature3.png",
   },
@@ -43,9 +43,10 @@ export const FEATURES: Feature[] = [
     position: "04",
     questionTitle: "Market Noise",
     questionDescription:
-      "Too much information in the market, leading to confusion and distraction",
+      "Too much noise in the market distracts investors from the correct information",
     answerTitle: "How CapX solves this",
-    answerDescription: " See only the data you need for the right decisions",
+    answerDescription:
+      "Actionable information filtered from the noise, making your decisions reliable",
     imageSrc: feature4,
     imageUrl: "feature4.png",
   },

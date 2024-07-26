@@ -52,12 +52,12 @@ export const Feature = ({
         }`}
       >
         <div className="flex flex-col justify-center flex-1">
-          <p className="flex-none font-bold text-xl md:text-2xl text-light-grey">
-            {answerTitle}
-          </p>
-          <p className="flex-1 flex items-center text-2xl md:text-4xl font-normal text-[#222222]">
+          <div className="flex-1 flex flex-col justify-center items-center text-2xl md:text-4xl font-normal text-[#222222]">
+            <div className="flex w-full justify-left font-bold text-xl md:text-2xl text-[#007700CC] text-left">
+              {answerTitle}
+            </div>
             {answerDescription}
-          </p>
+          </div>
         </div>
         <div className="flex-1">
           <Image src={imageSrc} alt="feature" />

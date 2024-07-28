@@ -35,6 +35,7 @@ const Header = (): JSX.Element => (
       property="og:image"
       content="https://lh3.googleusercontent.com/drive-viewer/AKGpihbUSg4AIyeGPYQ111xdOdcX79IcK9Wf1E-C4xsSGJeuo4fo-A9mE7uj9XAgSrJ7d2tBqR9n1Bc0CdmKtTXIfH1VLSBN20Pd_Ro=w3456-h614"
     />
+    <meta name="referrer" content="unsafe-url" />
   </Head>
 );
 

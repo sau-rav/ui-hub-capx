@@ -1,26 +1,27 @@
-import { useCallback } from "react";
-import { useRouter, NextRouter } from "next/router";
+// libs
+import { useCallback, useState } from "react";
 import { signInWithPopup } from "firebase/auth";
-import Image from "next/image";
 
+// components
 import { WaitListHeaderHero } from "./WaitListHeaderHero";
+import { ThankyouModal } from "./ThankyouModal";
 
+// hooks
 import { useUser } from "../context/user";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useSignUpMutation } from "../hooks/useSignUpMutation";
 
+// utils
 import { auth, googleProvider } from "../config/firebase";
 
 export const WaitlistHeader = (): JSX.Element => {
-  const router: NextRouter = useRouter();
+  const [isThankYouVisible, setIsThankYouVisible] = useState(false);
 
   const userContextValue = useUser();
   const { setUser } = userContextValue ?? {};
   const isMobile = useIsMobile();
 
-  const { mutateAsync: signUp } = useSignUpMutation({
-    onSuccess: () => router.push("/thankyou"),
-  });
+  const { mutateAsync: signUp } = useSignUpMutation();
 
   const signInWithGoogle = useCallback(async () => {
     try {
@@ -30,10 +31,9 @@ export const WaitlistHeader = (): JSX.Element => {
         email: userCred.user.email,
         uid: userCred.user.uid,
       });
-      // router.push("/thankyou");
       await signUp(userCred.user);
+      setIsThankYouVisible(true);
     } catch (err) {
-      router.push("/thankyou");
       console.error(err);
     }
   }, [setUser]);
@@ -74,6 +74,8 @@ export const WaitlistHeader = (): JSX.Element => {
           Signup using your google account
         </p>
       </div>
+
+      <ThankyouModal isOpen={isThankYouVisible} />
 
       <WaitListHeaderHero />
     </div>

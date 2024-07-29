@@ -18,6 +18,7 @@ module.exports = {
         accordionFooter: "#151410",
         "light-black": "#1E1E1E",
         "normal-black": "#101115",
+        "golden-light": "#FFC48E",
       },
 
       backgroundImage: {

@@ -8,19 +8,16 @@ const signup = (user: User) => {
     fullName: user.displayName,
   });
 
-  return fetch(
-    "https://ec2-16-171-226-117.eu-north-1.compute.amazonaws.com/v1/user/signUp",
-    {
-      method: "POST",
-      headers: new Headers({
-        "Content-Type": "application/json",
-        "Referrer-Policy": "no-referrer",
-      }),
-      body,
-    }
-  );
+  return fetch("https://16.171.226.117/v1/user/signUp", {
+    method: "POST",
+    headers: new Headers({
+      "Content-Type": "application/json",
+      "Referrer-Policy": "no-referrer",
+    }),
+    body,
+  });
 };
 
-export const useSignUpMutation = ({ onSuccess }: { onSuccess: () => void }) => {
-  return useMutation({ mutationFn: signup, onSuccess });
+export const useSignUpMutation = () => {
+  return useMutation({ mutationFn: signup });
 };

@@ -30,9 +30,10 @@ export const WaitlistHeader = (): JSX.Element => {
         email: userCred.user.email,
         uid: userCred.user.uid,
       });
-      router.push("/thankyou");
-      // await signUp(userCred.user);
+      // router.push("/thankyou");
+      await signUp(userCred.user);
     } catch (err) {
+      router.push("/thankyou");
       console.error(err);
     }
   }, [setUser]);

@@ -22,7 +22,7 @@ export const FAQ = (): JSX.Element => {
         }`}
         onClick={toggleExpansion}
       >
-        Frequently Asked Questions
+        Got Questions?
         {expanded ? (
           <ExpandLessIcon fontSize="large" />
         ) : (

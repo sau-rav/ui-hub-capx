@@ -33,7 +33,7 @@ export const Feature = ({
       style={{ scale, opacity }}
       className="flex flex-col w-full"
     >
-      <div className="text-white w-full bg-light-black rounded-t-[40px] p-6 md:px-10 md:py-20 flex gap-6">
+      <div className="text-white w-full bg-light-black rounded-t-[40px] p-4 pt-10 md:px-10 md:py-20 flex gap-6">
         {isMobile ? null : (
           <div className="bg-white rounded-full md:h-10 md:w-10 text-light-black flex items-center justify-center text-lg md:text-xl flex-none">
             {position}
@@ -47,12 +47,12 @@ export const Feature = ({
         </div>
       </div>
       <div
-        className={`text-light-black w-full bg-white rounded-b-[40px] p-4 md:p-10 flex gap-6 gap-10 ${
+        className={`text-light-black w-full bg-white rounded-b-[40px] p-4 pb-10 md:p-10 flex gap-6 gap-10 ${
           isMobile ? "flex-col-reverse" : ""
         }`}
       >
         <div className="flex flex-col justify-center flex-1">
-          <div className="flex-1 flex flex-col justify-center items-center text-2xl md:text-4xl font-normal text-[#222222]">
+          <div className="flex-1 flex flex-col justify-center items-center text-2xl gap-8 md:text-4xl font-normal text-[#222222]">
             <div className="flex w-full justify-left font-bold text-xl md:text-2xl text-[#007700CC] text-left">
               {answerTitle}
             </div>

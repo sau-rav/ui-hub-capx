@@ -19,7 +19,7 @@ const ScreenLeaderBoard = () => {
       <HeaderComponent />
 
       <Testimonial
-        title="Secure your early access now!"
+        title="Stay engaged with us and get early access!"
         testimony={TESTIMONY}
       />
       <Perks

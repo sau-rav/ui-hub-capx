@@ -24,7 +24,7 @@ export const Steps = (): JSX.Element => {
       >
         <Image src={signUp} alt="signUp"></Image>
         <div className={`${isMobile ? "text-center" : ""}`}>
-          Sign-up on the Waitlist
+          Sign-up on the waitlist
         </div>
         <div
           className={`flex justify-center items-center ${
@@ -51,7 +51,7 @@ export const Steps = (): JSX.Element => {
       >
         <Image src={engage} alt="engage"></Image>
         <div className={`${isMobile ? "text-center" : ""}`}>
-          Keep engaging to get a jump in your waitlist rank
+          Stay engaged to boost your waitlist rank
         </div>
         <div
           className={`flex justify-center items-center ${
@@ -78,7 +78,7 @@ export const Steps = (): JSX.Element => {
       >
         <Image src={key} alt="key"></Image>
         <div className={`${isMobile ? "text-center" : ""}`}>
-          Get early access to the product
+          Gain early access to the product
         </div>
       </div>
     </div>

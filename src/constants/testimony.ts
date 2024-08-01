@@ -5,25 +5,28 @@ import test4 from "../../public/test4.png";
 
 export const TESTIMONY = [
   {
-    title: "Experience",
-    description: "10+ years of combined experience from top IITs",
+    title: "Team Experience",
+    description:
+      "Our team comprises graduates from top IITs and IIMs with a combined experience of over 15 years.",
     image: test1,
   },
   {
-    title: "Billions Managed",
-    description: "Advisors have managed assets exceeding $4 billion",
+    title: "Hedge Fund Expertise",
+    description:
+      "Our advisors have worked at top hedge funds like WorldQuant and Tower Research, managing assets exceeding $4 billion.",
     image: test2,
   },
 
   {
-    title: "Built services",
+    title: "Product Scalability",
     description:
-      "generating millions in daily revenue and distributing 3 billion+ rewards monthly.",
+      "We have built scalable products serving over 150 million daily users, generating millions in daily revenue and disbursing over $3 billion in monthly rewards.",
     image: test3,
   },
   {
-    title: "Raising capital",
-    description: "Have raised over $250,000 for scalable B2C products",
+    title: "Founding Experience",
+    description:
+      "Our founders are serial entrepreneurs who have launched multiple startups, building products across various domains and securing funding from angel investors and VCs.",
     image: test4,
   },
 ];

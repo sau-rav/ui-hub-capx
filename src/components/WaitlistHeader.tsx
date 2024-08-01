@@ -32,7 +32,7 @@ export const WaitlistHeader = (): JSX.Element => {
         uid: userCred.user.uid,
       });
       await signUp(userCred.user);
-      setIsThankYouVisible(true);
+      // setIsThankYouVisible(true);
     } catch (err) {
       console.error(err);
     }
@@ -50,7 +50,7 @@ export const WaitlistHeader = (): JSX.Element => {
         </p>
         <p className="text-3xl md:text-5xl font-extrabold">trading platform</p>
         <p className="text-xl md:text-3xl font-semibold text-golden-light  mt-2 ">
-          Join now for Early Access
+          Start Your Journey to Smarter Investing
         </p>
       </div>
 

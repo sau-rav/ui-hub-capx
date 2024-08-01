@@ -20,7 +20,7 @@ export const Header = (): JSX.Element => {
       </Reveal>
       <Reveal>
         <p className="text-3xl md:text-7xl font-semibold text-center">
-          trading platform that
+          investing platform that
         </p>
       </Reveal>
       <Reveal>
@@ -33,7 +33,7 @@ export const Header = (): JSX.Element => {
       </Reveal>
       <Reveal sliderColor="#808080">
         <p className="text-xl md:text-2xl font-normal text-golden-light md:text-center mt-2 md:mt-12">
-          Research to investing, all-in-one place
+          All your investing needs, in one place
         </p>
       </Reveal>
     </div>

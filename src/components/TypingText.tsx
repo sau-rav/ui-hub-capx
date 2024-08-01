@@ -4,7 +4,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useIsMobile } from "../hooks/useIsMobile";
 
 const DESCRIPTION =
-  "Everything you will ever need for investing is all in one place, from learning, research, information, and data to investing tools. Our platform makes investing faster and easier for everyone, whether you are just getting started or need a helping hand to invest better.";
+  "Everything you need for investing is right here. From learning the basics to in-depth research and investing, we've got you covered. We make investing faster and easier for everyone, whether you are just getting started or need a helping hand to invest better.";
 
 const DESCRIPTION_WITH_TAGS = DESCRIPTION.split(" ").map((desc, index) => (
   <p data-id={index} id="type">

@@ -42,17 +42,17 @@ export const ThankyouModal = ({ isOpen }: { isOpen: boolean }) => {
   const userContext = useUser();
   const { user } = userContext ?? {};
 
-  const [width, setWidth] = useState<number>(500);
-  const [height, setHeight] = useState<number>(500);
+  const [width, setWidth] = useState<number>(0);
+  const [height, setHeight] = useState<number>(0);
 
   useEffect(() => {
     if (contentRef.current) {
       const { width: w, height: h } =
-        contentRef.current.getBoundingClientRect();
+        contentRef.current?.getBoundingClientRect() ?? {};
       setWidth(w);
       setHeight(h);
     }
-  }, [contentRef?.current]);
+  }, []);
 
   const onProfileClick = useCallback(() => {
     router.push("/profile");
@@ -86,10 +86,11 @@ export const ThankyouModal = ({ isOpen }: { isOpen: boolean }) => {
                 />
               </div>
               <div
-                className="p-2 hover:cursor-pointer absolute hover:bg-golden-light rounded-full hover:text-black"
+                className="p-2 hover:cursor-pointer absolute hover:bg-golden-light rounded-full border bg-golden-light"
                 style={{ right: "2%", top: "5%" }}
               >
                 <CloseIcon
+                  className="text-black"
                   sx={{ fontSize: 30, color: "#FFFFFF" }}
                   onClick={onProfileClick}
                 />

@@ -32,7 +32,7 @@ export const WaitlistHeader = (): JSX.Element => {
         uid: userCred.user.uid,
       });
       await signUp(userCred.user);
-      // setIsThankYouVisible(true);
+      setIsThankYouVisible(true);
     } catch (err) {
       console.error(err);
     }

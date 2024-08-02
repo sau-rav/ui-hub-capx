@@ -20,7 +20,7 @@ export const HeaderComponent = () => {
           {user?.displayName ?? "Trader"}
         </div>
         <div className="restText text-lg md:text-xl lg:text-2xl font-semibold leading-normal text-center text-white">
-          <span className="special-text text-golden">Congrats! </span>
+          <span className="special-text text-golden">⭐️ Congrats! ⭐️</span>
         </div>
       </div>
 

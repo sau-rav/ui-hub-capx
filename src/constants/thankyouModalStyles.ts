@@ -11,7 +11,7 @@ export const CONTAINER_STYLES = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "90%",
-  border: "1px solid #4F4F4F",
+  border: "1px solid #FFC48E",
   boxShadow: 24,
   borderRadius: "16px",
 };

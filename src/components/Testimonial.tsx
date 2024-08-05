@@ -25,7 +25,7 @@ export const Testimonial = ({
       <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-white">
         <div className="flex flex-col items-center justify-center w-full px-4 gap-4">
           <FadeInOut>
-            <p className="text-4xl font-bold md:text-8xl text-center mb-6 text-white">
+            <p className="text-4xl font-bold md:text-7xl text-center mb-6 text-white">
               {title}
             </p>
           </FadeInOut>
@@ -46,7 +46,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[0].title}
                 </p>
-                <p className="text-xl">{testimony[0].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[0].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image
@@ -68,7 +70,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[1].title}
                 </p>
-                <p className="text-xl">{testimony[1].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[1].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image
@@ -96,7 +100,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[2].title}
                 </p>
-                <p className="text-xl">{testimony[2].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[2].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image
@@ -118,7 +124,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[3].title}
                 </p>
-                <p className="text-xl">{testimony[3].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[3].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image

@@ -46,11 +46,13 @@ export const WaitlistHeader = (): JSX.Element => {
     >
       <div className="flex flex-col gap-2 md:mt-24">
         <p className="text-3xl md:text-5xl font-extrabold">
-          The next generation
+          Start your journey
         </p>
-        <p className="text-3xl md:text-5xl font-extrabold">trading platform</p>
+        <p className="text-3xl md:text-5xl font-extrabold">
+          to smarter investing
+        </p>
         <p className="text-xl md:text-3xl font-semibold text-golden-light  mt-2 ">
-          Start Your Journey to Smarter Investing
+          Join now for early access would be in the orange
         </p>
       </div>
 

@@ -13,6 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 // hooks
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useUser } from "../context/user";
+import { useMeasure } from "../hooks/useMeasure";
 
 // constants
 import {
@@ -36,23 +37,13 @@ const drawShape = (ctx: CanvasRenderingContext2D): void => {
 };
 
 export const ThankyouModal = ({ isOpen }: { isOpen: boolean }) => {
-  const contentRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const isMobile = useIsMobile();
   const userContext = useUser();
   const { user } = userContext ?? {};
 
-  const [width, setWidth] = useState<number>(0);
-  const [height, setHeight] = useState<number>(0);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      const { width: w, height: h } =
-        contentRef.current?.getBoundingClientRect() ?? {};
-      setWidth(w);
-      setHeight(h);
-    }
-  }, []);
+  const [confettiContainerRef, { height, width }] =
+    useMeasure<HTMLDivElement>();
 
   const onProfileClick = useCallback(() => {
     router.push("/profile");
@@ -75,8 +66,8 @@ export const ThankyouModal = ({ isOpen }: { isOpen: boolean }) => {
         style={THANKYOU_MODAL_STYLES}
       >
         <Fade in={isOpen}>
-          <Box sx={CONTAINER_STYLES} ref={contentRef}>
-            <div className="flex items-center flex flex-col gap-16 py-32">
+          <Box sx={CONTAINER_STYLES} ref={confettiContainerRef}>
+            <div className="flex items-center flex flex-col gap-16 py-20 px-10">
               <div className="absolute inset-0">
                 <Confetti
                   width={width}
@@ -107,9 +98,16 @@ export const ThankyouModal = ({ isOpen }: { isOpen: boolean }) => {
                 className="text-xl md:text-3xl font-normal text-white text-center px-2"
                 style={isMobile ? undefined : { maxWidth: "60%" }}
               >
-                We will go live soon! Stay connected with us on social media for
-                the latest updates and exclusive content!
+                Thanks for joining the Waitlist! Follow us on social media to
+                stay updated!
               </p>
+              <div className="flex group">
+                <button className="h-full px-10 py-3 rounded-full relative border text-black absolute flex bg-golden-light group-hover:border-golden group-hover:bg-golden">
+                  <span className="text-black text-lg md:text-xl font-bold">
+                    Continue
+                  </span>
+                </button>
+              </div>
             </div>
           </Box>
         </Fade>

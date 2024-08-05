@@ -12,14 +12,16 @@ export type Testimony = {
 export const Testimonial = ({
   title,
   testimony,
+  className,
 }: {
   title: string;
   testimony: Testimony;
+  className?: string;
 }): JSX.Element => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="flex items-center justify-center">
+    <div className={`flex items-center justify-center ${className}`}>
       <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-white">
         <div className="flex flex-col items-center justify-center w-full px-4 gap-4">
           <FadeInOut>
@@ -33,7 +35,7 @@ export const Testimonial = ({
             }`}
           >
             <div
-              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl flex flex-col"
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-4xl flex flex-col"
               style={{
                 flexGrow: 1,
                 background:
@@ -44,7 +46,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[0].title}
                 </p>
-                <p className="text-xl">{testimony[0].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[0].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image
@@ -55,7 +59,7 @@ export const Testimonial = ({
               </div>
             </div>
             <div
-              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4"
+              className="p-6 md:p-10 rounded-3xl text-xl md:text-4xl flex-1 flex flex-col gap-4"
               style={{
                 flexGrow: 1.6,
                 background:
@@ -66,7 +70,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[1].title}
                 </p>
-                <p className="text-xl">{testimony[1].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[1].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image
@@ -83,7 +89,7 @@ export const Testimonial = ({
             }`}
           >
             <div
-              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4 flex"
+              className="p-6 md:p-10 rounded-3xl text-xl md:text-4xl flex-1 flex flex-col gap-4 flex"
               style={{
                 flexGrow: 1.6,
                 background:
@@ -94,7 +100,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[2].title}
                 </p>
-                <p className="text-xl">{testimony[2].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[2].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image
@@ -105,7 +113,7 @@ export const Testimonial = ({
               </div>
             </div>
             <div
-              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl flex flex-col"
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-4xl flex flex-col"
               style={{
                 flexGrow: 1,
                 background:
@@ -116,7 +124,9 @@ export const Testimonial = ({
                 <p className="font-extrabold text-golden">
                   {testimony[3].title}
                 </p>
-                <p className="text-xl">{testimony[3].description}</p>
+                <p className="text-xl md:text-2xl">
+                  {testimony[3].description}
+                </p>
               </div>
               <div className="flex justify-end items-end">
                 <Image

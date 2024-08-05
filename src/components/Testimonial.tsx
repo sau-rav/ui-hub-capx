@@ -12,18 +12,20 @@ export type Testimony = {
 export const Testimonial = ({
   title,
   testimony,
+  className,
 }: {
   title: string;
   testimony: Testimony;
+  className?: string;
 }): JSX.Element => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="flex items-center justify-center">
+    <div className={`flex items-center justify-center ${className}`}>
       <div className="flex justify-center pt-16 gap-0 overflow-visible px-4 md:px-16 text-white">
         <div className="flex flex-col items-center justify-center w-full px-4 gap-4">
           <FadeInOut>
-            <p className="text-4xl font-bold md:text-7xl text-center mb-6 text-white">
+            <p className="text-4xl font-bold md:text-8xl text-center mb-6 text-white">
               {title}
             </p>
           </FadeInOut>
@@ -33,7 +35,7 @@ export const Testimonial = ({
             }`}
           >
             <div
-              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl flex flex-col"
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-4xl flex flex-col"
               style={{
                 flexGrow: 1,
                 background:
@@ -55,7 +57,7 @@ export const Testimonial = ({
               </div>
             </div>
             <div
-              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4"
+              className="p-6 md:p-10 rounded-3xl text-xl md:text-4xl flex-1 flex flex-col gap-4"
               style={{
                 flexGrow: 1.6,
                 background:
@@ -83,7 +85,7 @@ export const Testimonial = ({
             }`}
           >
             <div
-              className="p-6 md:p-10 rounded-3xl text-xl md:text-3xl flex-1 flex flex-col gap-4 flex"
+              className="p-6 md:p-10 rounded-3xl text-xl md:text-4xl flex-1 flex flex-col gap-4 flex"
               style={{
                 flexGrow: 1.6,
                 background:
@@ -105,7 +107,7 @@ export const Testimonial = ({
               </div>
             </div>
             <div
-              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-3xl flex flex-col"
+              className="p-6 md:p-10 flex-1 rounded-3xl text-xl md:text-4xl flex flex-col"
               style={{
                 flexGrow: 1,
                 background:

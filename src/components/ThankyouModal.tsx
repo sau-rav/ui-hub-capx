@@ -102,7 +102,10 @@ export const ThankyouModal = ({ isOpen }: { isOpen: boolean }) => {
                 stay updated!
               </p>
               <div className="flex group">
-                <button className="h-full px-10 py-3 rounded-full relative border text-black absolute flex bg-golden-light group-hover:border-golden group-hover:bg-golden">
+                <button
+                  className="h-full px-10 py-3 rounded-full relative border text-black absolute flex bg-golden-light group-hover:border-golden group-hover:bg-golden"
+                  onClick={onProfileClick}
+                >
                   <span className="text-black text-lg md:text-xl font-bold">
                     Continue
                   </span>

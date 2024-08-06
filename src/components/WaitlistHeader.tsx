@@ -49,26 +49,13 @@ export const WaitlistHeader = (): JSX.Element => {
       }`}
       style={{ height: "100vh" }}
     >
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex justify-center items-center">
         <Image
           src={isMobile ? bgMobile : bg}
           alt="bg"
           height={1000}
           width={1000}
         ></Image>
-      </div>
-      <div
-        className={`absolute inset-0 flex ${
-          isMobile ? "" : "justify-center items-center"
-        }`}
-      >
-        <div
-          className=" rounded-full"
-          style={{
-            background:
-              "radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c)",
-          }}
-        ></div>
       </div>
 
       <div className="flex flex-col gap-2 md:mt-24">

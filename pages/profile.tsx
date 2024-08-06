@@ -22,6 +22,7 @@ const ScreenLeaderBoard = () => {
         title="Stay engaged with us and get early access!"
         testimony={TESTIMONY}
         className="mt-10 md:mt-16"
+        showButton
       />
       <Perks
         heading="Perks of joining"

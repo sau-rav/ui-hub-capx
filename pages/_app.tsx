@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider } from "baseui";
@@ -69,6 +70,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               waitingTime={400}
               height={3}
             />
+            <GoogleAnalytics gaId="G-CFH3LJJG5P" />
             <UserProvider>
               <Component {...pageProps} />
             </UserProvider>

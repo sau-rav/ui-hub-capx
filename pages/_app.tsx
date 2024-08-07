@@ -3,6 +3,7 @@ import "odometer/themes/odometer-theme-default.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -69,6 +70,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               waitingTime={400}
               height={3}
             />
+            <GoogleAnalytics gaId="G-CFH3LJJGSP" />
             <UserProvider>
               <Component {...pageProps} />
             </UserProvider>

@@ -70,7 +70,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               waitingTime={400}
               height={3}
             />
-            <GoogleAnalytics gaId="G-CFH3LJJGSP" />
+            <GoogleAnalytics gaId="G-CFH3LJJG5P" />
             <UserProvider>
               <Component {...pageProps} />
             </UserProvider>

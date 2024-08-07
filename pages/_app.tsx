@@ -3,7 +3,6 @@ import "odometer/themes/odometer-theme-default.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -12,10 +11,18 @@ import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider } from "baseui";
 import LoadingBar from "react-top-loading-bar";
 import { UserProvider } from "../src/context/user";
+import ReactGA from "react-ga4";
 
 import { styletron } from "../src/styletron";
 
 const queryClient = new QueryClient();
+
+ReactGA.initialize("G-CFH3LJJG5P");
+
+ReactGA.send({
+  hitType: 'pageview',
+  page: window.location.pathname
+})
 
 const Header = (): JSX.Element => (
   <Head>
@@ -70,7 +77,6 @@ function MyApp({ Component, pageProps }: AppProps) {
               waitingTime={400}
               height={3}
             />
-            <GoogleAnalytics gaId="G-CFH3LJJG5P" />
             <UserProvider>
               <Component {...pageProps} />
             </UserProvider>

@@ -30,7 +30,7 @@ export const HeaderComponent = () => {
           className="blur-sm gap-2 flex md:h-20 sm:h-16 lg:h-24 h-14 w-full items-center justify-between bg-gray-950 rounded-lg p-3"
         >
           <div className="overflow-hidden text-gray-300 flex-1 text-center text-xs sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-6 italic tracking-wide ">
-            Nirmal George
+            Harshita Jha
           </div>
           <div className="text-white flex-1 text-center text-lg md:text-3xl lg:text-4xl font-bold leading-6 italic tracking-wide ">
             Rank #101
@@ -66,7 +66,7 @@ export const HeaderComponent = () => {
           className="blur-sm gap-2 flex md:h-20 sm:h-16 lg:h-24 h-14 w-full items-center justify-between bg-gray-950 rounded-lg p-3"
         >
           <div className="overflow-hidden text-gray-300 flex-1 text-center text-xs sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-6 italic tracking-wide ">
-            Andrew Tate
+            Muskan Jain
           </div>
           <div className="seperater h-10 sm:h-10 md:h-16 h-12"></div>
           <div className="text-white flex-1 text-center text-lg md:text-3xl lg:text-4xl font-bold leading-6 italic tracking-wide ">

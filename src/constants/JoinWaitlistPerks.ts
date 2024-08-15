@@ -3,7 +3,7 @@ export const PERKS = [
     title: "COMMUNITY OF",
     subTitle: "TOP TRADERS",
     description:
-      "Opportunity to engage with top traders around the India and learn the best strategies from each other",
+      "Opportunity to engage with top traders around India and learn the best strategies from each other",
   },
   {
     title: "BE THE FIRST TO",

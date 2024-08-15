@@ -9,12 +9,12 @@ export const PERKS = [
     title: "BE THE FIRST TO",
     subTitle: "TRY THE PRODUCT",
     description:
-      "Chance to engage with top traders around the India and learn the best strategies from each other",
+      "Chance to engage with top traders around India and learn the best strategies from each other",
   },
   {
     title: "UNLOCK",
     subTitle: "EXCLUSIVE OFFERS",
     description:
-      "Chance to engage with top traders around the India and learn the best strategies from each other",
+      "Chance to engage with top traders around India and learn the best strategies from each other",
   },
 ];

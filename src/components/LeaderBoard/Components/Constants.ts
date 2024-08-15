@@ -79,7 +79,7 @@ export const joiningWaitList = [
     img: "/joiningWaitlist01.png",
     title: "Access to community of top traders",
     description:
-      "Chance to engage with top traders around India and learn the best strategies from each other.",
+      "Chance to engage with top traders around the India and learn the best strategies from each other.",
   },
   {
     img: "/joiningWaitlist02.png",

@@ -78,21 +78,21 @@ export const Perks = ({
         {/* <Perk
           title="COMMUNITY OF"
           subTitle="TOP TRADERS"
-          description="Chance to engage with top traders around the India and learn the best strategies from each other"
+          description="Chance to engage with top traders around India and learn the best strategies from each other"
           className="flex-1"
         />
         <Divider />
         <Perk
           title="BE THE FIRST TO"
           subTitle="TRY THE PRODUCT"
-          description="Chance to engage with top traders around the India and learn the best strategies from each other"
+          description="Chance to engage with top traders around India and learn the best strategies from each other"
           className="flex-1"
         />
         <Divider />
         <Perk
           title="UNLOCK"
           subTitle="EXCLUSIVE OFFERS"
-          description="Chance to engage with top traders around the India and learn the best strategies from each other"
+          description="Chance to engage with top traders around India and learn the best strategies from each other"
           className="flex-1"
         /> */}
       </div>

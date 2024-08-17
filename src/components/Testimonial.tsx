@@ -1,5 +1,9 @@
+import { useCallback } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+
+import useCopyToClipboard from "react-use/lib/useCopyToClipboard";
+import { useUser } from "../context/user";
 
 import { useIsMobile } from "../hooks/useIsMobile";
 import { FadeInOut } from "./FadeInOut";
@@ -22,6 +26,16 @@ export const Testimonial = ({
   showButton?: boolean;
 }): JSX.Element => {
   const isMobile = useIsMobile();
+
+  const userContextValue = useUser();
+  const { user } = userContextValue ?? {};
+
+  const [state, copyToClipboard] = useCopyToClipboard();
+
+  const copyToClipBoard = useCallback(() => {
+    const { invitationCode } = user ?? {};
+    copyToClipboard(`https://www.capx.live?invitationCode=${invitationCode}`);
+  }, [user, copyToClipboard]);
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
@@ -91,13 +105,29 @@ export const Testimonial = ({
                 </p>
               </div>
               <div className="flex flex-1 justify-end items-end">
-                {/* <div className="flex-1 h-full flex items-center">
-                  <button className="md:px-8 md:py-3 px-3 py-2 rounded-full relative border text-black absolute flex group-hover:bg-golden-light group-hover:border-golden">
-                    <span className="text-white group-hover:text-black text-lg md:text-xl">
-                      COPY LINK
-                    </span>
-                  </button>
-                </div> */}
+                {showButton ? (
+                  <div className="flex-1 h-full flex items-center group">
+                    <button
+                      className="flex flex-col md:px-8 md:py-3 px-3 py-2 rounded-full relative border border-grey-200 text-black absolute flex group-hover:bg-golden-light group-hover:border-golden"
+                      onClick={copyToClipBoard}
+                    >
+                      <span className="text-golden group-hover:text-black text-lg md:text-xl">
+                        REFER NOW
+                      </span>
+                      {state.error ? (
+                        <p className="text-xs flex justify-center w-full text-rose-500">
+                          Failed to copy
+                        </p>
+                      ) : (
+                        state.value && (
+                          <p className="text-xs flex justify-center w-full text-emerald-400">
+                            Copied
+                          </p>
+                        )
+                      )}
+                    </button>
+                  </div>
+                ) : null}
                 <div className="flex-none h-full flex items-center">
                   <Image
                     src={testimony[1].image}

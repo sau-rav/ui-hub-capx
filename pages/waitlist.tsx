@@ -10,6 +10,8 @@ import {
 import { NavBar } from "../src/components/NavBar";
 import Footer from "../src/components/footer";
 
+import { withPage } from "../src/hoc/withPage";
+
 const DESCRIPTION = "The next generation trading platform";
 
 const Waitlist: NextPage = () => {
@@ -97,4 +99,4 @@ const Waitlist: NextPage = () => {
   );
 };
 
-export default Waitlist;
+export default withPage(Waitlist);

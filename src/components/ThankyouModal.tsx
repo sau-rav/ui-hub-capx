@@ -1,6 +1,6 @@
 // libs
 import { useRouter } from "next/router";
-import { useCallback, useRef, useState, useEffect } from "react";
+import { useCallback } from "react";
 import Confetti from "react-confetti";
 
 // components

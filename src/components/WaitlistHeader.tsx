@@ -1,6 +1,7 @@
 // libs
 import { useCallback, useState } from "react";
 import { signInWithPopup } from "firebase/auth";
+import { useRouter } from "next/router";
 
 // components
 import { WaitListHeaderHero } from "./WaitListHeaderHero";
@@ -15,28 +16,56 @@ import { useSignUpMutation } from "../hooks/useSignUpMutation";
 import { auth, googleProvider } from "../config/firebase";
 import Image from "next/image";
 
+// constants
 import bg from "../../public/bgEllipses.png";
 import bgMobile from "../../public/bgMobile.png";
 
+// types
+import type { User } from "../context/user/context";
+
 export const WaitlistHeader = (): JSX.Element => {
   const [isThankYouVisible, setIsThankYouVisible] = useState(false);
+  const router = useRouter();
 
   const userContextValue = useUser();
-  const { setUser } = userContextValue ?? {};
+  const { setUser, user } = userContextValue ?? {};
   const isMobile = useIsMobile();
 
-  const { mutateAsync: signUp } = useSignUpMutation();
+  const onProfileRedirect = useCallback(() => {
+    router.push("/profile");
+  }, [router]);
+
+  const onSuccess = useCallback(
+    async (data: {
+      emailId: string;
+      fullName: string;
+      invitationCode?: string;
+      existingUser?: boolean;
+      userId: string;
+    }) => {
+      setUser?.({
+        ...user,
+        email: data.emailId,
+        displayName: data.fullName,
+        invitationCode: data.invitationCode,
+        userId: data.userId,
+      } as unknown as User);
+
+      if (!data.existingUser) {
+        setIsThankYouVisible(true);
+      } else {
+        onProfileRedirect();
+      }
+    },
+    [user, onProfileRedirect]
+  );
+
+  const { mutateAsync: signUp } = useSignUpMutation({ onSuccess });
 
   const signInWithGoogle = useCallback(async () => {
     try {
       const userCred = await signInWithPopup(auth, googleProvider);
-      setUser?.({
-        displayName: userCred.user.displayName,
-        email: userCred.user.email,
-        uid: userCred.user.uid,
-      });
       await signUp(userCred.user);
-      setIsThankYouVisible(true);
     } catch (err) {
       console.error(err);
     }

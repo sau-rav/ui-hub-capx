@@ -17,9 +17,11 @@
     "@next/third-parties": "^14.2.5",
     "axios": "^1.6.8",
     "baseui": "^0.0.0-next-6fabc7134",
+    "cookie": "^0.6.0",
     "express": "^4.19.2",
     "firebase": "^10.10.0",
     "framer-motion": "^11.2.10",
+    "js-cookie": "^3.0.5",
     "next": "^14.2.2",
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
@@ -34,6 +36,7 @@
     "styletron-react": "^6.1.1"
   },
   "devDependencies": {
+    "@types/cookie": "^0.6.0",
     "@types/node": "20.12.5",
     "@types/react": "18.2.74",
     "@types/react-dom": "18.2.24",

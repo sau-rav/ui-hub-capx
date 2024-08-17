@@ -10,7 +10,9 @@ import { Testimonial } from "../src/components/Testimonial";
 import { PERKS } from "../src/constants/betaPerks";
 import { TESTIMONY } from "../src/constants/profileTestimony";
 
-const ScreenLeaderBoard = () => {
+import { withPage } from "../src/hoc/withPage";
+
+const Profile = () => {
   const isMobile = useIsMobile();
 
   return (
@@ -36,4 +38,4 @@ const ScreenLeaderBoard = () => {
   );
 };
 
-export default ScreenLeaderBoard;
+export default withPage(Profile);

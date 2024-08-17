@@ -2,6 +2,7 @@ import { signOut } from "firebase/auth";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { memo, useCallback, useState } from "react";
+import Cookies from "js-cookie";
 
 import NavbarModal from "./NavbarModal";
 
@@ -26,13 +27,23 @@ const NavBar = (): JSX.Element => {
   const { user, setUser } = userContext ?? {};
 
   const handleJoinWaitlist = useCallback(() => {
-    router.push(WAITLIST_ROUTE);
-  }, []);
+    const { query } = router;
+
+    router.push(
+      `${WAITLIST_ROUTE}?${new URLSearchParams(
+        query as unknown as string
+      ).toString()}`
+    );
+  }, [router]);
 
   const handleHome = useCallback(() => {
-    router.push("/");
+    const { query } = router;
+
+    router.push(
+      `/?${new URLSearchParams(query as unknown as string).toString()}`
+    );
     handleModalClose();
-  }, []);
+  }, [router]);
 
   const handleModalClose = useCallback(() => {
     setIsModalOpen(false);
@@ -44,6 +55,7 @@ const NavBar = (): JSX.Element => {
         setUser?.(null);
         router.push("/");
         handleModalClose();
+        Cookies.remove("userEmail");
       });
     } catch (err) {
       console.error(err);

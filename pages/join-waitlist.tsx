@@ -12,6 +12,8 @@ import { FAQ } from "../src/components/FAQ";
 
 import { PERKS } from "../src/constants/JoinWaitlistPerks";
 
+import { withPage } from "../src/hoc/withPage";
+
 const Waitlist: NextPage = () => {
   const isMobile = useIsMobile();
 
@@ -35,4 +37,4 @@ const Waitlist: NextPage = () => {
   );
 };
 
-export default Waitlist;
+export default withPage(Waitlist);

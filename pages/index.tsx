@@ -9,6 +9,8 @@ import { NavBar } from "../src/components/NavBar";
 import { Testimonial } from "../src/components/Testimonial";
 import { FAQ } from "../src/components/FAQ";
 
+import { withPage } from "../src/hoc/withPage";
+
 import { TESTIMONY } from "../src/constants/testimony";
 
 const Home: NextPage = () => {
@@ -33,4 +35,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default withPage(Home);

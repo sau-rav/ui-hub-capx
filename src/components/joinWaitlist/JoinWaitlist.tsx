@@ -20,7 +20,6 @@ export const JoinWaitlist = (): JSX.Element => {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider).then((userCredential) => {
-        console.log(userCredential);
         if (refParam) {
           router.push(`/dashboard?ref=${refParam}`);
         } else {

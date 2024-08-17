@@ -4,9 +4,11 @@ export type User = {
   displayName: string | null;
   email: string | null;
   uid: string;
+  invitationCode?: string;
+  userId?: string;
 };
 
-type Value =
+export type Value =
   | {
       user?: User | null;
       setUser: (user: User | null) => void;

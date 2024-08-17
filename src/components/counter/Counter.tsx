@@ -56,8 +56,14 @@ export const Counter = ({
   const router = useRouter();
 
   const handleJoinWaitlist = useCallback(() => {
-    router.push(WAITLIST_ROUTE);
-  }, []);
+    const { query } = router;
+
+    router.push(
+      `${WAITLIST_ROUTE}?${new URLSearchParams(
+        query as unknown as string
+      ).toString()}`
+    );
+  }, [router]);
 
   let primaryButtonEl;
   if (!user && !hideJoinWaitlistButton) {

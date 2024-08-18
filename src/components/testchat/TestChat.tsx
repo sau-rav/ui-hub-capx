@@ -10,10 +10,10 @@ interface Message {
 export const TestChat = (): JSX.Element => {
   const [query, setQuery] = useState<string>('');
   const [messages, setMessages] = useState<Message[]>([]);
-  const [loginMessage, setLoginMessage] = useState<string | null>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const { user } = useUser(); // Use the user context to get user info
+  const userContextValue = useUser();
+  const { user } = userContextValue ?? {};
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -28,7 +28,7 @@ export const TestChat = (): JSX.Element => {
     setQuery('');
 
     try {
-      const res = await fetch('', { // TODO update this URL with backend server URL
+      const res = await fetch('', { // TODO: Update this URL with backend server URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,7 +37,10 @@ export const TestChat = (): JSX.Element => {
         body: JSON.stringify({ query }),
       });
 
-      const data = await res.json();
+      // const data = await res.json();
+      const data = {
+        "response" : "Dummy response from server for meanwhile till backend server is updated"
+      }
       setMessages((prevMessages) => [
         ...prevMessages,
         { sender: 'server', text: data.response },
@@ -81,8 +84,9 @@ export const TestChat = (): JSX.Element => {
   return (
     <div className="flex flex-col h-screen items-center bg-black text-gray-300">
       {!user ? (
-        <div className="p-4 text-center text-red-500">
-          Please log in to access the chat functionality.
+        <div className="flex flex-col justify-center items-center h-full text-center text-white">
+          <h1 className="text-2xl">404 | Page not found</h1>
+          <p className="mt-4 text-xl">Please login to use chat functionality</p>
         </div>
       ) : (
         <>
@@ -100,7 +104,7 @@ export const TestChat = (): JSX.Element => {
                 )}
                 <div
                   className={`inline-block px-4 py-2 rounded-lg text-gray-400 ${
-                    message.sender === 'user' ? 'bg-gray-950 max-w-[75%]' : 'bg-black'
+                    message.sender === 'user' ? 'bg-gray-900 max-w-[75%]' : 'bg-black'
                   }`}
                   style={{ maxWidth: message.sender === 'user' ? '75%' : '100%' }}
                 >
@@ -119,7 +123,7 @@ export const TestChat = (): JSX.Element => {
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Ask me anything..."
-              className="flex-1 p-3 rounded-3xl bg-gray-950 text-gray-300 border border-gray-900 outline-none mr-3"
+              className="flex-1 p-3 rounded-3xl bg-gray-900 text-gray-300 border border-gray-900 outline-none mr-3"
               rows={1}
               style={{ 
                 resize: 'none', 
@@ -129,7 +133,7 @@ export const TestChat = (): JSX.Element => {
             />
             <button
               type="submit"
-              className="px-5 py-3 rounded-3xl bg-gray-950 text-gray-200"
+              className="px-5 py-3 rounded-3xl bg-gray-900 text-gray-200"
             >
               Send
             </button>

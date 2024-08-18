@@ -49,9 +49,9 @@ export default function NavbarModal({ isModalOpen, handleModalClose, handleLogou
                             <div onClick={onProfileClick} className={ITEM_CLASS_NAME} style={ITEM_STYLES} >Profile</div>
                         </div>
 
-                        <div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>
+                        {/*<div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>
                             <div onClick={handleChat} className={ITEM_CLASS_NAME} style={ITEM_STYLES} >Chat</div>
-                        </div>
+                        </div>*/}
 
                         <div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>
                             <div onClick={handleLogout}className={ITEM_CLASS_NAME} style={ITEM_STYLES} >Logout</div>

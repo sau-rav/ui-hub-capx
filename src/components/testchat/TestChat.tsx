@@ -28,11 +28,12 @@ export const TestChat = (): JSX.Element => {
     setQuery('');
 
     try {
+      console.log(user.accessToken)
       const res = await fetch('', { // TODO: Update this URL with backend server URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${user.uid}`, // Assuming `uid` is part of user context
+          'Authorization': `Bearer ${user.accessToken}`, // Assuming `uid` is part of user context
         },
         body: JSON.stringify({ query }),
       });

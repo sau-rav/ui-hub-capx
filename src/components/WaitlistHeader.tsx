@@ -92,7 +92,7 @@ export const WaitlistHeader = (): JSX.Element => {
           Start your journey
         </p>
         <p className="text-3xl md:text-5xl font-extrabold">
-          to smarter investing
+          to smart investing
         </p>
         <p className="text-xl md:text-3xl font-semibold text-golden-light  mt-2 ">
           Join now for early access

@@ -20,7 +20,7 @@ export const TESTIMONY = [
   {
     title: "Product Scalability",
     description:
-      "We have built scalable products serving over 150 million daily users, generating millions in daily revenue and disbursing over $3 billion in monthly rewards.",
+      "We have built scalable products serving over 150 million daily users, generating millions in daily revenue and disbursing over 3 billion monthly coupon rewards.",
     image: test3,
   },
   {

@@ -34,6 +34,11 @@ const NavBar = (): JSX.Element => {
     handleModalClose();
   }, []);
 
+  const handleChat = useCallback(() => {
+    router.push("/testChat");
+    handleModalClose();
+  }, []);
+
   const handleModalClose = useCallback(() => {
     setIsModalOpen(false);
   }, []);
@@ -96,6 +101,7 @@ const NavBar = (): JSX.Element => {
           handleModalClose={handleModalClose}
           handleLogout={handleLogout}
           handleHome={handleHome}
+          handleChat={handleChat}
         />
       </div>
     </div>

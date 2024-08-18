@@ -17,7 +17,7 @@ import logo from "../../public/logo.png";
 const ITEM_CLASS_NAME = "cursor-pointer w-full font-semibold text-[24px] leading-[29px]"
 const ITEM_STYLES = { color: '#fff', paddingBottom: '10px', borderBottom: '1px solid #595959', zIndex: '999999' }
 
-export default function NavbarModal({ isModalOpen, handleModalClose, handleLogout, handleHome }) {
+export default function NavbarModal({ isModalOpen, handleModalClose, handleLogout, handleHome, handleChat }) {
     const router = useRouter();
 
     const onProfileClick = useCallback(() => {router.push("/profile")}, [router]);
@@ -47,6 +47,10 @@ export default function NavbarModal({ isModalOpen, handleModalClose, handleLogou
                         
                         <div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>
                             <div onClick={onProfileClick} className={ITEM_CLASS_NAME} style={ITEM_STYLES} >Profile</div>
+                        </div>
+
+                        <div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>
+                            <div onClick={handleChat} className={ITEM_CLASS_NAME} style={ITEM_STYLES} >Chat</div>
                         </div>
 
                         <div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>

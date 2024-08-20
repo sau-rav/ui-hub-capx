@@ -20,7 +20,9 @@ const ITEM_STYLES = { color: '#fff', paddingBottom: '10px', borderBottom: '1px s
 export default function NavbarModal({ isModalOpen, handleModalClose, handleLogout, handleHome }) {
     const router = useRouter();
 
-    const onProfileClick = useCallback(() => {router.push("/profile")}, [router]);
+    const onProfileClick = useCallback(() => {router.push("/profile"); handleModalClose()}, [router, handleModalClose]);
+    const onHomeClick = useCallback(() => {router.push("/"); handleModalClose()}, [router, handleModalClose]);
+
 
     return (
         <div>
@@ -43,6 +45,10 @@ export default function NavbarModal({ isModalOpen, handleModalClose, handleLogou
                         <div className="flex items-center justify-between">
                             <Image src={logo} alt="logo" height={38} onClick={handleHome} />
                             <CloseIcon sx={{ fontSize: 30, color: "#FFFFFF" }} onClick={handleModalClose} />
+                        </div>
+
+                        <div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>
+                            <div onClick={onHomeClick} className={ITEM_CLASS_NAME} style={ITEM_STYLES} >Home</div>
                         </div>
                         
                         <div className="flex flex-col items-center" style={{ marginBottom: '20px', marginTop: '20px' }}>

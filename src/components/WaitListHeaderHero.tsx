@@ -24,7 +24,7 @@ export const WaitListHeaderHero = (): JSX.Element => {
   return (
     <motion.div
       ref={ref}
-      className="overflow-hidden"
+      className="overflow-hidden z-10"
       variants={{
         start: { opacity: 0, x: 0, y: 412, scale: 2 },
         end: { opacity: 1, x: 0, y: 0, scale: 1 },

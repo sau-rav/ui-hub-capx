@@ -16,7 +16,7 @@ import logo from "../../public/logo.png";
 
 const WAITLIST_ROUTE = "/join-waitlist";
 const PRIMARY_BUTTON_CLASSNAME =
-  "h-full w-full px-4 md:px-6 py-2 md:py-3 rounded-full relative bg-golden text-black hover:font-bold";
+  "h-full w-full px-4 md:px-6 py-2 md:py-3 rounded-full relative bg-golden text-black hover:bg-golden-light";
 
 const NavBar = (): JSX.Element => {
   const [isModalOpen, setIsModalOpen] = useState(false);

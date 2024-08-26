@@ -30,7 +30,6 @@ export const WaitlistHeader = (): JSX.Element => {
   const signInWithGoogle = useCallback(async () => {
     try {
       const userCred = await signInWithPopup(auth, googleProvider);
-      const token = await userCred.user.getIdToken();
       setUser?.({
         displayName: userCred.user.displayName,
         email: userCred.user.email,

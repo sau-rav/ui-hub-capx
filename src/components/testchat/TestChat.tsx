@@ -28,23 +28,20 @@ export const TestChat = (): JSX.Element => {
     setQuery('');
 
     try {
-      console.log(user.accessToken)
-      const res = await fetch('', { // TODO: Update this URL with backend server URL
+      const res = await fetch(`http://16.171.226.117/v1/chat/${user.uid}`, { // TODO: Update this URL with backend server URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${user.accessToken}`, // Assuming `uid` is part of user context
         },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify({ "query" : query }),
       });
 
-      // const data = await res.json();
-      const data = {
-        "response" : "Dummy response from server for meanwhile till backend server is updated"
-      }
+      const data = await res.json();
+      const jsonResponse = JSON.parse(data.response);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { sender: 'server', text: data.response },
+        { sender: 'server', text: jsonResponse.response },
       ]);
 
     } catch (error) {

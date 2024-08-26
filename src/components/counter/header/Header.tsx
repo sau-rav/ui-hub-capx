@@ -64,15 +64,19 @@ export const Header = (): JSX.Element => {
 
       <Card3 />
 
-      <p className="w-fit text-3xl md:text-7xl font-semibold">An AI-powered</p>
-      <p className="w-fit text-3xl md:text-7xl font-semibold text-left">
+      <p className="w-fit text-3xl md:text-7xl font-semibold z-10">
+        An AI-powered
+      </p>
+      <p className="w-fit text-3xl md:text-7xl font-semibold text-left z-10">
         investing platform that
       </p>
-      <p className="w-fit text-3xl md:text-7xl font-semibold">works as your</p>
-      <p className="w-fit text-3xl md:text-7xl font-semibold ">
+      <p className="w-fit text-3xl md:text-7xl font-semibold z-10">
+        works as your
+      </p>
+      <p className="w-fit text-3xl md:text-7xl font-semibold z-10">
         personal assistant
       </p>
-      <p className="w-fit text-xl md:text-2xl font-normal text-golden-light text-left md:text-center mt-2 md:mt-12">
+      <p className="w-fit text-xl md:text-2xl font-normal text-golden-light text-left md:text-center mt-2 md:mt-12 z-10">
         All your investing needs, in one place
       </p>
     </div>

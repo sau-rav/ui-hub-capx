@@ -32,7 +32,7 @@ export const TestChat = (): JSX.Element => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${user.accessToken}`, // Assuming `uid` is part of user context
+          //'Authorization': `Bearer ${user.accessToken}`
         },
         body: JSON.stringify({ "query" : query }),
       });

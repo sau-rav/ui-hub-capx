@@ -24,7 +24,7 @@ export const withPage = <P, IP>(PageComponent: NextPage<P, IP>): any => {
           emailId: _emailId,
         });
 
-        const response = await fetch("https://16.171.226.117/v1/user/signIn", {
+        const response = await fetch("https://13.60.191.141/v1/user/signIn", {
           method: "POST",
           headers: new Headers({
             "Content-Type": "application/json",

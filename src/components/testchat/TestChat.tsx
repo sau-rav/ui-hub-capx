@@ -28,7 +28,7 @@ export const TestChat = (): JSX.Element => {
     setQuery('');
 
     try {
-      const res = await fetch(`http://16.171.226.117/v1/chat/${user.uid}`, { // TODO: Update this URL with backend server URL
+      const res = await fetch(`http://13.60.191.141/v1/chat/${user.uid}`, { // TODO: Update this URL with backend server URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

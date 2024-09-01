@@ -17,7 +17,7 @@ import logo from "../../public/logo.png";
 const ITEM_CLASS_NAME = "cursor-pointer w-full font-semibold text-[24px] leading-[29px]"
 const ITEM_STYLES = { paddingBottom: '10px', borderBottom: '1px solid #595959', zIndex: '999999' }
 
-export default function NavbarModal({ isModalOpen, handleModalClose, handleLogout, handleHome }) {
+export default function NavbarModal({ isModalOpen, handleModalClose, handleLogout, handleHome, handleChat }) {
     const router = useRouter();
 
     const { route } = router;

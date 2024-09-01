@@ -17,7 +17,7 @@ const signup = (user: User) => {
     ...(user.invitationCode && { invitationCode: user.invitationCode }),
   });
 
-  return fetch("https://16.171.226.117/v1/user/signUp", {
+  return fetch("https://13.60.191.141/v1/user/signUp", {
     method: "POST",
     headers: new Headers({
       "Content-Type": "application/json",

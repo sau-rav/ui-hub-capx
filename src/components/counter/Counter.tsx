@@ -20,7 +20,7 @@ export const Counter = ({
   hideJoinWaitlistButton?: boolean;
   className?: string;
 }): JSX.Element => {
-  const [odometerValue, setOdometerValue] = useState<number>(460);
+  const [odometerValue, setOdometerValue] = useState<number>(900);
   const [complete, setComplete] = useState(false);
   const [triggerCounter, setTriggerCounter] = useState(false);
 
@@ -43,8 +43,8 @@ export const Counter = ({
   useEffect(() => {
     if (triggerCounter) {
       setTimeout(() => {
-        setOdometerValue(500);
-      }, 10);
+        setOdometerValue(1000);
+      }, 50);
     }
     if (triggerCounter) {
       setTimeout(() => {

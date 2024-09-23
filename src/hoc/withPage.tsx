@@ -7,7 +7,7 @@ import { useUser } from "../context/user";
 import { parseResponseStream } from "../utils/parseResponseStream";
 
 export const withPage = <P, IP>(PageComponent: NextPage<P, IP>): any => {
-  const WithUser = ({ ...restProps }: any): JSX.Element => {
+  const WithUser = ({ ...restProps }: any): JSX.Element | null => {
     const userContextValue = useUser();
     const { setUser, user } = userContextValue ?? {};
 
@@ -49,7 +49,7 @@ export const withPage = <P, IP>(PageComponent: NextPage<P, IP>): any => {
       fetchUser();
     }, []);
 
-    return <PageComponent {...restProps} />;
+    return user ? <PageComponent {...restProps} /> : null;
   };
 
   return WithUser;

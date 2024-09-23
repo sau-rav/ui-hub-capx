@@ -37,7 +37,6 @@ export const useSignUpMutation = ({
     query: { invitationCode },
   } = router;
 
-  console.log({ invitationCode });
   return useMutation({
     mutationFn: (params: any) => signup({ ...params, invitationCode }),
     onSuccess: async (data: any) => {

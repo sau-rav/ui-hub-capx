@@ -69,14 +69,39 @@ export const TestChat = (): JSX.Element => {
     }
   }, [query]);
 
-  // Helper function to convert line breaks to <br> tags
+  // Helper function to render messages with code blocks
   const formatMessage = (text: string) => {
-    return text.split('\n').map((item, index) => (
-      <span key={index}>
-        {item}
-        <br />
-      </span>
-    ));
+    // Split the text by lines and process each line
+    const lines = text.split('\n');
+    let formattedElements = [];
+    let insideCodeBlock = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('```')) {
+        // Toggle code block mode on/off
+        insideCodeBlock = !insideCodeBlock;
+        if (insideCodeBlock) {
+          formattedElements.push(<pre key={i} style={{ backgroundColor: '#2d2d2d', padding: '8px', borderRadius: '4px' }}><code>{line.replace('```', '')}</code></pre>);
+        } else {
+          formattedElements.push(<pre key={i}><code>{line.replace('```', '')}</code></pre>);
+        }
+      } else if (insideCodeBlock) {
+        // If inside code block, treat lines as code
+        formattedElements.push(<pre key={i}><code>{line}</code></pre>);
+      } else {
+        // If not inside code block, treat as normal text
+        formattedElements.push(
+          <span key={i}>
+            {line}
+            <br />
+          </span>
+        );
+      }
+    }
+
+    return formattedElements;
   };
 
   return (

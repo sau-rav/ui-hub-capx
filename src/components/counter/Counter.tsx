@@ -5,6 +5,7 @@ import { useCallback } from "react";
 import { useRouter } from "next/router";
 
 import { useUser } from "../../context/user";
+import { useUsersCount } from "../../hooks/useUsersCount";
 
 const Odometer = dynamic(import("react-odometerjs"), {
   ssr: false,
@@ -26,6 +27,8 @@ export const Counter = ({
 
   const userContext = useUser();
 
+  const { users, isLoading } = useUsersCount();
+
   const { user, setUser } = userContext ?? {};
 
   const ref = useRef(null);
@@ -35,23 +38,25 @@ export const Counter = ({
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0.2 && !triggerCounter) {
+    if (latest > 0 && !triggerCounter) {
       setTriggerCounter(true);
     }
   });
 
   useEffect(() => {
-    if (triggerCounter) {
-      setTimeout(() => {
-        setOdometerValue(1000);
-      }, 50);
+    if (!isLoading && users) {
+      if (triggerCounter) {
+        setTimeout(() => {
+          setOdometerValue(users);
+        }, 50);
+      }
+      if (triggerCounter) {
+        setTimeout(() => {
+          setComplete(true);
+        }, 2000);
+      }
     }
-    if (triggerCounter) {
-      setTimeout(() => {
-        setComplete(true);
-      }, 2000);
-    }
-  }, [triggerCounter]);
+  }, [triggerCounter, isLoading, users]);
 
   const router = useRouter();
 

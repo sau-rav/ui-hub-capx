@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useQuery } from "react-query";
 
 const usersCount = async () => {
-  const data = await fetch("http://13.60.191.141/v1/user/total", {
+  const data = await fetch("https://13.60.191.141/v1/user/total", {
     method: "GET",
   });
 

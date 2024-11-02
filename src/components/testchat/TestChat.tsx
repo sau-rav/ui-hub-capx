@@ -116,9 +116,12 @@ export const TestChat = (): JSX.Element => {
                 </div>
             ) : (
                 <>
+                    <div className="flex w-11/12 max-w-5xl p-5 mt-28 justify-center">
+                        This is still under testing. Please do not make your decision based on this data only
+                        </div>
                     <div
                         ref={chatContainerRef}
-                        className="flex-1 w-11/12 max-w-5xl p-5 mt-28 overflow-y-auto bg-black rounded-xl custom-scrollbar"
+                        className="flex-1 w-11/12 max-w-5xl p-5 overflow-y-auto bg-black rounded-xl custom-scrollbar"
                     >
                         {messages.map((message, index) => (
                             <div

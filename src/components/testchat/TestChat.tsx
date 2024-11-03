@@ -78,34 +78,82 @@ export const TestChat = (): JSX.Element => {
         const lines = text.split('\n');
         let formattedElements = [];
         let insideCodeBlock = false;
-
+    
         for (let i = 0; i < lines.length; i++) {
-            const line = lines[i];
-
+            let line = lines[i];
+    
             if (line.startsWith('```')) {
                 // Toggle code block mode on/off
                 insideCodeBlock = !insideCodeBlock;
                 if (insideCodeBlock) {
-                    formattedElements.push(<pre key={i} style={{ backgroundColor: '#2d2d2d', padding: '8px', borderRadius: '4px' }}><code>{line.replace('```', '')}</code></pre>);
+                    formattedElements.push(
+                        <pre
+                            key={i}
+                            style={{
+                                backgroundColor: '#2d2d2d',
+                                padding: '8px',
+                                borderRadius: '4px',
+                                fontSize: '0.9em',
+                                maxWidth: '90%',
+                                overflowX: 'auto',
+                                whiteSpace: 'pre-wrap'
+                            }}
+                        >
+                            <code>{line.replace('```', '')}</code>
+                        </pre>
+                    );
                 } else {
-                    formattedElements.push(<pre key={i}><code>{line.replace('```', '')}</code></pre>);
+                    formattedElements.push(
+                        <pre
+                            key={i}
+                            style={{
+                                fontSize: '0.9em',
+                                maxWidth: '90%',
+                                overflowX: 'auto',
+                                whiteSpace: 'pre-wrap'
+                            }}
+                        >
+                            <code>{line.replace('```', '')}</code>
+                        </pre>
+                    );
                 }
             } else if (insideCodeBlock) {
                 // If inside code block, treat lines as code
-                formattedElements.push(<pre key={i}><code>{line}</code></pre>);
-            } else {
-                // If not inside code block, treat as normal text
                 formattedElements.push(
-                    <span key={i}>
-                        {line}
+                    <pre
+                        key={i}
+                        style={{
+                            fontSize: '0.9em',
+                            maxWidth: '90%',
+                            overflowX: 'auto',
+                            whiteSpace: 'pre-wrap'
+                        }}
+                    >
+                        <code>{line}</code>
+                    </pre>
+                );
+            } else {
+                // Apply bold style to text surrounded by **<text>**
+                const boldText = line.replace(/\*\*(.*?)\*\*/g, (match, p1) => {
+                    return `<strong>${p1}</strong>`;
+                });
+    
+                formattedElements.push(
+                    <span key={i} style={{ color: line.includes('<strong>') ? '#f0f0f0' : 'inherit' }}>
+                        <span
+                            dangerouslySetInnerHTML={{
+                                __html: boldText,
+                            }}
+                        />
                         <br />
                     </span>
                 );
             }
         }
-
+    
         return formattedElements;
     };
+    
 
     return (
         <div className="flex flex-col h-screen items-center bg-black text-gray-300">

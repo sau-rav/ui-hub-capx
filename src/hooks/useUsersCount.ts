@@ -8,8 +8,6 @@ const usersCount = async () => {
 
   const response = await data.json();
 
-  console.log(response, "Users Count Response");
-
   return response;
 };
 

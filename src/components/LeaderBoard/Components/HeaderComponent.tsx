@@ -9,7 +9,7 @@ export const HeaderComponent = () => {
   const { data: standings } = useLeaderboard();
   const { data } = useCurrentUserRank({ userId: user?.userId });
 
-  const { rank } = data ?? {};
+  const { rank, score } = data ?? {};
 
   return (
     <div
@@ -18,7 +18,7 @@ export const HeaderComponent = () => {
         backgroundImage: `url('leaderBoardImg.png')`,
       }}
     >
-      <div className="mt-40 mb-12 md:mb-40 flex flex-col items-center">
+      <div className="mt-40 mb-12 md:mb-20 flex flex-col items-center">
         <div className="font-semibold text-1xl md:text-4xl lg:text-5xl leading-tight tracking-widest text-white relative">
           W E L C O M E
         </div>
@@ -27,12 +27,13 @@ export const HeaderComponent = () => {
           {user?.displayName ?? "Trader"}
         </div>
         <div className="restText text-lg md:text-xl lg:text-2xl font-semibold leading-normal text-center text-white">
-          <span className="special-text text-golden">⭐️ Congrats! ⭐️</span>
-        </div>
-        <div className="font-semibold text-xl md:text-2xl lg:text-3xl leading-tight tracking-widest text-white relative">
-          {rank > 0
-            ? `Your current rank is ${rank}`
-            : "Start referring to see your rank in the leaderboard"}
+          <span className="special-text text-golden">
+            ⭐️{" "}
+            {rank > 0
+              ? `Rank #${rank} - ${score} Referrals`
+              : "Start referring to see your rank in the leaderboard"}{" "}
+            ⭐️
+          </span>
         </div>
       </div>
 

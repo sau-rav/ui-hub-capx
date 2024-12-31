@@ -1,6 +1,45 @@
+import { useCallback } from "react";
+
+import useCopyToClipboard from "react-use/lib/useCopyToClipboard";
 import { useUser } from "../../../context/user";
 import { useCurrentUserRank } from "../hooks/useCurrentUserRank";
 import { useLeaderboard } from "../hooks/useLeaderboard";
+
+export const ReferNow = (): JSX.Element => {
+  const userContextValue = useUser();
+  const { user } = userContextValue ?? {};
+
+  const [state, copyToClipboard] = useCopyToClipboard();
+
+  const copyToClipBoard = useCallback(() => {
+    const { invitationCode } = user ?? {};
+    copyToClipboard(`https://www.capx.live?invitationCode=${invitationCode}`);
+  }, [user, copyToClipboard]);
+
+  return (
+    <div className="flex-1 h-full flex items-center group mt-2">
+      <button
+        className="flex flex-col md:px-8 md:py-3 px-3 py-2 rounded-full relative border border-grey-200 text-black absolute flex group-hover:bg-golden-light group-hover:border-golden"
+        onClick={copyToClipBoard}
+      >
+        <span className="text-golden group-hover:text-black text-lg md:text-xl">
+          REFER NOW
+        </span>
+        {state.error ? (
+          <p className="text-xs flex justify-center w-full text-rose-500">
+            Failed to copy
+          </p>
+        ) : (
+          state.value && (
+            <p className="text-xs flex justify-center w-full text-emerald-400">
+              Copied
+            </p>
+          )
+        )}
+      </button>
+    </div>
+  );
+};
 
 export const HeaderComponent = () => {
   const userContextValue = useUser();
@@ -35,6 +74,7 @@ export const HeaderComponent = () => {
             ⭐️
           </span>
         </div>
+        <ReferNow />
       </div>
 
       <div className="font-semibold text-1xl md:text-4xl lg:text-5xl leading-tight tracking-widest text-gray-300 relative">
